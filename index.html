@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Uyo Creators Club | Home </title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="/assets/css/event.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="logo.png" alt="Logo" style="width: 30px;"> Uyo Creators Club
+            </a>
+            <div class="navbar-nav ms-auto d-none d-lg-flex">
+                <a class="nav-link" href="#home">Home</a>
+                <a class="nav-link" href="#about">About</a>
+                <a class="nav-link" href="#contact">Contact</a>
+                <a class="nav-link" href="#blog">Blog</a>
+                <a class="nav-link">Membership</a>
+                <button class="btn btn-outline-light">Get Started</button>
+            </div>
+            <button class="btn btn-outline-light d-lg-none">Get Started</button>
+            <span class="mobile-menu-toggle d-lg-none" onclick="toggleSidebar()">☰</span>
+        </div>
+    </nav>
+
+    <!-- Sidebar -->
+    <div id="sidebar" class="sidebar">
+        <span class="close-btn d-lg-none" onclick="toggleSidebar()">×</span>
+        <a href="#" onclick="showSection('concerts')">Upcoming events</a>
+        <a href="#" onclick="showSection('conferences')">Conferences</a>
+        <a href="#" onclick="showSection('workshops')">Workshops</a>
+        <a href="#" onclick="showSection('awards')">Award Shows</a>
+    </div>
+
+    <!-- Main Content Area -->
+    <div class="container-fluid" id="content">
+        <!-- Default Section -->
+        <div id="home" class="content-section active">
+            <!-- <h2>Welcome to Uyo Creators Club</h2>  -->
+            <h4>
+                <marquee behavior="scroll" direction="left">Welcome to Uyo Creators Club</marquee>
+            </h4>
+            <!-- <p>Here is some introduction content about the club.</p> -->
+            <!-- Default Carousel -->
+            <div id="homeCarousel" class="carousel slide shadow border" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active" style="background-image: url('/Images1/creatorsweekone.jpg'); height: 400px; background-size: cover;">
+                        <div class="carousel-caption">
+                            <button class="btn btn-outline-light">Get Tickets</button>
+                        </div>
+                    </div>
+                    <!-- Additional carousel items... -->
+                    <div class="carousel-item active" style="background-image: url('/Images1/creators\ week\ 2.jpg'); height: 400px; background-size: cover;">
+                        <div class="carousel-caption">
+                            <button class="btn btn-outline-light">Get Tickets</button>
+                        </div>
+                    </div>
+                    <div class="carousel-item active" style="background-image: url('/Images1/creators\ week\ 4.jpg'); height: 400px; background-size: cover;">
+                        <div class="carousel-caption">
+                            <button class="btn btn-outline-light">Get Tickets</button>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#homeCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#homeCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Music Concerts Section -->
+        <div id="concerts" class="content-section" style="display: none;">
+            <h2>Upcoming Events</h2>
+            <p>Featured Events</p>
+            <!-- Concerts Carousel -->
+            <div id="concertsCarousel" class="carousel slide shadow border" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active" style="background-image: url('/Images1/creatorsweekone.jpg'); height: 400px; background-size: cover;">
+                        <div class="carousel-caption">
+                            <button class="btn btn-outline-light">Get Tickets</button>
+                        </div>
+                    </div>
+                    <!-- Additional carousel items... -->
+                    <div class="carousel-item active" style="background-image: url('/Images1/creators\ week\ 4.jpg'); height: 400px; background-size: cover;">
+                        <div class="carousel-caption">
+                            <button class="btn btn-outline-light">Get Tickets</button>
+                        </div>
+                    </div>
+                    <div class="carousel-item active" style="background-image: url('/Images1/creators\ week\ 2.jpg'); height: 400px; background-size: cover;">
+                        <div class="carousel-caption">
+                            <button class="btn btn-outline-light">Get Tickets</button>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#concertsCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#concertsCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Additional Sections (Conferences, Workshops, Award Shows, etc.) -->
+        <div id="conferences" class="content-section" style="display: none;">
+            <h2>Conferences</h2>
+            <p>Information about upcoming conferences.</p>
+            <!-- Conferences Carousel... -->
+        </div>
+
+        <div id="workshops" class="content-section" style="display: none;">
+            <h2>Workshops</h2>
+            <p>Information about upcoming workshops.</p>
+            <!-- Workshops Carousel... -->
+        </div>
+
+        <div id="awards" class="content-section" style="display: none;">
+            <h2>Award Shows</h2>
+            <p>Details about award nights and events.</p>
+            <!-- Award Shows Carousel... -->
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2024 Uyo Creators Club. All rights reserved.</p>
+        <p>
+            <a href="#">Privacy Policy</a> |
+            <a href="#">Terms of Service</a>
+        </p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Sidebar Toggle Script -->
+<script>
+    function toggleSidebar() {
+        document.getElementById("sidebar").classList.toggle("active");
+    }
+
+    function showSection(sectionId) {
+        // Hide all sections
+        const sections = document.querySelectorAll('.content-section');
+        sections.forEach(section => section.style.display = 'none');
+        
+        // Show the selected section
+        document.getElementById(sectionId).style.display = 'block';
+        
+        // Hide the sidebar
+        document.getElementById("sidebar").classList.remove("active");
+    }
+</script>
+
+</body>
+
+</html>

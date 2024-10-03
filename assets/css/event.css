@@ -1,0 +1,217 @@
+/* Reset margins and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+/* Body Styling */
+body {
+    background-color: #1D1B34;
+    color: #fff; /* Improved color contrast */
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+    font-weight: 400;
+    overflow-x: hidden;
+    line-height: 1.6; /* Improved readability */
+}
+
+/* Navbar Customization */
+.navbar {
+    background-color: #22223A; 
+    position: sticky; 
+    top: 0;
+    z-index: 1000;
+    width: 100%; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    padding: 10px 20px; /* Added padding for better spacing */
+}
+
+.navbar-brand {
+    font-size: 18px;
+    color: #d1d1d8 !important;
+}
+
+.navbar-nav .nav-link {
+    font-size: 16px;
+    color: #d1d1d8 !important;
+}
+
+.navbar-nav .btn {
+    margin-left: 10px;
+    font-size: 14px;
+    padding: 5px 10px;
+}
+
+/* Sidebar Styling */
+.sidebar {
+    position: fixed;
+    top: 60px;
+    left: 0;
+    height: 100vh;
+    width: 250px;
+    background-color: #343a40;
+    padding-top: 20px;
+    transition: 0.3s;
+    border-radius: 10px; /* Curly edges for desktop */
+}
+
+.sidebar a {
+    display: block;
+    padding: 15px 25px;
+    color: #d1d1d8;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.sidebar a:hover {
+    background-color: #495057;
+}
+
+.sidebar.active {
+    left: 0;
+}
+
+/* Prevent content from overlapping or extending into the sidebar */
+.container-fluid {
+    margin-left: 250px; /* Proper spacing to prevent overlap with sidebar */
+    width: calc(100% - 250px); /* Ensure content is within the page bounds */
+}
+
+/* Mobile Sidebar Menu Toggle */
+.mobile-menu-toggle {
+    font-size: 25px;
+    color: #d1d1d8;
+    cursor: pointer;
+    display: none;
+}
+
+/* Close Button */
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 30px;
+    cursor: pointer;
+    color: #d1d1d8;
+}
+
+/* Card Styling */
+.card {
+    border: none;
+    border-radius: 15px;
+    background-color: #2D2B47;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for a cleaner look */
+}
+
+#featuredEventCarousel {
+    margin: 0 auto; /* Center the carousel */
+    width: 100%;    /* Ensure it takes up the full width available */
+    max-width: 900px; /* Limit the width so it doesn't stretch too wide */
+}
+
+/* Featured Event Section */
+.carousel-item {
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Add shadow for a cleaner look */
+}
+
+.carousel-caption {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Adjust Carousel Layout */
+#featuredEventCarousel {
+    margin: 20px auto;
+    width: 100%; /* Full width for carousel */
+    max-width: 1100px; /* Limit width to prevent overspill */
+}
+
+@media (min-width: 769px) {
+    /* Maintain landscape ratio on desktop */
+    .carousel-item {
+        height: 400px;
+        background-size: cover;
+        border-radius: 15px;
+    }
+}
+
+/* Mobile and Small Screen Handling */
+@media (max-width: 768px) {
+    .mobile-menu-toggle {
+        display: block;
+    }
+
+    /* Sidebar remains fixed on mobile but toggleable */
+    .sidebar {
+        top: 0;
+        left: -250px;
+        width: 250px;
+        background-color: #2D2B47;
+        height: 100%;
+        z-index: 2000;
+        transition: left 0.3s ease-in-out;
+    }
+
+    .sidebar.active {
+        left: 0;
+    }
+
+    /* Ensure carousel images are landscape on mobile */
+    .carousel-item {
+        height: auto;
+        background-size: contain;
+        background-position: center;
+        max-height: 250px; /* Limit height for landscape display */
+    }
+
+    /* Ensure no overlapping content on mobile */
+    .container-fluid {
+        margin-left: 0;
+        width: 100%;
+    }
+}
+
+/* Footer Styling */
+footer {
+    background-color: #22223A;
+    padding: 20px 0;
+    text-align: center;
+    color: #d1d1d8;
+    width: 100%; /* Footer width consistent with page */
+}
+
+footer a {
+    color: #d1d1d8;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+
+/* Animations */
+.carousel-item {
+    transition: transform 0.3s ease-in-out;
+}
+
+.carousel-item:hover {
+    transform: scale(1.1);
+}
+
+
+/* Gradient Backgrounds */
+footer {
+    background: linear-gradient(to bottom, #22223A, #343A40);
+    padding: 20px 0;
+    text-align: center;
+    color: #d1d1d8;
+    width: 100%;
+}
