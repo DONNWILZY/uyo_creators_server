@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UYO Creators Club | Authentication</title>
+       <!-- High-resolution favicon -->
+<link rel="icon" type="image/png" sizes="48x48" href="/assets/images/favicon.ico">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
+
+        /* Reset margins and padding */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body Styling */
+        body {
+            background-color: #1e2a4b;
+            color: #ffffff;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        /* Container Styling */
+        .auth-container {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .auth-card {
+            background-color: #24355a;
+            border-radius: 15px;
+            padding: 30px;
+            width: 100%;
+            max-width: 400px;
+            box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
+                        0 10px 10px rgba(0, 0, 0, 0.22);
+            animation: slide-in 0.5s ease;
+        }
+
+        .auth-card h2 {
+            margin-bottom: 20px;
+            font-size: 28px;
+            text-align: center;
+            font-weight: 700;
+        }
+
+        .auth-card .logo {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .auth-card .logo img {
+            width: 80px;
+            height: auto;
+        }
+
+        .form-control {
+            background-color: #2d3d65;
+            color: #ffffff;
+            border: none;
+            margin-bottom: 15px;
+            padding: 12px;
+        }
+
+        .form-control::placeholder {
+            color: #b3b9d4;
+        }
+
+        .btn-custom {
+            background-color: #3c599e;
+            color: white;
+            border: none;
+            width: 100%;
+            padding: 12px;
+            margin-top: 10px;
+            border-radius: 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-custom:hover {
+            background-color: #4b6dad;
+        }
+
+        .auth-footer {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .auth-card a {
+            color: #a7bddc;
+            text-decoration: none;
+        }
+
+        .auth-card a:hover {
+            color: #fff;
+        }
+
+        .flash-message {
+            text-align: center;
+            margin-top: 10px;
+            font-weight: 600;
+            color: red;
+        }
+
+        .flash-message.success {
+            color: green;
+        }
+
+        /* OTP Styling */
+        .otp-inputs {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .otp-inputs input {
+            width: 45px;
+            height: 45px;
+            background-color: #2d3d65;
+            color: white;
+            text-align: center;
+            font-size: 24px;
+            border-radius: 5px;
+            border: none;
+        }
+
+        .otp-inputs input:focus {
+            border: 2px solid #4b6dad;
+            outline: none;
+        }
+
+        /* Password Eye Icon Styling */
+        .eye-icon {
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            color: #b3b9d4;
+            cursor: pointer;
+        }
+
+        /* Toggle Visibility */
+        .auth-page {
+            display: none;
+        }
+
+        .auth-page.active {
+            display: block;
+        }
+
+        /* Animations */
+        @keyframes slide-in {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive Styling */
+        @media (max-width: 768px) {
+            .auth-card {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Authentication Container -->
+    <div class="auth-container">
+        <!-- Sign In Page -->
+        <div id="signin" class="auth-card auth-page active">
+            <div class="logo">
+                <img src="/assets/images/logoWhite.png" alt="UYO Creators Club Logo">
+                <h6>Uyo Creators Club </h6>
+            </div>
+            <h2>Sign In</h2>
+            <form id="signinForm">
+                <div class="mb-3 position-relative">
+                    <input type="text" class="form-control" id="signinEmail" placeholder="Email or Username">
+                </div>
+                <div class="mb-3 position-relative">
+                    <input type="password" class="form-control password-input" id="signinPassword" placeholder="Password">
+                    <i class="fas fa-eye eye-icon" onclick="togglePasswordVisibility('signinPassword')"></i>
+                </div>
+                <button type="submit" class="btn btn-custom">Sign In</button>
+                <div class="auth-footer">
+                    <a href="#" onclick="showPage('forgot')">Forgot your password?</a><br>
+                    <a href="#" onclick="showPage('signup')">Don't have an account? Sign Up</a>
+                </div>
+                <div class="flash-message" id="signinMessage"></div>
+            </form>
+        </div>
+
+        <!-- Sign Up Page -->
+        <div id="signup" class="auth-card auth-page">
+            <div class="logo">
+                <img src="/assets/images/logoWhite.png" alt="UYO Creators Club Logo">
+                <h6>Uyo Creators Club </h6>
+            </div>
+            <h2>Sign Up</h2>
+            <form id="signupForm">
+                <div class="mb-3 position-relative">
+                    <input type="text" class="form-control" id="signupName" placeholder="Full Name">
+                </div>
+                <div class="mb-3 position-relative">
+                    <input type="email" class="form-control" id="signupEmail" placeholder="Email address">
+                </div>
+                <div class="mb-3 position-relative">
+                    <input type="password" class="form-control password-input" id="signupPassword" placeholder="Password">
+                    <i class="fas fa-eye eye-icon" onclick="togglePasswordVisibility('signupPassword')"></i>
+                </div>
+                <div class="mb-3 position-relative">
+                    <input type="password" class="form-control password-input" id="signupConfirmPassword" placeholder="Confirm Password">
+                    <i class="fas fa-eye eye-icon" onclick="togglePasswordVisibility('signupConfirmPassword')"></i>
+                </div>
+                <button type="submit" class="btn btn-custom">Sign Up</button>
+                <div class="auth-footer">
+                    <a href="#" onclick="showPage('signin')">Already have an account? Sign In</a>
+                </div>
+            </form>
+        </div>
+
+        <!-- Forgot Password Page -->
+        <div id="forgot" class="auth-card auth-page">
+            <div class="logo">
+                <img src="/assets/images/logoWhite.png" alt="UYO Creators Club Logo">
+            </div>
+            <h2>Forgot Password</h2>
+            <form id="forgotForm">
+                <div class="mb-3 position-relative">
+                    <input type="email" class="form-control" id="forgotEmail" placeholder="Email address">
+                </div>
+                <button type="submit" class="btn btn-custom">Request Reset</button>
+                <div class="auth-footer">
+                    <a href="#" onclick="showPage('signin')">Back to Sign In</a>
+                </div>
+            </form>
+        </div>
+
+        <!-- OTP Verification Page -->
+        <div id="otp" class="auth-card auth-page">
+            <div class="logo">
+                <img src="/assets/images/logoWhite.png" alt="UYO Creators Club Logo">
+            </div>
+            <h2>Enter OTP</h2>
+            <form id="otpForm">
+                <div class="otp-inputs">
+                    <input type="text" maxlength="1">
+                    <input type="text" maxlength="1">
+                    <input type="text" maxlength="1">
+                    <input type="text" maxlength="1">
+                    <input type="text" maxlength="1">
+                    <input type="text" maxlength="1">
+                </div>
+                <button type="submit" class="btn btn-custom">Verify OTP</button>
+                <div class="auth-footer">
+                    <a href="#" onclick="showPage('signin')">Back to Sign In</a>
+                </div>
+            </form>
+        </div>
+
+        <!-- New Password Page -->
+        <div id="newPassword" class="auth-card auth-page">
+            <div class="logo">
+                <img src="/assets/images/logoWhite.png" alt="UYO Creators Club Logo">
+            </div>
+            <h2>Set New Password</h2>
+            <form id="newPasswordForm">
+                <div class="mb-3 position-relative">
+                    <input type="password" class="form-control password-input" id="newPasswordInput" placeholder="New Password">
+                    <i class="fas fa-eye eye-icon" onclick="togglePasswordVisibility('newPasswordInput')"></i>
+                </div>
+                <div class="mb-3 position-relative">
+                    <input type="password" class="form-control password-input" id="confirmNewPasswordInput" placeholder="Confirm New Password">
+                    <i class="fas fa-eye eye-icon" onclick="togglePasswordVisibility('confirmNewPasswordInput')"></i>
+                </div>
+                <button type="submit" class="btn btn-custom">Set Password</button>
+                <div class="flash-message" id="newPasswordMessage"></div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        // Function to toggle between authentication pages
+        function showPage(pageId) {
+            const pages = document.querySelectorAll('.auth-page');
+            pages.forEach(page => {
+                page.classList.remove('active');
+            });
+            document.getElementById(pageId).classList.add('active');
+        }
+
+        // Function to toggle password visibility
+        function togglePasswordVisibility(inputId) {
+            const inputField = document.getElementById(inputId);
+            if (inputField.type === 'password') {
+                inputField.type = 'text';
+            } else {
+                inputField.type = 'password';
+            }
+        }
+
+        // Sample logic for handling OTP input
+        const otpForm = document.getElementById('otpForm');
+        otpForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            // Proceed to new password page after OTP validation
+            showPage('newPassword');
+        });
+    </script>
+</body>
+
+</html>
