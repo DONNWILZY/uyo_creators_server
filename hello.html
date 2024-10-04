@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UYO Creators Club | Authentication</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <style>
+        /* Reset margins and padding */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body Styling */
+        body {
+            background-color: #1D1B34;
+            color: #fff; 
+            font-family: 'Trebuchet MS', Arial, sans-serif;
+            font-weight: 400;
+            overflow-x: hidden;
+            line-height: 1.6; 
+        }
+
+        /* Navbar Customization */
+        .navbar {
+            background-color: #22223A;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            width: 100%;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            padding: 10px 20px;
+        }
+
+        .navbar-brand {
+            font-size: 18px;
+            color: #d1d1d8 !important;
+        }
+
+        .navbar-nav .nav-link {
+            font-size: 16px;
+            color: #d1d1d8 !important;
+        }
+
+        .navbar-nav .btn {
+            margin-left: 10px;
+            font-size: 14px;
+            padding: 5px 10px;
+        }
+
+        /* Sidebar Styling */
+        .sidebar {
+            position: fixed;
+            top: 60px;
+            left: 0;
+            height: 100vh;
+            width: 250px;
+            background-color: #343a40;
+            padding-top: 20px;
+            transition: 0.3s;
+            border-radius: 10px;
+        }
+
+        .sidebar a {
+            display: block;
+            padding: 15px 25px;
+            color: #d1d1d8;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        .sidebar a:hover {
+            background-color: #495057;
+        }
+
+        /* Card Styling */
+        .auth-card {
+            background-color: #2D2B47;
+            border-radius: 15px;
+            padding: 30px;
+            width: 100%;
+            max-width: 400px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .auth-card h2 {
+            margin-bottom: 20px;
+            font-size: 28px;
+            text-align: center;
+            color: #d1d1d8;
+        }
+
+        .auth-card .logo {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .auth-card .logo img {
+            width: 80px;
+            height: auto;
+        }
+
+        .form-control {
+            background-color: #3C3B55;
+            color: #d1d1d8;
+            border: none;
+            margin-bottom: 15px;
+            padding: 12px;
+        }
+
+        .form-control::placeholder {
+            color: #b3b9d4;
+        }
+
+        .btn-custom {
+            background-color: #3C3B55;
+            color: white;
+            border: none;
+            width: 100%;
+            padding: 12px;
+            margin-top: 10px;
+            border-radius: 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-custom:hover {
+            background-color: #4E4C68;
+        }
+
+        .auth-footer {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .auth-card a {
+            color: #d1d1d8;
+            text-decoration: none;
+        }
+
+        .auth-card a:hover {
+            color: white;
+        }
+
+        /* OTP Styling */
+        .otp-inputs {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .otp-inputs input {
+            width: 45px;
+            height: 45px;
+            background-color: #3C3B55;
+            color: #d1d1d8;
+            text-align: center;
+            font-size: 24px;
+            border-radius: 5px;
+            border: none;
+        }
+
+        .otp-inputs input:focus {
+            border: 2px solid #4b6dad;
+            outline: none;
+        }
+
+        /* Flash Messages */
+        .flash-message {
+            text-align: center;
+            margin-top: 10px;
+            font-weight: 600;
+        }
+
+        .flash-message.success {
+            color: green;
+        }
+
+        .flash-message.error {
+            color: red;
+        }
+
+        /* Footer Styling */
+        footer {
+            background-color: #22223A;
+            padding: 20px 0;
+            text-align: center;
+            color: #d1d1d8;
+            width: 100%;
+        }
+
+        footer a {
+            color: #d1d1d8;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Animations */
+        .auth-card {
+            animation: fadeIn 0.8s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+        <a class="navbar-brand" href="#">UYO Creators Club</a>
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Events</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Authentication Container -->
+    <div class="auth-container">
+        <!-- OTP Screen -->
+        <div id="otp" class="auth-card auth-page active">
+            <div class="logo">
+                <img src="path-to-your-logo.png" alt="UYO Creators Club Logo">
+            </div>
+            <h2>Enter OTP</h2>
+            <form id="otpForm">
+                <div class="otp-inputs">
+                    <input type="text" maxlength="1">
+                    <input type="text" maxlength="1">
+                    <input type="text" maxlength="1">
+                    <input type="text" maxlength="1">
+                    <input type="text" maxlength="1">
+                    <input type="text" maxlength="1">
+                </div>
+                <button type="submit" class="btn btn-custom">Verify OTP</button>
+                <div class="auth-footer">
+                    <a href="#">Back to Sign In</a>
+                </div>
+            </form>
+        </div>
+
+        <!-- New Password Screen -->
+        <div id="newPassword" class="auth-card auth-page">
+            <div class="logo">
+                <img src="path-to-your-logo.png" alt="UYO Creators Club Logo">
+            </div>
+            <h2>Set New Password</h2>
+            <form id="newPasswordForm">
+                <div class="mb-3">
+                    <input type="password" class="form-control" id="newPasswordInput" placeholder="New Password">
+                </div>
+                <div class="mb-3">
+                    <input type="password" class="form-control" id="confirmNewPasswordInput" placeholder="Confirm New Password">
+                </div>
+                <button type="submit" class="btn btn-custom">Set Password</button>
+                <div class="flash-message" id="newPasswordMessage"></div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 UYO Creators Club. All rights reserved.</p>
+        <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        // Function to toggle between authentication pages
+        function showPage(pageId) {
+            const pages = document.querySelectorAll('.auth-page');
+            pages.forEach(page => {
+                page.classList.remove('active');
+            });
+            document.getElementById(pageId).classList.add('active');
+        }
+
+        // Sample logic for handling OTP input
+        const otpForm = document.getElementById('otpForm');
+        otpForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            // Proceed to new password page after OTP validation
+            showPage('newPassword');
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,165 @@
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
+
+/* Reset margins and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    background-color: #1e2a4b;
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Container Styling */
+.auth-container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease-in-out;
+}
+
+.auth-card {
+    background-color: #24355a;
+    border-radius: 15px;
+    padding: 30px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
+                0 10px 10px rgba(0, 0, 0, 0.22);
+    animation: slide-in 0.5s ease;
+}
+
+.auth-card h2 {
+    margin-bottom: 20px;
+    font-size: 28px;
+    text-align: center;
+    font-weight: 700;
+}
+
+.auth-card .logo {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.auth-card .logo img {
+    width: 80px;
+    height: auto;
+}
+
+.form-control {
+    background-color: #2d3d65;
+    color: #ffffff;
+    border: none;
+    margin-bottom: 15px;
+    padding: 12px;
+}
+
+.form-control::placeholder {
+    color: #b3b9d4;
+}
+
+.btn-custom {
+    background-color: #3c599e;
+    color: white;
+    border: none;
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    border-radius: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-custom:hover {
+    background-color: #4b6dad;
+}
+
+.auth-footer {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.auth-card a {
+    color: #a7bddc;
+    text-decoration: none;
+}
+
+.auth-card a:hover {
+    color: #fff;
+}
+
+.flash-message {
+    text-align: center;
+    margin-top: 10px;
+    font-weight: 600;
+    color: red;
+}
+
+.flash-message.success {
+    color: green;
+}
+
+/* OTP Styling */
+.otp-inputs {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.otp-inputs input {
+    width: 45px;
+    height: 45px;
+    background-color: #2d3d65;
+    color: white;
+    text-align: center;
+    font-size: 24px;
+    border-radius: 5px;
+    border: none;
+}
+
+.otp-inputs input:focus {
+    border: 2px solid #4b6dad;
+    outline: none;
+}
+
+/* Password Eye Icon Styling */
+.eye-icon {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    color: #b3b9d4;
+    cursor: pointer;
+}
+
+/* Toggle Visibility */
+.auth-page {
+    display: none;
+}
+
+.auth-page.active {
+    display: block;
+}
+
+/* Animations */
+@keyframes slide-in {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .auth-card {
+        padding: 20px;
+    }
+}

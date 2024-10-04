@@ -1,0 +1,173 @@
+/* Reset margins and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    background-color: #1D1B34;
+    color: #fff;
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #22223A;
+    padding: 10px 20px;
+}
+
+.navbar-brand {
+    color: #d1d1d8 !important;
+}
+
+.navbar-nav .nav-link {
+    color: #d1d1d8 !important;
+}
+
+/* Profile Header */
+.profile-header {
+    position: relative;
+    width: 100%;
+}
+
+.cover-photo img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+/* Adjusted profile-info */
+.profile-info {
+    position: absolute;
+    bottom: -50px; /* Moves profile image down to overlap the cover */
+    left: 20px; /* Align profile image and text to the left */
+    display: flex;
+    align-items: center;
+}
+
+.profile-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.profile-name {
+    margin-left: 20px; /* Adds space between profile photo and text */
+    font-size: 24px;
+    color: #d1d1d8;
+}
+
+.profile-details {
+    color: #b3b9d4;
+}
+
+/* Sidebar */
+.sidebar {
+    background-color: #2D2B47;
+    padding-top: 20px;
+    height: 100vh; /* Full height for vertical scrolling */
+    overflow-y: auto; /* Enable vertical scrolling */
+}
+
+.sidebar .nav-link {
+    color: #d1d1d8;
+    padding: 15px;
+}
+
+.sidebar .nav-link:hover {
+    background-color: #495057;
+}
+
+.sidebar .nav-link.active {
+    background-color: #495057;
+    color: #fff;
+}
+
+.sidebar.active {
+    transform: translateX(0);
+}
+
+.sidebar .close-btn {
+    font-size: 30px;
+    color: #fff;
+    cursor: pointer;
+    padding: 10px 15px;
+}
+
+/* Mobile Menu Toggle */
+.mobile-menu-toggle {
+    padding: 15px;
+    cursor: pointer;
+    background-color: #2D2B47;
+    color: #d1d1d8;
+    text-align: center;
+    display: none;
+}
+
+@media (max-width: 991px) {
+    .mobile-menu-toggle {
+        display: block;
+    }
+
+    .sidebar {
+        position: fixed;
+        left: -250px;
+        width: 250px;
+        z-index: 2000;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .sidebar.active {
+        transform: translateX(0);
+    }
+}
+
+/* Content Area */
+.content-area {
+    background-color: #1D1B34;
+    padding: 20px;
+    overflow-y: auto;
+    max-height: 80vh;
+}
+
+.content-section {
+    display: none;
+}
+
+.content-section.active {
+    display: block;
+}
+
+h3 {
+    color: #d1d1d8;
+}
+
+.btn-custom {
+    background-color: #3C3B55;
+    color: white;
+    border: none;
+    width: 100px;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-custom:hover {
+    background-color: #4E4C68;
+}
+
+/* Footer */
+footer {
+    background-color: #22223A;
+    padding: 20px 0;
+    text-align: center;
+    color: #d1d1d8;
+}
