@@ -687,3 +687,60 @@ footer {
       padding: 15px;
     }
   }
+
+
+  /* Ongoing Activities Section */
+#ongoing-activities {
+    background-color: #2D2B47;
+    color: #d1d1d8;
+    padding: 40px 20px;
+    margin-top: 30px;
+}
+
+.activity-card {
+    background-color: #343a40;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+}
+
+.activity-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+.activity-card img {
+    border-radius: 15px 15px 0 0;
+    height: 200px;
+    object-fit: cover;
+}
+
+.activity-card h5 {
+    color: #ffffff;
+}
+
+.activity-card p {
+    color: #b3b9d4;
+}
+
+.activity-card .btn {
+    margin-top: 15px;
+}
+
+
+/* Sponsors Section */
+#partners-sponsors {
+    background-color: #1D1B34;
+    padding: 40px 20px;
+    border-radius: 15px;
+}
+
+.sponsor-logo {
+    width: 150px;
+    height: auto;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.sponsor-logo:hover {
+    opacity: 1;
+}
