@@ -403,3 +403,132 @@ footer {
     }
 }
 
+
+
+/* About Uyo Creators Club Section */
+/* About Uyo Creators Club Section */
+.about-club-section {
+    padding: 7rem 0;
+}
+
+.about-club-section h2 {
+    color: #ffffff;
+    font-size: 36px;
+}
+
+.about-club-section p {
+    color: #b3b9d4;
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+.about-club-section .btn {
+    margin-top: 30px;
+    background-color: transparent;
+    border: 2px solid #f0f1f6;
+    color: #f0f1f6;
+    border-radius: 20px;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.about-club-section .btn:hover {
+    background-color: #f0f1f6;
+    color: #2D2B47;
+}
+
+/* Image Grid */
+.imgs-grid {
+    display: grid;
+    grid-template-columns: repeat(27, 1fr);
+    position: relative;
+}
+
+.imgs-grid:before {
+    position: absolute;
+    content: "";
+    width: 255px;
+    height: 217px;
+    background-image: url("/assets/images/dots-green.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    transform: translate(-40%, -40%);
+    z-index: -1;
+}
+
+.imgs-grid .grid {
+    position: relative;
+}
+
+.imgs-grid .grid img {
+    border-radius: 20px;
+    max-width: 100%;
+}
+
+.img-grid-1 {
+    grid-column: 1 / span 27;
+    grid-row: 1 / span 27;
+}
+
+/* Hide extra images on mobile */
+@media (max-width: 992px) {
+    .img-grid-2, .img-grid-3 {
+        display: none;
+    }
+}
+
+/* Mission and Vision Section */
+.mission-vision-section {
+    background-color: #2D2B47;
+    color: #ffffff;
+    padding: 7rem 0;
+}
+
+.mission-vision-section h2 {
+    color: #ffffff;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.mission-vision-section p {
+    color: #b3b9d4;
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+/* Contact and Social Media Section */
+.contact-section {
+    background-color: #1D1B34;
+    color: #ffffff;
+    padding: 5rem 0;
+}
+
+.contact-section h2 {
+    font-size: 36px;
+    color: #ffffff;
+    margin-bottom: 40px;
+}
+
+.contact-section p, .contact-section h5 {
+    color: #b3b9d4;
+    font-size: 18px;
+}
+
+.contact-section .btn {
+    margin-top: 20px;
+    background-color: transparent;
+    border: 2px solid #f0f1f6;
+    color: #f0f1f6;
+    border-radius: 20px;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.contact-section .btn:hover {
+    background-color: #f0f1f6;
+    color: #2D2B47;
+}
+
+.contact-section .btn i {
+    margin-right: 5px;
+}
