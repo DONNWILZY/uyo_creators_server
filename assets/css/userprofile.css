@@ -171,3 +171,47 @@ footer {
     text-align: center;
     color: #d1d1d8;
 }
+
+
+/* Video + Event Info Card Styling */
+#creators-week {
+    background-color: #2D2B47;
+    color: #d1d1d8;
+    padding: 40px 20px;
+    margin-top: 30px;
+}
+
+.video-card {
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.event-info-card {
+    background-color: #343a40;
+    border-radius: 15px;
+    border: none;
+}
+
+.event-info-card h3 {
+    color: #ffffff;
+}
+
+.event-info-card p {
+    color: #b3b9d4;
+}
+
+.event-info-card .btn {
+    margin-top: 15px;
+}
+
+/* Sponsors Section */
+#creators-week .sponsor-logo {
+    width: 120px;
+    height: auto;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+#creators-week .sponsor-logo:hover {
+    opacity: 1;
+}

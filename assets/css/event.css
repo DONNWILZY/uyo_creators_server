@@ -590,7 +590,7 @@ footer {
 }
 
 .content-card {
-    background-color: #343a40;
+    background-color: #EF5E25;
     border-radius: 15px;
     border: none;
 }
@@ -601,7 +601,7 @@ footer {
 }
 
 .content-card p {
-    color: #b3b9d4;
+    color: #fff;
 }
 
 @media (max-width: 768px) {
@@ -698,7 +698,7 @@ footer {
 }
 
 .activity-card {
-    background-color: #343a40;
+    background-color: #13031C;
     border-radius: 15px;
     transition: all 0.3s ease;
 }
@@ -719,7 +719,7 @@ footer {
 }
 
 .activity-card p {
-    color: #b3b9d4;
+    color: #fff;
 }
 
 .activity-card .btn {
