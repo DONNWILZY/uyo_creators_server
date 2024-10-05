@@ -259,7 +259,7 @@ footer {
 }
 
 .blog-card {
-    background-color: #343a40;
+    background-color: #1D1B34;
     border: none;
     border-radius: 15px;
     overflow: hidden;
@@ -288,10 +288,95 @@ footer {
 .blog-card .btn {
     margin-top: 15px;
     border-radius: 20px;
+    background-color: #EF5E25;
 }
 
 @media (max-width: 768px) {
     .blog-card img {
         height: 180px;
     }
+}
+
+
+/* Award Nominee Section */
+#award-nominees {
+    background-color: #2D2B47;
+    color: #d1d1d8;
+    border-radius: 15px;
+    padding: 40px 20px;
+    margin-top: 30px;
+}
+
+#award-nominees h2 {
+    color: #ffffff;
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+/* Nominee Card Styling */
+.nominee-card {
+    background-color: #1D1B34;
+    border: none;
+    border-radius: 15px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.nominee-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Image Wrapper for Circle Effect */
+.nominee-img-wrapper {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.nominee-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+}
+
+.nominee-card:hover .nominee-img {
+    transform: scale(1.1);
+}
+
+/* Card Body Styling */
+.nominee-card .card-body {
+    padding: 20px;
+}
+
+.nominee-card .card-title {
+    font-size: 22px;
+    color: #ffffff;
+}
+
+.nominee-card .card-text {
+    font-size: 16px;
+    color: #b3b9d4;
+    margin-bottom: 20px;
+}
+
+.nominee-card .btn {
+    background-color: transparent;
+    border: 2px solid #f0f1f6;
+    color: #f0f1f6;
+    border-radius: 20px;
+    padding: 8px 20px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nominee-card .btn:hover {
+    background-color: #f0f1f6;
+    color: #2D2B47;
 }

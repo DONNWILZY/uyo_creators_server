@@ -41,7 +41,7 @@
         <a href="#" onclick="showSection('concerts')">Upcoming events</a>
         <a href="#" onclick="showSection('conferences')">Conferences</a>
         <a href="#" onclick="showSection('workshops')">Workshops</a>
-        <a href="#" onclick="showSection('awards')">Award Shows</a>
+        <a href="#" onclick="showSection('awards')">Award</a>
     </div>
 
     <!-- Main Content Area -->
@@ -60,6 +60,7 @@
                         style="background-image: url('/assets/images/creatorsweekone.jpg'); height: 400px; background-size: cover;">
                         <div class="carousel-caption">
                             <button class="btn btn-outline-light">Get Tickets</button>
+                            <button class="btn btn-outline-light">Event Details</button>
                         </div>
                     </div>
                     <!-- Additional carousel items... -->
@@ -67,12 +68,14 @@
                         style="background-image: url('/assets/images/creators\ week\ 2.jpg'); height: 400px; background-size: cover;">
                         <div class="carousel-caption">
                             <button class="btn btn-outline-light">Get Tickets</button>
+                            <button class="btn btn-outline-light">Event Details</button>
                         </div>
                     </div>
                     <div class="carousel-item active"
                         style="background-image: url('/assets/images/creators\ week\ 4.jpg'); height: 400px; background-size: cover;">
                         <div class="carousel-caption">
                             <button class="btn btn-outline-light">Get Tickets</button>
+                            <button class="btn btn-outline-light">Event Details</button>
                         </div>
                     </div>
                 </div>
@@ -107,51 +110,61 @@
     </div>
 </div> -->
 
-        <!-- Recent News and Activities Section -->
-<div id="recent-news" class="container py-5">
-    <h2 class="text-center mb-4">Recent News and Activities</h2>
-    <div class="row g-4">
-        <!-- Blog Card 1 -->
-        <div class="col-md-4">
-            <div class="card blog-card h-100" data-aos="fade-up">
-                <img src="/assets/images/news/blog (1).jpeg" class="card-img-top" alt="News Image 1">
-                <div class="card-body">
-                    <h5 class="card-title">Creator's Workshop Success</h5>
-                    <p class="card-text">The recent creator's workshop saw a massive turnout with industry leaders sharing their expertise...</p>
-                    <a href="#" class="btn btn-outline-light">Read More</a>
+            <!-- Recent News and Activities Section -->
+            <div id="recent-news" class="container py-5">
+                <h2 class="text-center mb-4">Recent News and Activities</h2>
+                <div class="row g-4">
+                    <!-- Blog Card 1 -->
+                    <div class="col-md-4">
+                        <div class="card blog-card h-100" data-aos="fade-up">
+                            <img src="/assets/images/news/blog (1).jpeg" class="card-img-top" alt="News Image 1">
+                            <div class="card-body">
+                                <h5 class="card-title">Creator's Workshop Success</h5>
+                                <p class="card-text">The recent creator's workshop saw a massive turnout with industry
+                                    leaders sharing their expertise...</p>
+                                <a href="#" class="btn btn-outline-light">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Blog Card 2 -->
+                    <div class="col-md-4">
+                        <div class="card blog-card h-100" data-aos="fade-up" data-aos-delay="100">
+                            <img src="/assets/images/news/blog (2).jpeg" class="card-img-top" alt="News Image 2">
+                            <div class="card-body">
+                                <h5 class="card-title">Uyo Creators Expo 2024</h5>
+                                <p class="card-text">The Uyo Creators Expo is around the corner! Get ready to showcase
+                                    your skills and network with top creators...</p>
+                                <a href="#" class="btn btn-outline-light">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Blog Card 3 -->
+                    <div class="col-md-4">
+                        <div class="card blog-card h-100" data-aos="fade-up" data-aos-delay="200">
+                            <img src="/assets/images/news/blog (3).jpeg" class="card-img-top" alt="News Image 3">
+                            <div class="card-body">
+                                <h5 class="card-title">Award Nominees Announced</h5>
+                                <p class="card-text">The Uyo Creators Club has officially announced the nominees for the
+                                    upcoming Annual Awards ceremony...</p>
+                                <a href="#" class="btn btn-outline-light" style="background-color: #EF5E25;">Read More</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+
+                <!-- recent activity ends here-->
+
+
+
+
+
+
+
             </div>
-        </div>
 
-        <!-- Blog Card 2 -->
-        <div class="col-md-4">
-            <div class="card blog-card h-100" data-aos="fade-up" data-aos-delay="100">
-                <img src="/assets/images/news/blog (2).jpeg" class="card-img-top" alt="News Image 2">
-                <div class="card-body">
-                    <h5 class="card-title">Uyo Creators Expo 2024</h5>
-                    <p class="card-text">The Uyo Creators Expo is around the corner! Get ready to showcase your skills and network with top creators...</p>
-                    <a href="#" class="btn btn-outline-light">Read More</a>
-                </div>
-            </div>
-        </div>
-
-        <!-- Blog Card 3 -->
-        <div class="col-md-4">
-            <div class="card blog-card h-100" data-aos="fade-up" data-aos-delay="200">
-                <img src="/assets/images/news/blog (3).jpeg" class="card-img-top" alt="News Image 3">
-                <div class="card-body">
-                    <h5 class="card-title">Award Nominees Announced</h5>
-                    <p class="card-text">The Uyo Creators Club has officially announced the nominees for the upcoming Annual Awards ceremony...</p>
-                    <a href="#" class="btn btn-outline-light">Read More</a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    
-</div>
-
-<!-- Default ends here-->
+            <!-- Default ends here-->
 
 
         </div>
@@ -194,6 +207,51 @@
                     <span class="visually-hidden">Next</span>
                 </button>
             </div>
+
+            <!-- Upcoming Events Section -->
+            <div id="upcoming-events" class="container py-5">
+                <h2 class="text-center mb-4">Upcoming Events</h2>
+                <div class="row g-4">
+                    <!-- Event Card 1 -->
+                    <div class="col-md-4">
+                        <div class="card event-card h-100" data-aos="fade-up">
+                            <img src="/assets/images/news/blog (3).jpeg" class="card-img-top" alt="Event Image 1">
+                            <div class="card-body">
+                                <h5 class="card-title">Creators Expo 2024</h5>
+                                <p class="card-text">Join the upcoming Creators Expo to meet industry leaders, showcase
+                                    your skills, and connect with like-minded creators.</p>
+                                <a href="#" class="btn btn-outline-light">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Event Card 2 -->
+                    <div class="col-md-4">
+                        <div class="card event-card h-100" data-aos="fade-up" data-aos-delay="100">
+                            <img src="/assets/images/news/blog (3).jpeg" class="card-img-top" alt="Event Image 2">
+                            <div class="card-body">
+                                <h5 class="card-title">Annual Awards 2024</h5>
+                                <p class="card-text">Celebrate the achievements of the most talented creators at the
+                                    Annual Awards. Nominees will be announced soon.</p>
+                                <a href="#" class="btn btn-outline-light">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Event Card 3 -->
+                    <div class="col-md-4">
+                        <div class="card event-card h-100" data-aos="fade-up" data-aos-delay="200">
+                            <img src="/assets/images/news/blog (3).jpeg" class="card-img-top" alt="Event Image 3">
+                            <div class="card-body">
+                                <h5 class="card-title">Digital Creators Conference</h5>
+                                <p class="card-text">Don't miss the Digital Creators Conference! Learn from the best and
+                                    take your digital creation to the next level.</p>
+                                <a href="#" class="btn btn-outline-light">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <!-- Additional Sections (Conferences, Workshops, Award Shows, etc.) -->
@@ -201,6 +259,52 @@
             <h2>Conferences</h2>
             <p>Information about upcoming conferences.</p>
             <!-- Conferences Carousel... -->
+
+            <!-- Featured Blog Posts Section -->
+            <div id="featured-blog-posts" class="container py-5">
+                <h2 class="text-center mb-4">Featured Blog Posts</h2>
+                <div class="row g-4">
+                    <!-- Blog Post Card 1 -->
+                    <div class="col-md-4">
+                        <div class="card blog-card h-100" data-aos="fade-up">
+                            <img src="/assets/images/blog1.jpg" class="card-img-top" alt="Blog Post 1">
+                            <div class="card-body">
+                                <h5 class="card-title">The Art of Digital Creation</h5>
+                                <p class="card-text">Discover the latest techniques in digital art and how to
+                                    incorporate them into your work.</p>
+                                <a href="#" class="btn btn-outline-light">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Blog Post Card 2 -->
+                    <div class="col-md-4">
+                        <div class="card blog-card h-100" data-aos="fade-up" data-aos-delay="100">
+                            <img src="/assets/images/blog2.jpg" class="card-img-top" alt="Blog Post 2">
+                            <div class="card-body">
+                                <h5 class="card-title">Behind the Scenes of the Creators Expo</h5>
+                                <p class="card-text">Get an inside look into the planning and execution of the biggest
+                                    creators' expo of the year.</p>
+                                <a href="#" class="btn btn-outline-light">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Blog Post Card 3 -->
+                    <div class="col-md-4">
+                        <div class="card blog-card h-100" data-aos="fade-up" data-aos-delay="200">
+                            <img src="/assets/images/blog3.jpg" class="card-img-top" alt="Blog Post 3">
+                            <div class="card-body">
+                                <h5 class="card-title">How to Succeed as a Creator in 2024</h5>
+                                <p class="card-text">From networking to honing your skills, learn the steps to make it
+                                    big as a creator in the coming year.</p>
+                                <a href="#" class="btn btn-outline-light">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
 
         <div id="workshops" class="content-section" style="display: none;">
@@ -213,6 +317,58 @@
             <h2>Award Shows</h2>
             <p>Details about award nights and events.</p>
             <!-- Award Shows Carousel... -->
+
+
+            <!-- Award Nominee Display Section -->
+            <div id="award-nominees" class="container py-5">
+                <h2 class="text-center mb-4">Award Nominees</h2>
+                <div class="row g-4">
+                    <!-- Nominee Card 1 -->
+                    <div class="col-md-4">
+                        <div class="card nominee-card h-100 text-center" data-aos="flip-up">
+                            <div class="nominee-img-wrapper">
+                                <img src="/assets/images/award/wilz.jpg" class="card-img-top nominee-img"
+                                    alt="Nominee Image 1">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Best Digital Creator</h5>
+                                <p class="card-text">Nominee: Jane Doe</p>
+                                <a href="#" class="btn btn-outline-light">View Profile</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Nominee Card 2 -->
+                    <div class="col-md-4">
+                        <div class="card nominee-card h-100 text-center" data-aos="flip-up" data-aos-delay="100">
+                            <div class="nominee-img-wrapper">
+                                <img src="/assets/images/award/wilz.jpg" class="card-img-top nominee-img"
+                                    alt="Nominee Image 2">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Innovator of the Year</h5>
+                                <p class="card-text">Nominee: John Smith</p>
+                                <a href="#" class="btn btn-outline-light">View Profile</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Nominee Card 3 -->
+                    <div class="col-md-4">
+                        <div class="card nominee-card h-100 text-center" data-aos="flip-up" data-aos-delay="200">
+                            <div class="nominee-img-wrapper">
+                                <img src="/assets/images/award/wilz.jpg" class="card-img-top nominee-img"
+                                    alt="Nominee Image 3">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Most Influential Creator</h5>
+                                <p class="card-text">Nominee: Alex Johnson</p>
+                                <a href="#" class="btn btn-outline-light">View Profile</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
