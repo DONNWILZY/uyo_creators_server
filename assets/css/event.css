@@ -99,7 +99,7 @@ body {
 .card {
     border: none;
     border-radius: 15px;
-    background-color: #2D2B47;
+    background-color: #0F0117;
     color: white;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for a cleaner look */
 }
@@ -296,9 +296,8 @@ footer {
         height: 180px;
     }
 }
+/* Award Nominee Display Section */
 
-
-/* Award Nominee Section */
 #award-nominees {
     background-color: #2D2B47;
     color: #d1d1d8;
@@ -311,9 +310,14 @@ footer {
     color: #ffffff;
     font-size: 36px;
     margin-bottom: 40px;
+    text-align: center;
 }
 
+
+
+
 /* Nominee Card Styling */
+
 .nominee-card {
     background-color: #1D1B34;
     border: none;
@@ -330,6 +334,7 @@ footer {
 }
 
 /* Image Wrapper for Circle Effect */
+
 .nominee-img-wrapper {
     position: relative;
     width: 150px;
@@ -342,23 +347,26 @@ footer {
 
 .nominee-img {
     width: 100%;
-    height: 100%;
+    height: 150px; /* Fixed height */
     object-fit: cover;
-    transition: transform 0.3s ease-in-out;
+    object-position: 50% 15%; /* Move up */
 }
 
-.nominee-card:hover .nominee-img {
-    transform: scale(1.1);
-}
+/* .nominee-card:hover .nominee-img {
+    transform: scale(1.8);
+} */
 
 /* Card Body Styling */
+
 .nominee-card .card-body {
     padding: 20px;
+    text-align: center;
 }
 
 .nominee-card .card-title {
     font-size: 22px;
     color: #ffffff;
+    margin-bottom: 10px;
 }
 
 .nominee-card .card-text {
@@ -380,3 +388,18 @@ footer {
     background-color: #f0f1f6;
     color: #2D2B47;
 }
+
+/* Responsive Layout */
+
+@media (max-width: 768px) {
+    .nominee-card {
+        flex-basis: 50%;
+    }
+}
+
+@media (max-width: 576px) {
+    .nominee-card {
+        flex-basis: 100%;
+    }
+}
+

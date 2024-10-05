@@ -28,9 +28,13 @@
                 <a class="nav-link" href="#contact">Contact</a>
                 <a class="nav-link" href="#blog">Blog</a>
                 <a class="nav-link">Membership</a>
-                <button class="btn btn-outline-light">Get Started</button>
+               
             </div>
-            <button class="btn btn-outline-light d-lg-none">Get Started</button>
+            
+            <a href="pages/auth.html">
+                <button class="btn btn-outline-light">Get Started</button>
+              </a>
+            <!-- <button class="btn btn-outline-light d-lg-none">Get Started</button> -->
             <span class="mobile-menu-toggle d-lg-none" onclick="toggleSidebar()">☰</span>
         </div>
     </nav>
@@ -38,10 +42,12 @@
     <!-- Sidebar -->
     <div id="sidebar" class="sidebar">
         <span class="close-btn d-lg-none" onclick="toggleSidebar()">×</span>
-        <a href="#" onclick="showSection('concerts')">Upcoming events</a>
-        <a href="#" onclick="showSection('conferences')">Conferences</a>
+        <a href="#" onclick="showSection('events')">Upcoming events</a>
+        <a href="#" onclick="showSection('membership')">Membership</a>
         <a href="#" onclick="showSection('workshops')">Workshops</a>
+        <a href="#" onclick="showSection('about')">About</a>
         <a href="#" onclick="showSection('awards')">Award</a>
+        <a href="#" onclick="showSection('conferences')">Blog</a>
     </div>
 
     <!-- Main Content Area -->
@@ -256,8 +262,8 @@
 
         <!-- Additional Sections (Conferences, Workshops, Award Shows, etc.) -->
         <div id="conferences" class="content-section" style="display: none;">
-            <h2>Conferences</h2>
-            <p>Information about upcoming conferences.</p>
+            <h2>Blog</h2>
+            <p>News and Blog</p>
             <!-- Conferences Carousel... -->
 
             <!-- Featured Blog Posts Section -->
@@ -267,7 +273,7 @@
                     <!-- Blog Post Card 1 -->
                     <div class="col-md-4">
                         <div class="card blog-card h-100" data-aos="fade-up">
-                            <img src="/assets/images/blog1.jpg" class="card-img-top" alt="Blog Post 1">
+                            <img src="/assets/images/news/blog (2).jpeg" class="card-img-top" alt="Blog Post 1">
                             <div class="card-body">
                                 <h5 class="card-title">The Art of Digital Creation</h5>
                                 <p class="card-text">Discover the latest techniques in digital art and how to
@@ -280,7 +286,7 @@
                     <!-- Blog Post Card 2 -->
                     <div class="col-md-4">
                         <div class="card blog-card h-100" data-aos="fade-up" data-aos-delay="100">
-                            <img src="/assets/images/blog2.jpg" class="card-img-top" alt="Blog Post 2">
+                            <img src="/assets/images/news/blog (4).jpeg" class="card-img-top" alt="Blog Post 2">
                             <div class="card-body">
                                 <h5 class="card-title">Behind the Scenes of the Creators Expo</h5>
                                 <p class="card-text">Get an inside look into the planning and execution of the biggest
@@ -293,7 +299,7 @@
                     <!-- Blog Post Card 3 -->
                     <div class="col-md-4">
                         <div class="card blog-card h-100" data-aos="fade-up" data-aos-delay="200">
-                            <img src="/assets/images/blog3.jpg" class="card-img-top" alt="Blog Post 3">
+                            <img src="/assets/images/news/blog (1).jpeg" class="card-img-top" alt="Blog Post 3">
                             <div class="card-body">
                                 <h5 class="card-title">How to Succeed as a Creator in 2024</h5>
                                 <p class="card-text">From networking to honing your skills, learn the steps to make it
@@ -313,6 +319,12 @@
             <!-- Workshops Carousel... -->
         </div>
 
+        <div id="about" class="content-section" style="display: none;">
+            <h2>About Section</h2>
+            <p>About us.</p>
+            <!-- Workshops Carousel... -->
+        </div>
+
         <div id="awards" class="content-section" style="display: none;">
             <h2>Award Shows</h2>
             <p>Details about award nights and events.</p>
@@ -320,55 +332,66 @@
 
 
             <!-- Award Nominee Display Section -->
-            <div id="award-nominees" class="container py-5">
-                <h2 class="text-center mb-4">Award Nominees</h2>
-                <div class="row g-4">
-                    <!-- Nominee Card 1 -->
-                    <div class="col-md-4">
-                        <div class="card nominee-card h-100 text-center" data-aos="flip-up">
-                            <div class="nominee-img-wrapper">
-                                <img src="/assets/images/award/wilz.jpg" class="card-img-top nominee-img"
-                                    alt="Nominee Image 1">
-                            </div>
-                            <div class="card-body">
-                                <h5 class="card-title">Best Digital Creator</h5>
-                                <p class="card-text">Nominee: Jane Doe</p>
-                                <a href="#" class="btn btn-outline-light">View Profile</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Nominee Card 2 -->
-                    <div class="col-md-4">
-                        <div class="card nominee-card h-100 text-center" data-aos="flip-up" data-aos-delay="100">
-                            <div class="nominee-img-wrapper">
-                                <img src="/assets/images/award/wilz.jpg" class="card-img-top nominee-img"
-                                    alt="Nominee Image 2">
-                            </div>
-                            <div class="card-body">
-                                <h5 class="card-title">Innovator of the Year</h5>
-                                <p class="card-text">Nominee: John Smith</p>
-                                <a href="#" class="btn btn-outline-light">View Profile</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Nominee Card 3 -->
-                    <div class="col-md-4">
-                        <div class="card nominee-card h-100 text-center" data-aos="flip-up" data-aos-delay="200">
-                            <div class="nominee-img-wrapper">
-                                <img src="/assets/images/award/wilz.jpg" class="card-img-top nominee-img"
-                                    alt="Nominee Image 3">
-                            </div>
-                            <div class="card-body">
-                                <h5 class="card-title">Most Influential Creator</h5>
-                                <p class="card-text">Nominee: Alex Johnson</p>
-                                <a href="#" class="btn btn-outline-light">View Profile</a>
-                            </div>
-                        </div>
-                    </div>
+<div id="award-nominees" class="container py-5">
+    <h2 class="text-center mb-4">Award Nominees</h2>
+    <div class="row g-4">
+        <!-- Nominee Card 1 -->
+        <div class="col-lg-3 col-md-6">
+            <div class="card nominee-card h-100 text-center" data-aos="flip-up">
+                <div class="nominee-img-wrapper">
+                    <img src="/assets/images/award/wilz.jpg" class="card-img-top nominee-img" alt="Nominee Image 1">
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Best Digital Creator</h5>
+                    <p class="card-text">Nominee: Jane Doe</p>
+                    <a href="#" class="btn btn-outline-light">View Profile</a>
                 </div>
             </div>
+        </div>
+
+        <!-- Nominee Card 2 -->
+        <div class="col-lg-3 col-md-6">
+            <div class="card nominee-card h-100 text-center" data-aos="flip-up" data-aos-delay="100">
+                <div class="nominee-img-wrapper">
+                    <img src="/assets/images/award/wilz.jpg" class="card-img-top nominee-img" alt="Nominee Image 2">
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Innovator of the Year</h5>
+                    <p class="card-text">Nominee: John Smith</p>
+                    <a href="#" class="btn btn-outline-light">View Profile</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Nominee Card 3 -->
+        <div class="col-lg-3 col-md-6">
+            <div class="card nominee-card h-100 text-center" data-aos="flip-up" data-aos-delay="200">
+                <div class="nominee-img-wrapper">
+                    <img src="/assets/images/award/wilz.jpg" class="card-img-top nominee-img" alt="Nominee Image 3">
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Most Influential Creator</h5>
+                    <p class="card-text">Nominee: Alex Johnson</p>
+                    <a href="#" class="btn btn-outline-light">View Profile</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Nominee Card 4 -->
+        <div class="col-lg-3 col-md-6">
+            <div class="card nominee-card h-100 text-center" data-aos="flip-up" data-aos-delay="300">
+                <div class="nominee-img-wrapper">
+                    <img src="/assets/images/award/wilz.jpg" class="card-img-top nominee-img" alt="Nominee Image 4">
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Best Digital Artist</h5>
+                    <p class="card-text">Nominee: Emma Williams</p>
+                    <a href="#" class="btn btn-outline-light">View Profile</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
         </div>
     </div>
 
