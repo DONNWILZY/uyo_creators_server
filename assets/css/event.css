@@ -570,3 +570,120 @@ footer {
       margin: 2px;
     }
   }
+
+
+
+  /* Two-Column Card Styling  for brief intro*/
+#intro-card {
+    background-color: #2D2B47;
+    color: #d1d1d8;
+    border-radius: 15px;
+    padding: 40px 20px;
+    margin-top: 30px;
+}
+
+.image-card img {
+    border-radius: 15px;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.content-card {
+    background-color: #343a40;
+    border-radius: 15px;
+    border: none;
+}
+
+.content-card h3 {
+    color: #ffffff;
+    font-size: 28px;
+}
+
+.content-card p {
+    color: #b3b9d4;
+}
+
+@media (max-width: 768px) {
+    .image-card img {
+        height: auto;
+    }
+}
+
+
+/* Group Purpose Section */
+#group-purpose {
+    background-color: #1D1B34;
+    color: #d1d1d8;
+    padding: 40px 20px;
+    border-radius: 15px;
+    margin-top: 30px;
+  }
+  
+  #group-purpose h3 {
+    color: #ffffff;
+    font-size: 32px;
+    margin-bottom: 30px;
+  }
+  
+  .purpose-card {
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+  }
+  
+  .purpose-img {
+    background-size: cover;
+    background-position: center;
+    height: 60%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  
+  .purpose-text {
+    height: 40%;
+    padding: 20px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+  
+  .bg-collaboration {
+    background-color: #FFC080;
+    color: #ffffff;
+  }
+  
+  .bg-innovation {
+    background-color: #6495ED;
+    color: #ffffff;
+  }
+  
+  .bg-community {
+    background-color: #DC143C;
+    color: #ffffff;
+  }
+  
+  #group-purpose h5 {
+    font-size: 20px;
+    margin-top: 10px;
+  }
+  
+  #group-purpose p {
+    font-size: 16px;
+  }
+  
+  /* Responsive Behavior */
+  @media (max-width: 768px) {
+    .purpose-card {
+      margin-bottom: 20px;
+      height: 250px;
+    }
+  
+    .purpose-img {
+      height: 50%;
+    }
+  
+    .purpose-text {
+      height: 50%;
+      padding: 15px;
+    }
+  }
