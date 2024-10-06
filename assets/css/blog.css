@@ -1,0 +1,165 @@
+/* Reset margins and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    background-color: #1D1B34;
+    color: #fff; /* Improved color contrast */
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+    font-weight: 400;
+    overflow-x: hidden;
+    line-height: 1.6; /* Improved readability */
+}
+
+/* Blog Section Styling */
+#custom-blog {
+    background-color: #1B2A49;
+    color: #E8EAF6;
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.custom-blog-title {
+    font-size: 36px;
+    color: #FFFFFF;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.custom-blog-subtitle {
+    color: #BBBBBB;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* Blog Section Styling */
+#custom-blog {
+    background-color: #1B2A49;
+    color: #E8EAF6;
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.custom-blog-title {
+    font-size: 36px;
+    color: #FFFFFF;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.custom-blog-subtitle {
+    color: #BBBBBB;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* Blog Card Styling */
+.custom-blog-card {
+    background-color: #293C66;
+    border-radius: 15px;
+    border: none;
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    height: 100%;
+}
+
+.custom-card-img {
+    border-radius: 15px 15px 0 0;
+    height: 250px;
+    object-fit: cover;
+    width: 100%;
+}
+
+.custom-card-body {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.custom-card-title {
+    color: #FFFFFF;
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.custom-card-text {
+    color: #CCCCCC;
+    flex: 1;
+    margin-bottom: 15px;
+}
+
+.custom-btn {
+    background-color: transparent;
+    border: 1px solid #F0F0F0;
+    color: #F0F0F0;
+    padding: 8px 20px;
+    border-radius: 20px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.custom-btn:hover {
+    background-color: #F0F0F0;
+    color: #293C66;
+}
+
+/* Sidebar Styling */
+.custom-sidebar-widget {
+    background-color: #2A3F68;
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    color: #F0F0F0;
+}
+
+.custom-sidebar-widget h4 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #FFFFFF;
+}
+
+.custom-sidebar-widget ul li a {
+    color: #D1D1D8;
+    text-decoration: none;
+}
+
+.custom-sidebar-widget ul li a:hover {
+    color: #FFFFFF;
+}
+
+/* Search Bar Styling */
+.custom-search-input {
+    background-color: #FFFFFF;
+    color: #333333;
+    padding: 10px;
+    border-radius: 10px 0 0 10px;
+}
+
+.custom-search-btn {
+    background-color: #2A3F68;
+    border-radius: 0 10px 10px 0;
+    color: #F0F0F0;
+    padding: 10px 20px;
+    border: none;
+}
+
+.custom-search-btn:hover {
+    background-color: #F0F0F0;
+    color: #2A3F68;
+}
+
+/* Mobile Only Styling */
+@media (max-width: 991px) {
+    #mobile-search-categories {
+        margin-bottom: 20px;
+    }
+
+    #mobile-popular-archives {
+        margin-top: 40px;
+    }
+}

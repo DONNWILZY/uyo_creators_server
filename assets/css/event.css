@@ -295,7 +295,9 @@ footer {
     .blog-card img {
         height: 180px;
     }
-}
+} 
+
+
 /* Award Nominee Display Section */
 
 #award-nominees {
@@ -405,7 +407,7 @@ footer {
 
 
 
-/* About Uyo Creators Club Section */
+
 /* About Uyo Creators Club Section */
 .about-club-section {
     padding: 7rem 0;
@@ -732,18 +734,75 @@ footer {
     background-color: #1D1B34;
     padding: 40px 20px;
     border-radius: 15px;
-}
-
-.sponsor-logo {
-    width: 150px;
+  }
+  
+  .sponsors-container {
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+  }
+  
+  .sponsors-slider {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .sponsor {
+    scroll-snap-align: center;
+    flex-shrink: 0;
+    width: 150px; 
     height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .sponsor .sponsor-logo {
     opacity: 0.8;
     transition: opacity 0.3s ease;
-}
-
-.sponsor-logo:hover {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+  
+  .sponsor .sponsor-logo:hover {
     opacity: 1;
-}
+  }
+  
+  .sponsor .sponsor-name {
+    font-size: 14px;
+    color: #b3b9d4;
+    margin: 0;
+  }
+  
+  /* Auto-scrolling sponsors */
+  .sponsors-slider {
+    animation: scroll 10s linear infinite;
+    transform: translateX(0);
+  }
+  
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  
+  /* Responsive Behavior */
+  @media (max-width: 768px) {
+    .sponsors-slider {
+      gap: 10px;
+    }
+  
+    .sponsor {
+      width: 100px; 
+    }
+  
+    .sponsor .sponsor-logo {
+      width: 80px;
+    }
+  }
 
 
 /* Video + Event Info Card Styling */
@@ -780,9 +839,10 @@ footer {
   .event-info-card .btn {
     margin-top: 15px;
   }
-  
+
+
   /* Sponsors Section */
-  .sponsors-container {
+.sponsors-container {
     overflow-x: auto;
     scroll-snap-type: x mandatory;
   }
@@ -795,45 +855,53 @@ footer {
   .sponsor {
     scroll-snap-align: center;
     flex-shrink: 0;
-    width: 80px; /* reduced width for mobile */
+    width: 80px; 
     height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   
   .sponsor .sponsor-logo {
     opacity: 0.8;
     transition: opacity 0.3s ease;
+    width: 60px;
+    height: auto;
+    margin-bottom: 10px;
   }
   
   .sponsor .sponsor-logo:hover {
     opacity: 1;
   }
   
+  .sponsor .sponsor-name {
+    font-size: 14px;
+    color: #b3b9d4;
+    margin: 0;
+  }
+  
   /* Responsive Behavior */
   @media (max-width: 768px) {
-    .video-card, .event-info-card {
-      margin-bottom: 20px;
-    }
-  
-    .video-card {
-      order: 2;
-    }
-  
-    .event-info-card {
-      order: 1;
-    }
-  
     .sponsors-slider {
       gap: 10px;
     }
   
     .sponsor {
-      width: 60px; /* reduced width for smaller mobile screens */
+      width: 60px; 
+    }
+  
+    .sponsor .sponsor-logo {
+      width: 40px;
     }
   }
   
+
+
+
   /* Auto-scrolling sponsors */
-  .sponsors-slider {
+.sponsors-slider {
     animation: scroll 10s linear infinite;
+    transform: translateX(0); /* Add this line */
   }
   
   @keyframes scroll {
