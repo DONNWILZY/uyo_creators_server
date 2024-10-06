@@ -12,7 +12,9 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Font Awesome-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <link rel="stylesheet" href="/assets/css/event.css">
 </head>
@@ -31,12 +33,12 @@
                 <a class="nav-link" href="#contact">Contact</a>
                 <a class="nav-link" href="#blog">Blog</a>
                 <a class="nav-link">Membership</a>
-               
+
             </div>
-            
+
             <a href="pages/auth.html">
                 <button class="btn btn-outline-light">Get Started</button>
-              </a>
+            </a>
             <!-- <button class="btn btn-outline-light d-lg-none">Get Started</button> -->
             <span class="mobile-menu-toggle d-lg-none" onclick="toggleSidebar()">☰</span>
         </div>
@@ -48,6 +50,7 @@
         <a href="#" onclick="showSection('events')">Upcoming events</a>
         <a href="#" onclick="showSection('membership')">Membership</a>
         <a href="#" onclick="showSection('contents')">Content</a>
+        <a href="#" onclick="showSection('shop')">Shop</a>
         <a href="#" onclick="showSection('about')">About</a>
         <a href="#" onclick="showSection('awards')">Award</a>
         <a href="#" onclick="showSection('blog')">Blog</a>
@@ -69,7 +72,7 @@
                         style="background-image: url('/assets/images/creatorsweekone.jpg'); height: 400px; background-size: cover;">
                         <div class="carousel-caption">
                             <button class="btn btn-outline-light">Get Tickets</button>
-                            <button class="btn btn-outline-light">Event Details</button>
+                            <!-- <button class="btn btn-outline-light">Event Details</button> -->
                         </div>
                     </div>
                     <!-- Additional carousel items... -->
@@ -77,14 +80,14 @@
                         style="background-image: url('/assets/images/creators\ week\ 2.jpg'); height: 400px; background-size: cover;">
                         <div class="carousel-caption">
                             <button class="btn btn-outline-light">Get Tickets</button>
-                            <button class="btn btn-outline-light">Event Details</button>
+                            <!-- <button class="btn btn-outline-light">Event Details</button> -->
                         </div>
                     </div>
                     <div class="carousel-item active"
                         style="background-image: url('/assets/images/creators\ week\ 4.jpg'); height: 400px; background-size: cover;">
                         <div class="carousel-caption">
                             <button class="btn btn-outline-light">Get Tickets</button>
-                            <button class="btn btn-outline-light">Event Details</button>
+                            <!-- <button class="btn btn-outline-light">Event Details</button> -->
                         </div>
                     </div>
                 </div>
@@ -119,158 +122,180 @@
     </div>
 </div> -->
 
-        <!-- breif intro-->
-         <!-- Two-Column Card Section -->
-<div id="intro-card" class="container py-5">
-    <div class="row align-items-center g-4">
-        <!-- Image Column -->
-        <div class="col-md-6">
-            <div class="card image-card">
-                <img src="/assets/images/news/blog (2).jpeg" class="card-img-top" alt="Introduction Image">
-            </div>
-        </div>
+            <!-- breif intro-->
+            <!-- Two-Column Card Section -->
+            <div id="intro-card" class="container py-5">
+                <div class="row align-items-center g-4">
+                    <!-- Image Column -->
+                    <div class="col-md-6">
+                        <div class="card image-card">
+                            <img src="/assets/images/news/blog (2).jpeg" class="card-img-top" alt="Introduction Image">
+                        </div>
+                    </div>
 
-        <!-- Content Column -->
-        <div class="col-md-6">
-            <div class="card content-card h-100 p-4" data-aos="fade-left">
-                <h3>Welcome to Uyo Creators Club</h3>
-                <p class="lead">Our club is home to a vibrant community of creators, innovators, and entrepreneurs who are dedicated to building and growing creative solutions. We foster a space where members can learn, connect, and thrive.</p>
-                <a href="#" class="btn btn-outline-light mt-3">Learn More</a>
+                    <!-- Content Column -->
+                    <div class="col-md-6">
+                        <div class="card content-card h-100 p-4" data-aos="fade-left">
+                            <h3>Welcome to Uyo Creators Club</h3>
+                            <p class="lead">Our club is home to a vibrant community of creators, innovators, and
+                                entrepreneurs who are dedicated to building and growing creative solutions. We foster a
+                                space where members can learn, connect, and thrive.</p>
+                            <a href="#" class="btn btn-outline-light mt-3">Learn More</a>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
-</div>
 
 <!-- UYO Creators Week Video Section -->
 <div id="creators-week" class="container py-5">
     <div class="row align-items-center g-4">
-        <!-- Video Column -->
-        <div class="col-md-6">
-            <div class="card video-card">
-                <video class="w-100" controls>
-                    <source src="/assets/videos/creators-week.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-            </div>
+      <!-- Content Column -->
+      <div class="col-md-6 order-md-1 order-2">
+        <div class="card event-info-card h-100 p-4">
+          <h3>UYO Creators Week 2024</h3>
+          <p class="lead">Theme: <strong>Innovate, Create, Inspire</strong></p>
+          <p>Date: <strong>March 12 - 16, 2024</strong></p>
+          <p>Venue: <strong>Uyo International Conference Center</strong></p>
+          <p>Uyo Creators Week brings together creators from various fields for a week of workshops,
+            networking, and exhibitions.</p>
+          <a href="#" class="btn btn-outline-light mt-3">Register Now</a>
         </div>
-
-        <!-- Content Column -->
-        <div class="col-md-6">
-            <div class="card event-info-card h-100 p-4">
-                <h3>UYO Creators Week 2024</h3>
-                <p class="lead">Theme: <strong>Innovate, Create, Inspire</strong></p>
-                <p>Date: <strong>March 12 - 16, 2024</strong></p>
-                <p>Venue: <strong>Uyo International Conference Center</strong></p>
-                <p>Uyo Creators Week brings together creators from various fields for a week of workshops, networking, and exhibitions.</p>
-                <a href="#" class="btn btn-outline-light mt-3">Register Now</a>
-            </div>
+      </div>
+  
+      <!-- Video Column -->
+      <div class="col-md-6 order-md-2 order-1">
+        <div class="card video-card">
+          <video class="w-100" controls>
+            <source src="/assets/videos/creators-week.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video> 
         </div>
+      </div>
     </div>
-
+  
     <!-- Event Sponsors -->
     <div class="row text-center mt-5">
-        <h4 class="mb-4">Event Sponsors</h4>
-        <div class="col-md-3">
+      <h4 class="mb-4">Event Sponsors</h4>
+      <div class="sponsors-container">
+        <div class="sponsors-slider">
+          <div class="sponsor">
             <img src="/assets/images/logoWhite.png" class="img-fluid sponsor-logo" alt="Sponsor 1">
-        </div>
-        <div class="col-md-3">
+          </div>
+          <div class="sponsor">
             <img src="/assets/images/logoWhite.png" class="img-fluid sponsor-logo" alt="Sponsor 2">
-        </div>
-        <div class="col-md-3">
+          </div>
+          <div class="sponsor">
             <img src="/assets/images/logoWhite.png" class="img-fluid sponsor-logo" alt="Sponsor 3">
-        </div>
-        <div class="col-md-3">
+          </div>
+          <div class="sponsor">
             <img src="/assets/images/logoWhite.png" class="img-fluid sponsor-logo" alt="Sponsor 4">
-        </div>
-    </div>
-</div>
-
-
-
-<!-- Ongoing Activities Section -->
-<div id="ongoing-activities" class="container py-5">
-    <h3 class="text-center mb-4">Ongoing Activities</h3>
-    <div class="row g-4">
-        <!-- Activity Card 1 -->
-        <div class="col-md-4">
-            <div class="card activity-card h-100" data-aos="fade-up">
-                <img src="/assets/images/creators week 2.jpg" class="card-img-top" alt="Activity Image 1">
-                <div class="card-body">
-                    <h5 class="card-title">Photography Workshop</h5>
-                    <p class="card-text">Join our hands-on photography workshop and improve your skills with top experts.</p>
-                    <a href="#" class="btn btn-outline-light">Join Now</a>
-                </div>
-            </div>
-        </div>
-
-        <!-- Activity Card 2 -->
-        <div class="col-md-4">
-            <div class="card activity-card h-100" data-aos="fade-up" data-aos-delay="100">
-                <img src="/assets/images/news/blog (4).jpeg" class="card-img-top" alt="Activity Image 2">
-                <div class="card-body">
-                    <h5 class="card-title">Coding Bootcamp</h5>
-                    <p class="card-text">Sign up for our coding bootcamp and learn from the best in the industry.</p>
-                    <a href="#" class="btn btn-outline-light">Join Now</a>
-                </div>
-            </div>
-        </div>
-
-        <!-- Activity Card 3 -->
-        <div class="col-md-4">
-            <div class="card activity-card h-100" data-aos="fade-up" data-aos-delay="200">
-                <img src="/assets/images/news/blog (4).jpeg" class="card-img-top" alt="Activity Image 3">
-                <div class="card-body">
-                    <h5 class="card-title">Design Thinking Workshop</h5>
-                    <p class="card-text">Learn the principles of design thinking and how to apply them to real-world challenges.</p>
-                    <a href="#" class="btn btn-outline-light">Join Now</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-
-
-<!-- Group Purpose Section -->
-<div id="group-purpose" class="container py-5">
-    <div class="row text-center">
-      <div class="col-md-12">
-        <h3>Our Purpose and Focus Areas</h3>
-      </div>
-    </div>
-  
-    <div class="row g-0 mt-4">
-      <!-- Purpose 1 -->
-      <div class="col-md-4 purpose-card">
-        <div class="purpose-img" style="background-image: url('/assets/images/creators week 4.jpg')">
-        </div>
-        <div class="purpose-text bg-collarboration">
-          <h5>Collaboration</h5>
-          <p>Fostering collaboration among creators to solve real-world challenges.</p>
-        </div>
-      </div>
-  
-      <!-- Purpose 2 -->
-      <div class="col-md-4 purpose-card">
-        <div class="purpose-img" style="background-image: url('/assets/images/creators week 4.jpg')">
-        </div>
-        <div class="purpose-text bg-innovation">
-          <h5>Innovation</h5>
-          <p>Driving innovation in various creative fields through training and resources.</p>
-        </div>
-      </div>
-  
-      <!-- Purpose 3 -->
-      <div class="col-md-4 purpose-card">
-        <div class="purpose-img" style="background-image: url('/assets/images/creatorsweekone.jpg')">
-        </div>
-        <div class="purpose-text bg-community">
-          <h5>Community Building</h5>
-          <p>Building a supportive network for creators to connect and grow.</p>
+          </div>
+          <div class="sponsor">
+            <img src="/assets/images/logoWhite.png" class="img-fluid sponsor-logo" alt="Sponsor 5">
+          </div>
+          <div class="sponsor">
+            <img src="/assets/images/logoWhite.png" class="img-fluid sponsor-logo" alt="Sponsor 6">
+          </div>
+          <div class="sponsor">
+            <img src="/assets/images/logoWhite.png" class="img-fluid sponsor-logo" alt="Sponsor 7">
+          </div>
+          <div class="sponsor">
+            <img src="/assets/images/logoWhite.png" class="img-fluid sponsor-logo" alt="Sponsor 8">
+          </div>
         </div>
       </div>
     </div>
   </div>
+
+
+
+            <!-- Ongoing Activities Section -->
+            <div id="ongoing-activities" class="container py-5">
+                <h3 class="text-center mb-4">Ongoing Activities</h3>
+                <div class="row g-4">
+                    <!-- Activity Card 1 -->
+                    <div class="col-md-4">
+                        <div class="card activity-card h-100" data-aos="fade-up">
+                            <img src="/assets/images/creators week 2.jpg" class="card-img-top" alt="Activity Image 1">
+                            <div class="card-body">
+                                <h5 class="card-title">Photography Workshop</h5>
+                                <p class="card-text">Join our hands-on photography workshop and improve your skills with
+                                    top experts.</p>
+                                <a href="#" class="btn btn-outline-light">Join Now</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Activity Card 2 -->
+                    <div class="col-md-4">
+                        <div class="card activity-card h-100" data-aos="fade-up" data-aos-delay="100">
+                            <img src="/assets/images/news/blog (4).jpeg" class="card-img-top" alt="Activity Image 2">
+                            <div class="card-body">
+                                <h5 class="card-title">Coding Bootcamp</h5>
+                                <p class="card-text">Sign up for our coding bootcamp and learn from the best in the
+                                    industry.</p>
+                                <a href="#" class="btn btn-outline-light">Join Now</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Activity Card 3 -->
+                    <div class="col-md-4">
+                        <div class="card activity-card h-100" data-aos="fade-up" data-aos-delay="200">
+                            <img src="/assets/images/news/blog (4).jpeg" class="card-img-top" alt="Activity Image 3">
+                            <div class="card-body">
+                                <h5 class="card-title">Design Thinking Workshop</h5>
+                                <p class="card-text">Learn the principles of design thinking and how to apply them to
+                                    real-world challenges.</p>
+                                <a href="#" class="btn btn-outline-light">Join Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <!-- Group Purpose Section -->
+            <div id="group-purpose" class="container py-5">
+                <div class="row text-center">
+                    <div class="col-md-12">
+                        <h3>Our Purpose and Focus Areas</h3>
+                    </div>
+                </div>
+
+                <div class="row g-0 mt-4">
+                    <!-- Purpose 1 -->
+                    <div class="col-md-4 purpose-card">
+                        <div class="purpose-img" style="background-image: url('/assets/images/creators week 4.jpg')">
+                        </div>
+                        <div class="purpose-text bg-collarboration">
+                            <h5>Collaboration</h5>
+                            <p>Fostering collaboration among creators to solve real-world challenges.</p>
+                        </div>
+                    </div>
+
+                    <!-- Purpose 2 -->
+                    <div class="col-md-4 purpose-card">
+                        <div class="purpose-img" style="background-image: url('/assets/images/creators week 4.jpg')">
+                        </div>
+                        <div class="purpose-text bg-innovation">
+                            <h5>Innovation</h5>
+                            <p>Driving innovation in various creative fields through training and resources.</p>
+                        </div>
+                    </div>
+
+                    <!-- Purpose 3 -->
+                    <div class="col-md-4 purpose-card">
+                        <div class="purpose-img" style="background-image: url('/assets/images/creatorsweekone.jpg')">
+                        </div>
+                        <div class="purpose-text bg-community">
+                            <h5>Community Building</h5>
+                            <p>Building a supportive network for creators to connect and grow.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
 
 
@@ -312,7 +337,8 @@
                                 <h5 class="card-title">Award Nominees Announced</h5>
                                 <p class="card-text">The Uyo Creators Club has officially announced the nominees for the
                                     upcoming Annual Awards ceremony...</p>
-                                <a href="#" class="btn btn-outline-light" style="background-color: #EF5E25;">Read More</a>
+                                <a href="#" class="btn btn-outline-light" style="background-color: #EF5E25;">Read
+                                    More</a>
                             </div>
                         </div>
                     </div>
@@ -322,31 +348,31 @@
 
                 <!-- recent activity ends here-->
                 <br>
-                    <!-- Official Partners and Sponsors Section -->
-<div id="partners-sponsors" class="container py-5 text-center">
-    <h3 class="mb-4">Our Official Partners & Sponsors</h3>
-    <div class="row g-4">
-        <!-- Sponsor 1 -->
-        <div class="col-md-3">
-            <img src="/assets/images/logo.png" class="img-fluid sponsor-logo" alt="Sponsor Logo 1">
-        </div>
+                <!-- Official Partners and Sponsors Section -->
+                <div id="partners-sponsors" class="container py-5 text-center">
+                    <h3 class="mb-4">Our Official Partners & Sponsors</h3>
+                    <div class="row g-4">
+                        <!-- Sponsor 1 -->
+                        <div class="col-md-3">
+                            <img src="/assets/images/logo.png" class="img-fluid sponsor-logo" alt="Sponsor Logo 1">
+                        </div>
 
-        <!-- Sponsor 2 -->
-        <div class="col-md-3">
-            <img src="/assets/images/logo.png" class="img-fluid sponsor-logo" alt="Sponsor Logo 2">
-        </div>
+                        <!-- Sponsor 2 -->
+                        <div class="col-md-3">
+                            <img src="/assets/images/logo.png" class="img-fluid sponsor-logo" alt="Sponsor Logo 2">
+                        </div>
 
-        <!-- Sponsor 3 -->
-        <div class="col-md-3">
-            <img src="/assets/images/logo.png" class="img-fluid sponsor-logo" alt="Sponsor Logo 3">
-        </div>
+                        <!-- Sponsor 3 -->
+                        <div class="col-md-3">
+                            <img src="/assets/images/logo.png" class="img-fluid sponsor-logo" alt="Sponsor Logo 3">
+                        </div>
 
-        <!-- Sponsor 4 -->
-        <div class="col-md-3">
-            <img src="/assets/images/logo.png" class="img-fluid sponsor-logo" alt="Sponsor Logo 4">
-        </div>
-    </div>
-</div>
+                        <!-- Sponsor 4 -->
+                        <div class="col-md-3">
+                            <img src="/assets/images/logo.png" class="img-fluid sponsor-logo" alt="Sponsor Logo 4">
+                        </div>
+                    </div>
+                </div>
 
 
 
@@ -452,6 +478,14 @@
             <!-- Workshops Carousel... -->
         </div>
 
+
+           <!-- Shop area for mechandizes-->
+           <div id="shop" class="content-section" style="display: none;">
+            <h2>Shop Section</h2>
+            <p>Shop with us.</p>
+            <!-- Workshops Carousel... -->
+        </div>
+
         <!-- Additional Sections (Conferences, Workshops, Award Shows, etc.) -->
         <div id="blog" class="content-section" style="display: none;">
             <h2>Blog</h2>
@@ -516,78 +550,86 @@
             <p>About us.</p>
 
 
-<!-- About Uyo Creators Club Section -->
-<div class="about-club-section container py-5">
-    <div class="row align-items-center">
-        <div class="col-lg-6">
-            <h2 class="mb-4">Who We Are</h2>
-            <p class="lead">The Uyo Creators Club is a vibrant community of creators, innovators, and entrepreneurs who are passionate about art, technology, and innovation. We strive to help our members grow, connect, and thrive in their respective fields.</p>
-            <p>Through collaborative events, mentorship, and opportunities for exposure, we provide the tools and platforms creators need to achieve their full potential.</p>
-            <a href="#" class="btn btn-outline-light">Join Us Today</a>
-        </div>
-        <div class="col-lg-6 imgs-grid">
-            <div class="grid img-grid-1">
-                <img src="/assets/images/news/blog (3).jpeg" alt="Club Members Image 1">
+            <!-- About Uyo Creators Club Section -->
+            <div class="about-club-section container py-5">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <h2 class="mb-4">Who We Are</h2>
+                        <p class="lead">The Uyo Creators Club is a vibrant community of creators, innovators, and
+                            entrepreneurs who are passionate about art, technology, and innovation. We strive to help
+                            our members grow, connect, and thrive in their respective fields.</p>
+                        <p>Through collaborative events, mentorship, and opportunities for exposure, we provide the
+                            tools and platforms creators need to achieve their full potential.</p>
+                        <a href="#" class="btn btn-outline-light">Join Us Today</a>
+                    </div>
+                    <div class="col-lg-6 imgs-grid">
+                        <div class="grid img-grid-1">
+                            <img src="/assets/images/news/blog (3).jpeg" alt="Club Members Image 1">
+                        </div>
+                        <div class="grid img-grid-2 d-none d-lg-block">
+                            <img src="/assets/images/news/blog (2).jpeg" alt="Club Members Image 2">
+                        </div>
+                        <div class="grid img-grid-3 d-none d-lg-block">
+                            <img src="/assets/images/news/blog (3).jpeg" alt="Club Members Image 3">
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="grid img-grid-2 d-none d-lg-block">
-                <img src="/assets/images/news/blog (2).jpeg" alt="Club Members Image 2">
-            </div>
-            <div class="grid img-grid-3 d-none d-lg-block">
-                <img src="/assets/images/news/blog (3).jpeg" alt="Club Members Image 3">
-            </div>
-        </div>
-    </div>
-</div>
 
-<!-- Mission and Vision Section -->
-<div class="mission-vision-section container py-5">
-    <div class="row">
-        <div class="col-lg-6">
-            <h2 class="mb-4">Our Mission</h2>
-            <p>Our mission is to create a supportive and collaborative environment where creators can grow and achieve their full potential. We aim to foster innovation, encourage creativity, and connect individuals to opportunities that will propel them forward in their careers.</p>
-        </div>
-        <div class="col-lg-6">
-            <h2 class="mb-4">Our Vision</h2>
-            <p>Our vision is to be the leading creative community in Africa, where creators from all industries can come together to share, learn, and collaborate. We believe in the power of creativity to change the world, and we strive to be the platform where that change begins.</p>
-        </div>
-    </div>
-</div>
+            <!-- Mission and Vision Section -->
+            <div class="mission-vision-section container py-5">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <h2 class="mb-4">Our Mission</h2>
+                        <p>Our mission is to create a supportive and collaborative environment where creators can grow
+                            and achieve their full potential. We aim to foster innovation, encourage creativity, and
+                            connect individuals to opportunities that will propel them forward in their careers.</p>
+                    </div>
+                    <div class="col-lg-6">
+                        <h2 class="mb-4">Our Vision</h2>
+                        <p>Our vision is to be the leading creative community in Africa, where creators from all
+                            industries can come together to share, learn, and collaborate. We believe in the power of
+                            creativity to change the world, and we strive to be the platform where that change begins.
+                        </p>
+                    </div>
+                </div>
+            </div>
 
-<!-- Contact and Social Media Section -->
-<div class="contact-section container py-5">
-    <h2 class="text-center mb-4">Contact Us</h2>
-    <div class="contact-info d-flex justify-content-center mb-4">
-      <div class="email me-4">
-        <h5>Email</h5>
-        <p>contact@uyocreators.com</p>
-      </div>
-      <div class="phone">
-        <h5>Phone</h5>
-        <p>+234 800 123 4567</p>
-      </div>
-    </div>
-    <div class="social-media text-center">
-      <h5 class="mb-2">Follow Us on Social Media</h5>
-      <div class="social-links d-flex flex-wrap justify-content-center">
-        <a href="https://facebook.com" target="_blank" class="btn btn-social">
-          <i class="fab fa-facebook me-2"></i> Facebook
-        </a>
-        <a href="https://twitter.com" target="_blank" class="btn btn-social">
-          <i class="fab fa-twitter me-2"></i> Twitter
-        </a>
-        <a href="https://instagram.com" target="_blank" class="btn btn-social">
-          <i class="fab fa-instagram me-2"></i> Instagram
-        </a>
-        <a href="https://linkedin.com" target="_blank" class="btn btn-social">
-          <i class="fab fa-linkedin me-2"></i> LinkedIn
-        </a>
-      </div>
-    </div>
-  </div>
+            <!-- Contact and Social Media Section -->
+            <div class="contact-section container py-5">
+                <h2 class="text-center mb-4">Contact Us</h2>
+                <div class="contact-info d-flex justify-content-center mb-4">
+                    <div class="email me-4">
+                        <h5>Email</h5>
+                        <p>contact@uyocreators.com</p>
+                    </div>
+                    <div class="phone">
+                        <h5>Phone</h5>
+                        <p>+234 800 123 4567</p>
+                    </div>
+                </div>
+                <div class="social-media text-center">
+                    <h5 class="mb-2">Follow Us on Social Media</h5>
+                    <div class="social-links d-flex flex-wrap justify-content-center">
+                        <a href="https://facebook.com" target="_blank" class="btn btn-social">
+                            <i class="fab fa-facebook me-2"></i> Facebook
+                        </a>
+                        <a href="https://twitter.com" target="_blank" class="btn btn-social">
+                            <i class="fab fa-twitter me-2"></i> Twitter
+                        </a>
+                        <a href="https://instagram.com" target="_blank" class="btn btn-social">
+                            <i class="fab fa-instagram me-2"></i> Instagram
+                        </a>
+                        <a href="https://linkedin.com" target="_blank" class="btn btn-social">
+                            <i class="fab fa-linkedin me-2"></i> LinkedIn
+                        </a>
+                    </div>
+                </div>
+            </div>
 
             <!-- End We Help Section -->
             <!-- Workshops Carousel... -->
-             <!-- Start We Help Section -->
+            <!-- Start We Help Section -->
 
         </div>
 
@@ -598,66 +640,70 @@
 
 
             <!-- Award Nominee Display Section -->
-<div id="award-nominees" class="container py-5">
-    <h2 class="text-center mb-4">Award Nominees</h2>
-    <div class="row g-4">
-        <!-- Nominee Card 1 -->
-        <div class="col-lg-3 col-md-6">
-            <div class="card nominee-card h-100 text-center" data-aos="flip-up">
-                <div class="nominee-img-wrapper">
-                    <img src="/assets/images/award/wilz.jpg" class="card-img-top nominee-img" alt="Nominee Image 1">
-                </div>
-                <div class="card-body">
-                    <h5 class="card-title">Best Digital Creator</h5>
-                    <p class="card-text">Nominee: Jane Doe</p>
-                    <a href="#" class="btn btn-outline-light">View Profile</a>
-                </div>
-            </div>
-        </div>
+            <div id="award-nominees" class="container py-5">
+                <h2 class="text-center mb-4">Award Nominees</h2>
+                <div class="row g-4">
+                    <!-- Nominee Card 1 -->
+                    <div class="col-lg-3 col-md-6">
+                        <div class="card nominee-card h-100 text-center" data-aos="flip-up">
+                            <div class="nominee-img-wrapper">
+                                <img src="/assets/images/award/wilz.jpg" class="card-img-top nominee-img"
+                                    alt="Nominee Image 1">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Best Digital Creator</h5>
+                                <p class="card-text">Nominee: Jane Doe</p>
+                                <a href="#" class="btn btn-outline-light">View Profile</a>
+                            </div>
+                        </div>
+                    </div>
 
-        <!-- Nominee Card 2 -->
-        <div class="col-lg-3 col-md-6">
-            <div class="card nominee-card h-100 text-center" data-aos="flip-up" data-aos-delay="100">
-                <div class="nominee-img-wrapper">
-                    <img src="/assets/images/award/wilz.jpg" class="card-img-top nominee-img" alt="Nominee Image 2">
-                </div>
-                <div class="card-body">
-                    <h5 class="card-title">Innovator of the Year</h5>
-                    <p class="card-text">Nominee: John Smith</p>
-                    <a href="#" class="btn btn-outline-light">View Profile</a>
-                </div>
-            </div>
-        </div>
+                    <!-- Nominee Card 2 -->
+                    <div class="col-lg-3 col-md-6">
+                        <div class="card nominee-card h-100 text-center" data-aos="flip-up" data-aos-delay="100">
+                            <div class="nominee-img-wrapper">
+                                <img src="/assets/images/award/wilz.jpg" class="card-img-top nominee-img"
+                                    alt="Nominee Image 2">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Innovator of the Year</h5>
+                                <p class="card-text">Nominee: John Smith</p>
+                                <a href="#" class="btn btn-outline-light">View Profile</a>
+                            </div>
+                        </div>
+                    </div>
 
-        <!-- Nominee Card 3 -->
-        <div class="col-lg-3 col-md-6">
-            <div class="card nominee-card h-100 text-center" data-aos="flip-up" data-aos-delay="200">
-                <div class="nominee-img-wrapper">
-                    <img src="/assets/images/award/wilz.jpg" class="card-img-top nominee-img" alt="Nominee Image 3">
-                </div>
-                <div class="card-body">
-                    <h5 class="card-title">Most Influential Creator</h5>
-                    <p class="card-text">Nominee: Alex Johnson</p>
-                    <a href="#" class="btn btn-outline-light">View Profile</a>
-                </div>
-            </div>
-        </div>
+                    <!-- Nominee Card 3 -->
+                    <div class="col-lg-3 col-md-6">
+                        <div class="card nominee-card h-100 text-center" data-aos="flip-up" data-aos-delay="200">
+                            <div class="nominee-img-wrapper">
+                                <img src="/assets/images/award/wilz.jpg" class="card-img-top nominee-img"
+                                    alt="Nominee Image 3">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Most Influential Creator</h5>
+                                <p class="card-text">Nominee: Alex Johnson</p>
+                                <a href="#" class="btn btn-outline-light">View Profile</a>
+                            </div>
+                        </div>
+                    </div>
 
-        <!-- Nominee Card 4 -->
-        <div class="col-lg-3 col-md-6">
-            <div class="card nominee-card h-100 text-center" data-aos="flip-up" data-aos-delay="300">
-                <div class="nominee-img-wrapper">
-                    <img src="/assets/images/award/wilz.jpg" class="card-img-top nominee-img" alt="Nominee Image 4">
-                </div>
-                <div class="card-body">
-                    <h5 class="card-title">Best Digital Artist</h5>
-                    <p class="card-text">Nominee: Emma Williams</p>
-                    <a href="#" class="btn btn-outline-light">View Profile</a>
+                    <!-- Nominee Card 4 -->
+                    <div class="col-lg-3 col-md-6">
+                        <div class="card nominee-card h-100 text-center" data-aos="flip-up" data-aos-delay="300">
+                            <div class="nominee-img-wrapper">
+                                <img src="/assets/images/award/wilz.jpg" class="card-img-top nominee-img"
+                                    alt="Nominee Image 4">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Best Digital Artist</h5>
+                                <p class="card-text">Nominee: Emma Williams</p>
+                                <a href="#" class="btn btn-outline-light">View Profile</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>
-</div>
         </div>
     </div>
 

@@ -744,3 +744,103 @@ footer {
 .sponsor-logo:hover {
     opacity: 1;
 }
+
+
+/* Video + Event Info Card Styling */
+#creators-week {
+    background-color: #2D2B47;
+    color: #d1d1d8;
+    padding: 40px 20px;
+    margin-top: 30px;
+  }
+  
+  .video-card {
+    border-radius: 15px;
+    overflow: hidden;
+    background-color: #ffffff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .event-info-card {
+    background-color: #343a40;
+    border-radius: 15px;
+    border: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .event-info-card h3 {
+    color: #ffffff;
+  }
+  
+  .event-info-card p {
+    color: #b3b9d4;
+  }
+  
+  .event-info-card .btn {
+    margin-top: 15px;
+  }
+  
+  /* Sponsors Section */
+  .sponsors-container {
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+  }
+  
+  .sponsors-slider {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .sponsor {
+    scroll-snap-align: center;
+    flex-shrink: 0;
+    width: 80px; /* reduced width for mobile */
+    height: auto;
+  }
+  
+  .sponsor .sponsor-logo {
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+  }
+  
+  .sponsor .sponsor-logo:hover {
+    opacity: 1;
+  }
+  
+  /* Responsive Behavior */
+  @media (max-width: 768px) {
+    .video-card, .event-info-card {
+      margin-bottom: 20px;
+    }
+  
+    .video-card {
+      order: 2;
+    }
+  
+    .event-info-card {
+      order: 1;
+    }
+  
+    .sponsors-slider {
+      gap: 10px;
+    }
+  
+    .sponsor {
+      width: 60px; /* reduced width for smaller mobile screens */
+    }
+  }
+  
+  /* Auto-scrolling sponsors */
+  .sponsors-slider {
+    animation: scroll 10s linear infinite;
+  }
+  
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
