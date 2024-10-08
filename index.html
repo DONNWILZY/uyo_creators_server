@@ -389,97 +389,424 @@
 
         </div>
 
-        <!-- Upcoming Events -->
-        <div id="events" class="content-section" style="display: none;">
-            <h2>Upcoming Events</h2>
-            <p>Featured Events</p>
-            <!-- Concerts Carousel -->
-            <div id="concertsCarousel" class="carousel slide shadow border" data-bs-ride="carousel">
-                <div class="carousel-inner">
-                    <div class="carousel-item active"
-                        style="background-image: url('/assets/images/creatorsweekone.jpg'); height: 400px; background-size: cover;">
-                        <div class="carousel-caption">
-                            <button class="btn btn-outline-light">Get Tickets</button>
-                        </div>
-                    </div>
-                    <!-- Additional carousel items... -->
-                    <div class="carousel-item active"
-                        style="background-image: url('/assets/images/creators\ week\ 4.jpg'); height: 400px; background-size: cover;">
-                        <div class="carousel-caption">
-                            <button class="btn btn-outline-light">Get Tickets</button>
-                        </div>
-                    </div>
-                    <div class="carousel-item active"
-                        style="background-image: url('/assets/images/creators\ week\ 2.jpg'); height: 400px; background-size: cover;">
-                        <div class="carousel-caption">
-                            <button class="btn btn-outline-light">Get Tickets</button>
-                        </div>
-                    </div>
+       
+<!-- Upcoming and Past Events Section -->
+<div id="events" class="content-section">
+    <div class="container py-5">
+        <h2 class="text-center mb-5">Upcoming Events</h2>
+
+        <!-- Event Cards -->
+       
+<div class="row g-4">
+    <!-- Event Card 1 -->
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="card product-card h-100" data-bs-toggle="modal" data-bs-target="#eventModal1">
+            <img src="/assets/images/Uyo_creators_club/uyo_creators_4.jpg" class="card-img-top" alt="Event Image 1">
+            <div class="card-body">
+                <h5 class="card-title">FIRST PHYSICAL MEETING</h5>
+                <p class="card-text"><strong>Sept 10-12, 2024 | 9:00 AM - 5:00 PM </strong> </p>
+                <p class="card-text"> 4 Lanes, Uyo</p>
+                <div class="price-section mt-auto">
+                    <p class="price">Free Event</p>
+                    <button class="btn btn-outline-light btn-sm">Get Tickets</button>
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#concertsCarousel"
-                    data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#concertsCarousel"
-                    data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
             </div>
+        </div>
+    </div>
 
-            <!-- Upcoming Events Section -->
-            <div id="upcoming-events" class="container py-5">
-                <h2 class="text-center mb-4">Upcoming Events</h2>
-                <div class="row g-4">
-                    <!-- Event Card 1 -->
-                    <div class="col-md-4">
-                        <div class="card event-card h-100" data-aos="fade-up">
-                            <img src="/assets/images/news/blog (3).jpeg" class="card-img-top" alt="Event Image 1">
-                            <div class="card-body">
-                                <h5 class="card-title">Creators Expo 2024</h5>
-                                <p class="card-text">Join the upcoming Creators Expo to meet industry leaders, showcase
-                                    your skills, and connect with like-minded creators.</p>
-                                <a href="#" class="btn btn-outline-light">Learn More</a>
-                            </div>
+    <!-- Event Card 2 -->
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="card product-card h-100" data-bs-toggle="modal" data-bs-target="#eventModal1">
+            <img src="/assets/images/creatorsweekone.jpg" class="card-img-top" alt="Event Image 1">
+            <div class="card-body">
+                <h5 class="card-title">UYO CREATORS WEEK: 3 DAYS EVENTS TO UNVEIL THE GROUP</h5>
+                <p class="card-text"><strong>Mar 10-12, 2024 | 9:00 AM - 5:00 PM </strong> </p>
+                <p class="card-text"> Uyo Convention Center</p>
+                <div class="price-section mt-auto">
+                    <p class="price">₦500</p>
+                    <button class="btn btn-outline-light btn-sm">Get Tickets</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+     <!-- Event Card 3 -->
+     <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="card product-card h-100" data-bs-toggle="modal" data-bs-target="#eventModal1">
+            <img src="/assets/images/creators week 4.jpg" class="card-img-top" alt="Event Image 1">
+            <div class="card-body">
+                <h5 class="card-title">UYO CREATORS WEEK: 3 DAYS EVENTS TO UNVEIL THE GROUP</h5>
+                <p class="card-text"><strong>Mar 10-12, 2024 | 9:00 AM - 5:00 PM </strong> </p>
+                <p class="card-text"> Uyo Convention Center</p>
+                <div class="price-section mt-auto">
+                    <p class="price">Free</p>
+                    <button class="btn btn-outline-light btn-sm">Get Tickets</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+     <!-- Event Card 4 -->
+     <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="card product-card h-100" data-bs-toggle="modal" data-bs-target="#eventModal1">
+            <img src="/assets/images/creators week 4.jpg" class="card-img-top" alt="Event Image 1">
+            <div class="card-body">
+                <h5 class="card-title">UYO CREATORS WEEK: 3 DAYS EVENTS TO UNVEIL THE GROUP</h5>
+                <p class="card-text"><strong>Mar 10-12, 2024 | 9:00 AM - 5:00 PM </strong> </p>
+                <p class="card-text"> Uyo Convention Center</p>
+                <div class="price-section mt-auto">
+                    <p class="price">₦3500</p>
+                    <button class="btn btn-outline-light btn-sm">Get Tickets</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- More Event Cards (Following the same structure) -->
+</div>
+
+        <!-- Modal for Event Details -->
+        <div class="modal fade" id="eventModal1" tabindex="-1" aria-labelledby="eventModalLabel1" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="eventModalLabel1">Creators Expo 2024</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <img src="https://via.placeholder.com/300" alt="Event Image">
+                        <p><strong>Date:</strong> March 10-12, 2024</p>
+                        <p><strong>Time:</strong> 9:00 AM - 5:00 PM</p>
+                        <p><strong>Venue:</strong> Uyo Convention Center</p>
+                        <h5>Event Highlights</h5>
+                        <ul>
+                            <li>Day 1: Opening Ceremony (9:00 AM - 10:00 AM)</li>
+                            <li>Speaker 1: John Doe (10:00 AM - 11:00 AM)</li>
+                            <!-- More agenda items... -->
+                        </ul>
+                        <h5>RSVP Attendees</h5>
+                        <div class="d-flex align-items-center">
+                            <div class="circle-avatar" style="background-image: url('https://via.placeholder.com/40');"></div>
+                            <div class="circle-avatar" style="background-image: url('https://via.placeholder.com/40');"></div>
+                            <div class="circle-avatar" style="background-image: url('https://via.placeholder.com/40');"></div>
+                            <!-- More attendees... -->
                         </div>
                     </div>
-
-                    <!-- Event Card 2 -->
-                    <div class="col-md-4">
-                        <div class="card event-card h-100" data-aos="fade-up" data-aos-delay="100">
-                            <img src="/assets/images/news/blog (3).jpeg" class="card-img-top" alt="Event Image 2">
-                            <div class="card-body">
-                                <h5 class="card-title">Annual Awards 2024</h5>
-                                <p class="card-text">Celebrate the achievements of the most talented creators at the
-                                    Annual Awards. Nominees will be announced soon.</p>
-                                <a href="#" class="btn btn-outline-light">Learn More</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Event Card 3 -->
-                    <div class="col-md-4">
-                        <div class="card event-card h-100" data-aos="fade-up" data-aos-delay="200">
-                            <img src="/assets/images/news/blog (3).jpeg" class="card-img-top" alt="Event Image 3">
-                            <div class="card-body">
-                                <h5 class="card-title">Digital Creators Conference</h5>
-                                <p class="card-text">Don't miss the Digital Creators Conference! Learn from the best and
-                                    take your digital creation to the next level.</p>
-                                <a href="#" class="btn btn-outline-light">Learn More</a>
-                            </div>
-                        </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Get Tickets</button>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- Membership-->
-        <div id="membership" class="content-section" style="display: none;">
-            <h2>Membership Section</h2>
-            <p>About us.</p>
-            <!-- Workshops Carousel... -->
+        
+    </div>
+</div>
+
+<!-- CSS for Styling Event Cards and Modal -->
+<style>
+    /* Event Card Styling */
+.product-card {
+    background-color: #2D2B47;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+    height: 100%;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+}
+
+.product-card img {
+    border-radius: 15px 15px 0 0;
+    height: 150px;
+    object-fit: cover;
+}
+
+.product-card .card-body {
+    padding: 15px;
+}
+
+.product-card .card-title {
+    font-size: 16px;
+    margin-bottom: 5px;
+    color: #ffffff;
+}
+
+.product-card .card-text {
+    color: #d1d1d8;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.product-card .price-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: auto;
+}
+
+.product-card .price-section .price {
+    font-size: 16px;
+    font-weight: bold;
+    color: #ff6961;
+    margin-bottom: 10px;
+}
+
+.product-card .price-section button {
+    padding: 5px 10px;
+    border-radius: 10px;
+    border: none;
+}
+
+.product-card .price-section button:first-child {
+    background-color: #4E4C68;
+    color: #ffffff;
+}
+
+.product-card .price-section button:last-child {
+    background-color: #ff6961;
+    color: #ffffff;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 576px) {
+    .product-card img {
+        height: 100px;
+    }
+
+    .product-card .card-title {
+        font-size: 14px;
+    }
+
+    .product-card .card-text {
+        font-size: 12px;
+    }
+}
+</style>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+<!-- CSS for Styling Event Cards and  -->
+
+
+        <!-- Membership Section -->
+<div id="membership" class="content-section">
+    <div class="container py-5">
+        <h2 class="text-center mb-5">Become a Member</h2>
+
+        <!-- Membership Benefits -->
+        <div class="row mb-5">
+            <div class="col-md-6">
+                <h4>Benefits of Being a Member</h4>
+                <ul>
+                    <li>Access to exclusive events and workshops</li>
+                    <li>Networking opportunities with top industry professionals</li>
+                    <li>Free resources and educational materials</li>
+                    <li>Discounts on all club-sponsored programs</li>
+                    <li>Professional recognition and awards</li>
+                </ul>
+            </div>
+            <div class="col-md-6">
+                <h4>Bylaws, Purpose, and Terms & Conditions</h4>
+                <p>As a member, you are expected to abide by our bylaws, which include:</p>
+                <ul>
+                    <li>Upholding the values of the Uyo Creators Club</li>
+                    <li>Maintaining a positive and collaborative spirit</li>
+                    <li>Adhering to ethical practices within your industry</li>
+                    <li>Participation in at least one event annually</li>
+                    <li>Payment of yearly dues</li>
+                </ul>
+                <p>
+                    <a href="#">View Full Terms & Conditions</a>
+                </p>
+            </div>
         </div>
+
+        <!-- Join Button -->
+        <div class="text-center">
+            <button class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#membershipModal">Join Now</button>
+        </div>
+
+        <!-- Membership Form Modal -->
+        <div class="modal fade" id="membershipModal" tabindex="-1" aria-labelledby="membershipModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="membershipModalLabel">Membership Signup Form</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="row">
+                                <!-- Full Name -->
+                                <div class="col-md-6 mb-3">
+                                    <label for="fullName" class="form-label">Full Name</label>
+                                    <input type="text" class="form-control" id="fullName" placeholder="Enter your full name" required>
+                                </div>
+                                <!-- Phone Number -->
+                                <div class="col-md-6 mb-3">
+                                    <label for="phoneNumber" class="form-label">Phone Number</label>
+                                    <input type="text" class="form-control" id="phoneNumber" placeholder="Enter your phone number" required>
+                                </div>
+                                <!-- Email Address -->
+                                <div class="col-md-6 mb-3">
+                                    <label for="emailAddress" class="form-label">Email Address</label>
+                                    <input type="email" class="form-control" id="emailAddress" placeholder="Enter your email" required>
+                                </div>
+                                <!-- Area of Specialty -->
+                                <div class="col-md-6 mb-3">
+                                    <label for="specialty" class="form-label">Area of Specialty</label>
+                                    <input type="text" class="form-control" id="specialty" placeholder="Your area of expertise" required>
+                                </div>
+                                <!-- Brand Name -->
+                                <div class="col-md-6 mb-3">
+                                    <label for="brandName" class="form-label">Brand Name</label>
+                                    <input type="text" class="form-control" id="brandName" placeholder="Enter your brand name">
+                                </div>
+                                <!-- Gender Identification -->
+                                <div class="col-md-6 mb-3">
+                                    <label for="gender" class="form-label">Gender Identification</label>
+                                    <select id="gender" class="form-select">
+                                        <option selected>Select...</option>
+                                        <option value="male">Male</option>
+                                        <option value="female">Female</option>
+                                        <option value="non-binary">Non-binary</option>
+                                        <option value="prefer-not-to-say">Prefer not to say</option>
+                                    </select>
+                                </div>
+                                <!-- Headshot Upload -->
+                                <div class="col-md-6 mb-3">
+                                    <label for="headshot" class="form-label">Headshot (Upload)</label>
+                                    <input type="file" class="form-control" id="headshot">
+                                </div>
+                                <!-- City -->
+                                <div class="col-md-6 mb-3">
+                                    <label for="city" class="form-label">City</label>
+                                    <input type="text" class="form-control" id="city" placeholder="Enter your city">
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <!-- Social Media Handles -->
+                                <div class="col-md-6 mb-3">
+                                    <label for="facebookHandle" class="form-label">Facebook Handle</label>
+                                    <input type="text" class="form-control" id="facebookHandle" placeholder="Facebook profile link">
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="tiktokHandle" class="form-label">TikTok Handle</label>
+                                    <input type="text" class="form-control" id="tiktokHandle" placeholder="TikTok profile link">
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="instagramHandle" class="form-label">Instagram Handle</label>
+                                    <input type="text" class="form-control" id="instagramHandle" placeholder="Instagram profile link">
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="twitterHandle" class="form-label">Twitter Handle</label>
+                                    <input type="text" class="form-control" id="twitterHandle" placeholder="Twitter profile link">
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="linkedInHandle" class="form-label">LinkedIn Handle</label>
+                                    <input type="text" class="form-control" id="linkedInHandle" placeholder="LinkedIn profile link">
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="website" class="form-label">Website</label>
+                                    <input type="url" class="form-control" id="website" placeholder="Your website URL">
+                                </div>
+                                <!-- Additional Information -->
+                                <div class="col-12 mb-3">
+                                    <label for="additionalInfo" class="form-label">Additional Information</label>
+                                    <textarea class="form-control" id="additionalInfo" rows="3" placeholder="Tell us anything else we should know"></textarea>
+                                </div>
+                            </div>
+
+                            <!-- Submit Button -->
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-primary">Submit Application</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- CSS Styling -->
+<style>
+    #membership {
+        background-color: #1D1B34;
+        color: #ffffff;
+        padding: 40px 20px;
+    }
+
+    h4 {
+        color: #d1d1d8;
+    }
+
+    ul {
+        padding-left: 20px;
+    }
+
+    ul li {
+        margin-bottom: 10px;
+        color: #f0f0f0;
+    }
+
+    .btn-outline-light {
+        border-color: #ffffff;
+        color: #ffffff;
+        transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .btn-outline-light:hover {
+        background-color: #ffffff;
+        color: #1D1B34;
+    }
+
+    .modal-content {
+        background-color: #2D2B47;
+        color: #ffffff;
+        border-radius: 15px;
+    }
+
+    .form-label {
+        color: #ffffff;
+    }
+
+    .form-control, .form-select {
+        background-color: #3C3B55;
+        color: #ffffff;
+        border: none;
+    }
+
+    .form-control::placeholder {
+        color: #d1d1d8;
+    }
+
+    .btn-primary {
+        background-color: #4E4C68;
+        border: none;
+    }
+
+    .btn-primary:hover {
+        background-color: #ff6961;
+    }
+
+    .btn-close {
+        filter: invert(100%);
+    }
+</style>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
 
 
 

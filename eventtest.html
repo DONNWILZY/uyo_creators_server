@@ -1,0 +1,198 @@
+<!-- Upcoming and Past Events Section -->
+<div id="events" class="content-section">
+    <div class="container py-5">
+        <h2 class="text-center mb-5">Upcoming Events</h2>
+
+        <!-- Event Cards -->
+        <div class="row g-4">
+            <!-- Event Card 1 -->
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="card event-card h-100" data-bs-toggle="modal" data-bs-target="#eventModal1">
+                    <img src="https://via.placeholder.com/300" class="card-img-top" alt="Event Image 1">
+                    <div class="card-body">
+                        <h3 class="card-title">Creators Expo 2024</h3>
+                        <div class="d-flex justify-content-between">
+                            <span> Mar 10-12, 2024 |9:00 AM </span>
+                            
+                        </div>
+                        <p class="venue"><small>Venue: Uyo Convention Center</small></p>
+                        <p class="price">Ticket Price: $50</p>
+                        <button class="btn btn-outline-light btn-sm">Get Tickets</button>
+                        <div class="d-flex justify-content-between mt-2">
+                            <button class="btn btn-outline-light btn-sm"><i class="fas fa-share"></i> </button>
+                            <button class="btn btn-outline-light btn-sm"><i class="fas fa-heart"></i> </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Repeat similar cards for other events... -->
+        </div>
+
+        <!-- Modal for Event Details -->
+        <div class="modal fade" id="eventModal1" tabindex="-1" aria-labelledby="eventModalLabel1" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="eventModalLabel1">Creators Expo 2024</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- Event Details -->
+                        <p><strong>Date:</strong> March 10-12, 2024</p>
+                        <p><strong>Time:</strong> 9:00 AM - 5:00 PM</p>
+                        <p><strong>Type:</strong> Onsite</p>
+                        <p><strong>Venue:</strong> Uyo Convention Center</p>
+                        <h5>Event Highlights</h5>
+                        <p>Keynote Speakers, Panel Discussions, Workshops, and Networking Opportunities.</p>
+
+                        <!-- Speakers Section -->
+                        <h5>Speakers</h5>
+                        <div class="row g-3">
+                            <div class="col-6 col-md-4">
+                                <div class="circle-avatar" style="background-image: url('https://via.placeholder.com/100');"></div>
+                                <p class="text-center">John Doe - Topic: Digital Transformation</p>
+                            </div>
+                            <div class="col-6 col-md-4">
+                                <div class="circle-avatar" style="background-image: url('https://via.placeholder.com/100');"></div>
+                                <p class="text-center">Jane Smith - Topic: Social Media Marketing</p>
+                            </div>
+                            <!-- Add more speakers as necessary -->
+                        </div>
+
+                        <!-- Organizing Team -->
+                        <h5 class="mt-4">Organizing Team</h5>
+                        <div class="row g-2">
+                            <div class="col-4 col-md-2">
+                                <div class="circle-avatar" style="background-image: url('https://via.placeholder.com/100');"></div>
+                                <p class="text-center">Alex - Organizer</p>
+                            </div>
+                            <div class="col-4 col-md-2">
+                                <div class="circle-avatar" style="background-image: url('https://via.placeholder.com/100');"></div>
+                                <p class="text-center">Chris - Coordinator</p>
+                            </div>
+                            <!-- Add more team members -->
+                        </div>
+
+                        <!-- RSVP Attendees -->
+                        <h5 class="mt-4">RSVP Attendees (350+)</h5>
+                        <div class="d-flex">
+                            <div class="circle-avatar overlap" style="background-image: url('https://via.placeholder.com/40');"></div>
+                            <div class="circle-avatar overlap" style="background-image: url('https://via.placeholder.com/40');"></div>
+                            <div class="circle-avatar overlap" style="background-image: url('https://via.placeholder.com/40');"></div>
+                            <!-- Add more attendee avatars -->
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Get Tickets</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- CSS Styling -->
+<style>
+    /* Event Card Styling */
+    .event-card {
+        background-color: #2D2B47;
+        color: #ffffff;
+        border: none;
+        border-radius: 20px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s ease-in-out;
+        height: 100%;
+        overflow: hidden;
+    }
+
+    .event-card:hover {
+        transform: translateY(-10px);
+    }
+
+    .event-card .card-body {
+        padding: 15px;
+    }
+
+    .event-card h3 {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    .event-card .venue {
+        margin-top: 5px;
+        font-size: 13px;
+    }
+
+    .event-card .price {
+        margin-top: 5px;
+        font-size: 14px;
+    }
+
+    .btn-outline-light {
+        margin-right: 5px;
+        transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .btn-outline-light:hover {
+        background-color: #ffffff;
+        color: #2D2B47;
+    }
+
+    /* Modal Styling */
+    .modal-content {
+        background-color: #2D2B47;
+        color: #ffffff;
+        border-radius: 20px;
+        border: none;
+    }
+
+    .modal-header .btn-close {
+        filter: invert(100%);
+    }
+
+    .modal-title {
+        font-size: 24px;
+    }
+
+    /* Avatar Styling */
+    .circle-avatar {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background-size: cover;
+        background-position: center;
+        margin: 0 auto;
+    }
+
+    .overlap {
+        position: relative;
+        margin-right: -10px;
+    }
+
+    .modal-footer .btn-primary {
+        background-color: #4E4C68;
+        border: none;
+        border-radius: 10px;
+    }
+
+    .modal-footer .btn-primary:hover {
+        background-color: #ff6961;
+    }
+
+    /* Responsive Adjustments */
+    @media (max-width: 768px) {
+        .event-card {
+            margin-bottom: 20px;
+        }
+
+        .circle-avatar {
+            width: 80px;
+            height: 80px;
+        }
+    }
+</style>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
