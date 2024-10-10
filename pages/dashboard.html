@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+
+    <style>
+        /* General Styling */
+        body {
+            background-color: #1D1B34;
+            color: white;
+            font-family: 'Trebuchet MS', Arial, sans-serif;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            background-color: #2D2B47;
+            height: 100vh;
+            width: 250px;
+            position: fixed;
+            top: 0;
+            left: -250px;
+            z-index: 1000;
+            transition: all 0.3s ease;
+            padding-top: 20px;
+        }
+
+        .sidebar.open {
+            left: 0;
+        }
+
+        .sidebar a {
+            padding: 15px 25px;
+            display: block;
+            text-decoration: none;
+            color: #d1d1d8;
+            transition: background-color 0.3s;
+        }
+
+        .sidebar a:hover {
+            background-color: #495057;
+            color: white;
+        }
+
+        .toggle-btn {
+            font-size: 30px;
+            cursor: pointer;
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            color: #fff;
+            z-index: 1100;
+        }
+
+        /* Header / Navbar */
+        .navbar {
+            background-color: #2D2B47;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .navbar .navbar-brand img {
+            width: 35px;
+            margin-right: 10px;
+        }
+
+        .navbar .navbar-right {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .navbar .navbar-right img {
+            width: 35px;
+            border-radius: 50%;
+        }
+
+        .main-content {
+            margin-left: 250px;
+            padding: 60px 20px 20px;
+            transition: all 0.3s ease;
+        }
+
+        /* Sidebar Logout and Notification for Mobile */
+        .sidebar-logout {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+        }
+
+        /* Badges */
+        .badges {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+
+        .badge-verification, .badge-membership {
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 12px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .badge-verification {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        .badge-membership {
+            background-color: #FFA500;
+            color: white;
+        }
+
+        /* Profile Page Avatar on Mobile */
+        .mobile-profile-info {
+            display: none;
+            background-color: #22223A;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .mobile-profile-info img {
+            width: 50px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+
+        .mobile-profile-info h5 {
+            margin: 0;
+            font-size: 16px;
+        }
+
+        /* Responsive Styling */
+        @media (max-width: 768px) {
+            .main-content {
+                margin-left: 0;
+            }
+
+            .toggle-btn {
+                display: block;
+                top: 20px;
+                left: 10px;
+            }
+
+            .navbar .navbar-brand {
+                display: flex;
+                align-items: center;
+                gap: 5px;
+            }
+
+            .navbar .navbar-right img {
+                width: 30px;
+            }
+
+            /* Show Mobile Profile Info */
+            .mobile-profile-info {
+                display: block;
+            }
+
+            .sidebar-logout {
+                left: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar with Toggle, Logo, Notifications, and Logout -->
+    <div class="navbar">
+        <span class="toggle-btn" onclick="toggleSidebar()"><i class="fas fa-bars"></i></span>
+        <div class="navbar-brand">
+            <img src="https://via.placeholder.com/35" alt="Logo"> 
+            <span>Dashboard</span>
+        </div>
+        <div class="navbar-right">
+            <i class="fas fa-bell"></i>
+            <i class="fas fa-sign-out-alt"></i>
+            <img src="https://via.placeholder.com/35" alt="User Avatar">
+        </div>
+    </div>
+
+    <!-- Sidebar Navigation -->
+    <div id="sidebar" class="sidebar">
+        <a href="#profile" onclick="showSection('profile')"><i class="fas fa-user"></i> Profile</a>
+        <a href="#profile" onclick="showSection('feed')"><i class="fas fa-user"></i> Feed</a>
+        <a href="#events" onclick="showSection('events')"><i class="fas fa-calendar"></i> Events</a>
+        <a href="#shop" onclick="showSection('shop')"><i class="fas fa-shopping-cart"></i> Shop</a>
+        <a href="#content" onclick="showSection('content')"><i class="fas fa-video"></i> Content</a>
+        <a href="#membership" onclick="showSection('membership')"><i class="fas fa-users"></i> Membership</a>
+        <a href="#media" onclick="showSection('media')"><i class="fas fa-photo-video"></i> Media</a>
+        <a href="#settings" onclick="showSection('settings')"><i class="fas fa-cog"></i> Settings</a>
+        <div class="sidebar-logout">
+            <a href="#logout"><i class="fas fa-sign-out-alt"></i> Logout</a>
+        </div>
+    </div>
+
+    <!-- Main Content Area -->
+    <div id="main-content" class="main-content">
+        <!-- Profile Section on Default -->
+        <div id="profile" class="content-section">
+            <div class="mobile-profile-info">
+                <img src="https://via.placeholder.com/50" alt="User Avatar">
+                <h5>John Doe</h5>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="card">
+                            <img src="https://via.placeholder.com/300" alt="Profile Image">
+                            <div class="card-body">
+                                <div class="badges">
+                                    <span class="badge-verification"><i class="fas fa-check"></i> Verified</span>
+                                    <span class="badge-membership"><i class="fas fa-id-card"></i> Member</span>
+                                </div>
+                                <h5 class="card-title">John Doe</h5>
+                                <p>Brand Name: Doe Creations</p>
+                                <p>Specialty: Digital Art</p>
+                                <p>Social Media: @doecreator</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-8">
+                        <div class="widget-box">
+                            <h4>Profile Overview</h4>
+                            <p>Full Name: John Doe</p>
+                            <p>Phone: (123) 456-7890</p>
+                            <p>Email: john.doe@example.com</p>
+                            <p>Area of Specialty: Digital Art</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+         <!-- feed Section -->
+         <div id="feed" class="content-section" style="display: none;">
+            <div class="dashboard-header">
+                <h2>News Feed</h2>
+            </div>
+            <div class="container">
+                <!-- Event Cards -->
+            </div>
+        </div>
+
+        <!-- Events Section -->
+        <div id="events" class="content-section" style="display: none;">
+            <div class="dashboard-header">
+                <h2>Upcoming Events</h2>
+            </div>
+            <div class="container">
+                <!-- Event Cards -->
+            </div>
+        </div>
+
+        <!-- Shop Section -->
+        <div id="shop" class="content-section" style="display: none;">
+            <div class="dashboard-header">
+                 <h2> Shop</h2>
+                </div>
+                <div class="container">
+                    <!-- Shop Cards -->
+                    <div class="row g-4">
+                        <!-- Shop Item 1 -->
+                        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                            <div class="card product-card h-100">
+                                <img src="https://via.placeholder.com/300" class="card-img-top" alt="Product Image 1">
+                                <div class="card-body">
+                                    <h5 class="card-title">Product 1</h5>
+                                    <p class="card-text">A brief description of the product goes here.</p>
+                                    <div class="price-section">
+                                        <span class="price">$30</span>
+                                        <span class="price-slash">$40</span>
+                                    </div>
+                                    <button class="btn btn-outline-light btn-sm">Add to Cart</button>
+                                    <button class="btn btn-outline-light btn-sm">Add to Favorites</button>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <!-- Shop Item 2 -->
+                        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                            <div class="card product-card h-100">
+                                <img src="https://via.placeholder.com/300" class="card-img-top" alt="Product Image 2">
+                                <div class="card-body">
+                                    <h5 class="card-title">Product 2</h5>
+                                    <p class="card-text">A brief description of the product goes here.</p>
+                                    <div class="price-section">
+                                        <span class="price">$25</span>
+                                        <span class="price-slash">$35</span>
+                                    </div>
+                                    <button class="btn btn-outline-light btn-sm">Add to Cart</button>
+                                    <button class="btn btn-outline-light btn-sm">Add to Favorites</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Add more shop items here... -->
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Content Section -->
+            <div id="content" class="content-section" style="display: none;">
+                <div class="dashboard-header">
+                    <h2>Video Content</h2>
+                </div>
+                <div class="container">
+                    <!-- Video Cards -->
+                    <div class="row g-4">
+                        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <h5 class="card-title">Video 1</h5>
+                                    <iframe width="100%" height="150" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
+                                    <p class="card-text mt-2">A short description of the video.</p>
+                                    <button class="btn btn-outline-light btn-sm">Save to Playlist</button>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <!-- Add more video cards here... -->
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Membership Section -->
+            <div id="membership" class="content-section" style="display: none;">
+                <div class="dashboard-header">
+                    <h2>Membership</h2>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <div class="widget-box">
+                                <h4>Become a Member</h4>
+                                <p>Fill out the form below to join the club.</p>
+                                <form>
+                                    <div class="mb-3">
+                                        <label for="fullName" class="form-label">Full Name</label>
+                                        <input type="text" class="form-control" id="fullName" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="email" class="form-label">Email Address</label>
+                                        <input type="email" class="form-control" id="email" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="phone" class="form-label">Phone Number</label>
+                                        <input type="tel" class="form-control" id="phone" required>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary">Join Now</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Media Section -->
+            <div id="media" class="content-section" style="display: none;">
+                <div class="dashboard-header">
+                    <h2>Media Gallery</h2>
+                </div>
+                <div class="container">
+                    <div class="row g-4">
+                        <!-- Media Item 1 -->
+                        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                            <div class="card h-100">
+                                <img src="https://via.placeholder.com/300" class="card-img-top" alt="Media Image 1">
+                                <div class="card-body">
+                                    <h5 class="card-title">Gallery Image 1</h5>
+                                    <p class="card-text">Description of the image.</p>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <!-- Media Item 2 -->
+                        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                            <div class="card h-100">
+                                <img src="https://via.placeholder.com/300" class="card-img-top" alt="Media Image 2">
+                                <div class="card-body">
+                                    <h5 class="card-title">Gallery Image 2</h5>
+                                    <p class="card-text">Description of the image.</p>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <!-- Add more media items here... -->
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Settings Section -->
+            <div id="settings" class="content-section" style="display: none;">
+                <div class="dashboard-header">
+                    <h2>Settings</h2>
+                </div>
+                <div class="container">
+                    <div class="widget-box">
+                        <h4>Account Settings</h4>
+                        <form>
+                            <div class="mb-3">
+                                <label for="username" class="form-label">Username</label>
+                                <input type="text" class="form-control" id="username" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email Address</label>
+                                <input type="email" class="form-control" id="email" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="password" class="form-label">New Password</label>
+                                <input type="password" class="form-control" id="password" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Save Changes</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Feedback Section -->
+            <div id="feedback" class="content-section" style="display: none;">
+                <div class="dashboard-header">
+                    <h2>Feedback</h2>
+                </div>
+                <div class="container">
+                    <div class="widget-box">
+                        <h4>Leave Your Feedback</h4>
+                        <form>
+                            <div class="mb-3">
+                                <label for="feedbackMessage" class="form-label">Your Message</label>
+                                <textarea class="form-control" id="feedbackMessage" rows="4"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <!-- JavaScript -->
+        <script>
+            function toggleSidebar() {
+                document.getElementById('sidebar').classList.toggle('open');
+            }
+    
+            function showSection(sectionId) {
+                document.querySelectorAll('.content-section').forEach(section => section.style.display = 'none');
+                document.getElementById(sectionId).style.display = 'block';
+            }
+    
+            // Show profile section by default
+            document.addEventListener("DOMContentLoaded", function() {
+                showSection('profile');
+            });
+        </script>
+    
+        <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+        <script>
+            AOS.init();
+        </script>
+    
+    </body>
+    
+    </html>
+    
