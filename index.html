@@ -36,8 +36,9 @@
 
             </div>
 
-            <a href="pages/auth.html">
-                <button class="btn btn-outline-light">Get Started</button>
+            <!-- Login Button -->
+            <a id="login-btn" href="pages/auth.html">
+                <button class="btn btn-outline-light">Login</button>
             </a>
             <!-- <button class="btn btn-outline-light d-lg-none">Get Started</button> -->
             <span class="mobile-menu-toggle d-lg-none" onclick="toggleSidebar()">☰</span>
@@ -49,6 +50,7 @@
         <span class="close-btn d-lg-none" onclick="toggleSidebar()">×</span>
         <a href="#" onclick="showSection('events')">Upcoming events</a>
         <a href="#" onclick="showSection('membership')">Membership</a>
+        <a id="dashboard-link" style="display:none" href="dashboard.html">Dashboard</a>
         <a href="#" onclick="showSection('contents')">Content</a>
         <a href="#" onclick="showSection('shop')">Shop</a>
         <a href="#" onclick="showSection('about')">About</a>
@@ -389,497 +391,462 @@
 
         </div>
 
-       
-<!-- Upcoming and Past Events Section -->
-<div id="events" class="content-section">
-    <div class="container py-5">
-        <h2 class="text-center mb-5">Upcoming Events</h2>
 
-        <!-- Event Cards -->
-       
-<!-- Event Cards -->
-<div class="row g-4">
-    <!-- Event Card 1 -->
-    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-        <div class="event-card h-100" data-bs-toggle="modal" data-bs-target="#eventModal1">
-            <img src="/assets/images/creators week 4.jpg" alt="Event Image 1">
-            <div class="card-body">
-                <h5 class="card-title">UYO CREATORS WEEK: 3 DAYS EVENTS TO UNVEIL THE GROUP</h5>
-                <p class="card-text"><strong>Mar 10-12, 2024 | 9:00 AM - 5:00 PM </strong> </p>
-                <p class="card-text"> Uyo Convention Center</p>
-                <div class="price-section mt-auto">
-                    <p class="price">₦500</p>
-                    <button class="btn btn-primary">Get Tickets</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Event Card 2 -->
-    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-        <div class="event-card h-100" data-bs-toggle="modal" data-bs-target="#eventModal1">
-            <img src="assets/images/creatorsweekone.jpg" alt="Event Image 1">
-            <div class="card-body">
-                <h5 class="card-title">UYO CREATORS WEEK: 3 DAYS EVENTS TO UNVEIL THE GROUP</h5>
-                <p class="card-text"><strong>Mar 10-12, 2024 | 9:00 AM - 5:00 PM </strong> </p>
-                <p class="card-text"> Uyo Convention Center</p>
-                <div class="price-section mt-auto">
-                    <p class="price">Free Event</p>
-                    <button class="btn btn-primary">Get Tickets</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- More Event Cards (Following the same structure) -->
-</div>
-
-       <!-- Modal for Event Details -->
-<div class="modal fade" id="eventModal1" tabindex="-1" aria-labelledby="eventModalLabel1" aria-hidden="true">
-    <div class="modal-dialog modal-lg" role="document" aria-describedby="eventModalDesc1">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="eventModalLabel1">Creators Expo 2024</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <img src="/assets/images/Uyo_creators_club/uyo_creAtor_07.jpg" alt="Creators Expo 2024 Event Image">
-                <dl>
-                    <dt>Date:</dt>
-                    <dd>March 10-12, 2024</dd>
-                    <dt>Time:</dt>
-                    <dd>9:00 AM - 5:00 PM</dd>
-                    <dt>Venue:</dt>
-                    <dd>Uyo Convention Center</dd>
-                </dl>
-                <h5>Event Highlights</h5>
-                <ul>
-                    <li>Day 1: Opening Ceremony (9:00 AM - 10:00 AM)</li>
-                    <li>Speaker 1: John Doe (10:00 AM - 11:00 AM)</li>
-                    <!-- More agenda items... -->
-                </ul>
-                <h5>RSVP Attendees</h5>
-<div class="rsvp-avatars d-flex align-items-center">
-    <div class="circle-avatar"> 
-        <img src="https://via.placeholder.com/40"  alt="Attendee 1">
-    </div>
-
-    <div class="circle-avatar">
-        <img src="https://via.placeholder.com/40" alt="Attendee 2">
-    </div>
-
-    <div class="circle-avatar">
-        <img src="https://via.placeholder.com/40" class="" alt="Attendee 3">
-    </div>
-    
-    <!-- More attendees... -->
-    <span class="attendees-count">+5</span>
-</div>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" role="button">Close</button>
-                <button type="button" class="btn btn-primary" role="button">Get Tickets</button>
-            </div>
-        </div>
-    </div>
-</div>
-
-        
-    </div>
-</div>
-
-<!-- CSS for Styling Event Cards and Modal -->
-<style>
-    /* Event Card Styling */
-.event-card {
-    background-color: #2D2B47;
-    border: none;
-    border-radius: 15px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease-in-out;
-    height: 100%;
-}
-
-.event-card:hover {
-    transform: translateY(-10px);
-}
-
-.event-card img {
-    border-radius: 15px 15px 0 0;
-    height: 200px;
-    width: 100%;
-    object-fit: cover;
-}
-
-.event-card .card-body {
-    padding: 15px;
-}
-
-.event-card .card-title {
-    font-size: 16px;
-    margin-bottom: 5px;
-    color: #ffffff;
-}
-
-.event-card .card-text {
-    color: #d1d1d8;
-    font-size: 14px;
-    margin-bottom: 5px;
-}
-
-.event-card .price-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-top: auto;
-}
-
-.event-card .price-section .price {
-    font-size: 16px;
-    font-weight: bold;
-    color: #ff6961;
-    margin-bottom: 10px;
-}
-
-.event-card .price-section button {
-    padding: 5px 10px;
-    border-radius: 10px;
-    border: none;
-}
-
-.event-card .price-section button:first-child {
-    background-color: #4E4C68;
-    color: #ffffff;
-}
-
-.event-card .price-section button:last-child {
-    background-color: #ff6961;
-    color: #ffffff;
-}
-
-/* Modal Styling */
-.modal-content {
-    background-color: #f7f7f7;
-    color: #333;
-    border-radius: 10px;
-    border: none;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.modal-header .btn-close {
-    filter: invert(100%);
-}
-
-.modal-title {
-    font-size: 20px;
-    color: #333;
-}
-
-.modal-body img {
-    width: 100%;
-    border-radius: 10px;
-    margin-bottom: 20px;
-}
-
-.modal-body p,
-.modal-body ul {
-    color: #666;
-}
-
-/* RSVP Section Styling */
-.rsvp-avatars {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-}
-
-.circle-avatar {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    overflow: hidden;
-    margin-right: -15px; 
-    border: 2px solid #fff;
-}
-
-.circle-avatar img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.attendees-count {
-    font-size: 16px;
-    color: #666;
-    margin-left: 10px;
-}
-
-.modal-footer .btn {
-    border: none;
-    border-radius: 5px;
-    padding: 10px 20px;
-    font-size: 14px;
-    cursor: pointer;
-}
-
-.modal-footer .btn-primary {
-    background-color: #4CAF50;
-    color: #fff;
-}
-
-/* Mobile Adjustments */
-@media (max-width: 768px) {
-    .event-card {
-        margin-bottom: 20px;
-    }
-
-    .event-card img {
-        height: 100px;
-    }
-
-    .event-card .card-title {
-        font-size: 14px;
-    }
-
-    .event-card .card-text {
-        font-size: 12px;
-    }
-}
-
-@media (max-width: 576px) {
-    .event-card img {
-        height: 100px;
-    }
-
-    .event-card .card-title {
-        font-size: 14px;
-    }
-
-    .event-card .card-text {
-        font-size: 12px;
-    }
-}
-</style>
-
-<!-- Bootstrap JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-
-
-<!-- CSS for Styling Event Cards and  -->
-
-
-        <!-- Membership Section -->
-<div id="membership" class="content-section">
-    <div class="container py-5">
-        <h2 class="text-center mb-5">Become a Member</h2>
-
-        <!-- Membership Benefits -->
-        <div class="row mb-5">
-            <div class="col-md-6">
-                <h4>Benefits of Being a Member</h4>
-                <ul>
-                    <li>Access to exclusive events and workshops</li>
-                    <li>Networking opportunities with top industry professionals</li>
-                    <li>Free resources and educational materials</li>
-                    <li>Discounts on all club-sponsored programs</li>
-                    <li>Professional recognition and awards</li>
-                </ul>
-            </div>
-            <div class="col-md-6">
-                <h4>Bylaws, Purpose, and Terms & Conditions</h4>
-                <p>As a member, you are expected to abide by our bylaws, which include:</p>
-                <ul>
-                    <li>Upholding the values of the Uyo Creators Club</li>
-                    <li>Maintaining a positive and collaborative spirit</li>
-                    <li>Adhering to ethical practices within your industry</li>
-                    <li>Participation in at least one event annually</li>
-                    <li>Payment of yearly dues</li>
-                </ul>
-                <p>
-                    <a href="#">View Full Terms & Conditions</a>
-                </p>
+        <!-- Upcoming and Past Events Section -->
+        <!-- Events Section -->
+        <div id="events" class="content-section">
+            <div class="container py-5">
+                <h2 class="text-center mb-5">Upcoming Events</h2>
+                <div id="event-list" class="row g-4"></div> <!-- Events will be populated here -->
             </div>
         </div>
 
-        <!-- Join Button -->
-        <div class="text-center">
-            <button class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#membershipModal">Join Now</button>
-        </div>
-
-        <!-- Membership Form Modal -->
-        <div class="modal fade" id="membershipModal" tabindex="-1" aria-labelledby="membershipModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-lg">
+        <!-- Modal for Event Details -->
+        <div class="modal fade" id="eventModal" tabindex="-1" aria-labelledby="eventModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg" role="document" aria-describedby="eventModalDesc">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="membershipModalLabel">Membership Signup Form</h5>
+                        <h5 class="modal-title" id="eventModalLabel">Event Details</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        <form>
-                            <div class="row">
-                                <!-- Full Name -->
-                                <div class="col-md-6 mb-3">
-                                    <label for="fullName" class="form-label">Full Name</label>
-                                    <input type="text" class="form-control" id="fullName" placeholder="Enter your full name" required>
-                                </div>
-                                <!-- Phone Number -->
-                                <div class="col-md-6 mb-3">
-                                    <label for="phoneNumber" class="form-label">Phone Number</label>
-                                    <input type="text" class="form-control" id="phoneNumber" placeholder="Enter your phone number" required>
-                                </div>
-                                <!-- Email Address -->
-                                <div class="col-md-6 mb-3">
-                                    <label for="emailAddress" class="form-label">Email Address</label>
-                                    <input type="email" class="form-control" id="emailAddress" placeholder="Enter your email" required>
-                                </div>
-                                <!-- Area of Specialty -->
-                                <div class="col-md-6 mb-3">
-                                    <label for="specialty" class="form-label">Area of Specialty</label>
-                                    <input type="text" class="form-control" id="specialty" placeholder="Your area of expertise" required>
-                                </div>
-                                <!-- Brand Name -->
-                                <div class="col-md-6 mb-3">
-                                    <label for="brandName" class="form-label">Brand Name</label>
-                                    <input type="text" class="form-control" id="brandName" placeholder="Enter your brand name">
-                                </div>
-                                <!-- Gender Identification -->
-                                <div class="col-md-6 mb-3">
-                                    <label for="gender" class="form-label">Gender Identification</label>
-                                    <select id="gender" class="form-select">
-                                        <option selected>Select...</option>
-                                        <option value="male">Male</option>
-                                        <option value="female">Female</option>
-                                        <option value="non-binary">Non-binary</option>
-                                        <option value="prefer-not-to-say">Prefer not to say</option>
-                                    </select>
-                                </div>
-                                <!-- Headshot Upload -->
-                                <div class="col-md-6 mb-3">
-                                    <label for="headshot" class="form-label">Headshot (Upload)</label>
-                                    <input type="file" class="form-control" id="headshot">
-                                </div>
-                                <!-- City -->
-                                <div class="col-md-6 mb-3">
-                                    <label for="city" class="form-label">City</label>
-                                    <input type="text" class="form-control" id="city" placeholder="Enter your city">
-                                </div>
-                            </div>
-
-                            <div class="row">
-                                <!-- Social Media Handles -->
-                                <div class="col-md-6 mb-3">
-                                    <label for="facebookHandle" class="form-label">Facebook Handle</label>
-                                    <input type="text" class="form-control" id="facebookHandle" placeholder="Facebook profile link">
-                                </div>
-                                <div class="col-md-6 mb-3">
-                                    <label for="tiktokHandle" class="form-label">TikTok Handle</label>
-                                    <input type="text" class="form-control" id="tiktokHandle" placeholder="TikTok profile link">
-                                </div>
-                                <div class="col-md-6 mb-3">
-                                    <label for="instagramHandle" class="form-label">Instagram Handle</label>
-                                    <input type="text" class="form-control" id="instagramHandle" placeholder="Instagram profile link">
-                                </div>
-                                <div class="col-md-6 mb-3">
-                                    <label for="twitterHandle" class="form-label">Twitter Handle</label>
-                                    <input type="text" class="form-control" id="twitterHandle" placeholder="Twitter profile link">
-                                </div>
-                                <div class="col-md-6 mb-3">
-                                    <label for="linkedInHandle" class="form-label">LinkedIn Handle</label>
-                                    <input type="text" class="form-control" id="linkedInHandle" placeholder="LinkedIn profile link">
-                                </div>
-                                <div class="col-md-6 mb-3">
-                                    <label for="website" class="form-label">Website</label>
-                                    <input type="url" class="form-control" id="website" placeholder="Your website URL">
-                                </div>
-                                <!-- Additional Information -->
-                                <div class="col-12 mb-3">
-                                    <label for="additionalInfo" class="form-label">Additional Information</label>
-                                    <textarea class="form-control" id="additionalInfo" rows="3" placeholder="Tell us anything else we should know"></textarea>
-                                </div>
-                            </div>
-
-                            <!-- Submit Button -->
-                            <div class="text-center">
-                                <button type="submit" class="btn btn-primary">Submit Application</button>
-                            </div>
-                        </form>
+                        <img src="" alt="Event Image" id="event-image" class="img-fluid mb-3">
+                        <dl>
+                            <dt>Date:</dt>
+                            <dd id="event-date">N/A</dd>
+                            <dt>Time:</dt>
+                            <dd id="event-time">N/A</dd>
+                            <dt>Venue:</dt>
+                            <dd id="event-venue">N/A</dd>
+                            <dt>Description:</dt>
+                            <dd id="event-description">N/A</dd>
+                            <dt>Price:</dt>
+                            <dd id="event-price">N/A</dd>
+                        </dl>
+                        <h5>RSVP Attendees</h5>
+                        <div id="attendee-list" class="d-flex align-items-center"></div>
+                        <!-- Attendees will be shown here -->
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary" id="book-event-btn">Get Tickets</button>
+                        <!-- Booking Button -->
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</div>
 
-<!-- CSS Styling -->
-<style>
-    #membership {
-        background-color: #1D1B34;
-        color: #ffffff;
-        padding: 40px 20px;
-    }
 
-    h4 {
-        color: #d1d1d8;
-    }
+        <!-- CSS for Styling Event Cards and Modal -->
+        <style>
+            /* Event Card Styling */
+            .event-card {
+                background-color: #2D2B47;
+                border: none;
+                border-radius: 15px;
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+                transition: transform 0.3s ease-in-out;
+                height: 100%;
+            }
 
-    ul {
-        padding-left: 20px;
-    }
+            .event-card:hover {
+                transform: translateY(-10px);
+            }
 
-    ul li {
-        margin-bottom: 10px;
-        color: #f0f0f0;
-    }
+            .event-card img {
+                border-radius: 15px 15px 0 0;
+                height: 200px;
+                width: 100%;
+                object-fit: cover;
+            }
 
-    .btn-outline-light {
-        border-color: #ffffff;
-        color: #ffffff;
-        transition: background-color 0.3s ease, color 0.3s ease;
-    }
+            .event-card .card-body {
+                padding: 15px;
+            }
 
-    .btn-outline-light:hover {
-        background-color: #ffffff;
-        color: #1D1B34;
-    }
+            .event-card .card-title {
+                font-size: 16px;
+                margin-bottom: 5px;
+                color: #ffffff;
+            }
 
-    .modal-content {
-        background-color: #2D2B47;
-        color: #ffffff;
-        border-radius: 15px;
-    }
+            .event-card .card-text {
+                color: #d1d1d8;
+                font-size: 14px;
+                margin-bottom: 5px;
+            }
 
-    .form-label {
-        color: #ffffff;
-    }
+            .event-card .price-section {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                margin-top: auto;
+            }
 
-    .form-control, .form-select {
-        background-color: #3C3B55;
-        color: #ffffff;
-        border: none;
-    }
+            .event-card .price-section .price {
+                font-size: 16px;
+                font-weight: bold;
+                color: #ff6961;
+                margin-bottom: 10px;
+            }
 
-    .form-control::placeholder {
-        color: #d1d1d8;
-    }
+            .event-card .price-section button {
+                padding: 5px 10px;
+                border-radius: 10px;
+                border: none;
+            }
 
-    .btn-primary {
-        background-color: #4E4C68;
-        border: none;
-    }
+            .event-card .price-section button:first-child {
+                background-color: #4E4C68;
+                color: #ffffff;
+            }
 
-    .btn-primary:hover {
-        background-color: #ff6961;
-    }
+            .event-card .price-section button:last-child {
+                background-color: #ff6961;
+                color: #ffffff;
+            }
 
-    .btn-close {
-        filter: invert(100%);
-    }
-</style>
+            /* Modal Styling */
+            .modal-content {
+                background-color: #f7f7f7;
+                color: #333;
+                border-radius: 10px;
+                border: none;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            }
 
-<!-- Bootstrap JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+            .modal-header .btn-close {
+                filter: invert(100%);
+            }
+
+            .modal-title {
+                font-size: 20px;
+                color: #333;
+            }
+
+            .modal-body img {
+                width: 100%;
+                border-radius: 10px;
+                margin-bottom: 20px;
+            }
+
+            .modal-body p,
+            .modal-body ul {
+                color: #666;
+            }
+
+            /* RSVP Section Styling */
+            .rsvp-avatars {
+                display: flex;
+                align-items: center;
+                flex-wrap: wrap;
+                justify-content: flex-start;
+            }
+
+            .circle-avatar {
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                overflow: hidden;
+                margin-right: -15px;
+                border: 2px solid #fff;
+            }
+
+            .circle-avatar img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+            .attendees-count {
+                font-size: 16px;
+                color: #666;
+                margin-left: 10px;
+            }
+
+            .modal-footer .btn {
+                border: none;
+                border-radius: 5px;
+                padding: 10px 20px;
+                font-size: 14px;
+                cursor: pointer;
+            }
+
+            .modal-footer .btn-primary {
+                background-color: #4CAF50;
+                color: #fff;
+            }
+
+            /* Mobile Adjustments */
+            @media (max-width: 768px) {
+                .event-card {
+                    margin-bottom: 20px;
+                }
+
+                .event-card img {
+                    height: 100px;
+                }
+
+                .event-card .card-title {
+                    font-size: 14px;
+                }
+
+                .event-card .card-text {
+                    font-size: 12px;
+                }
+            }
+
+            @media (max-width: 576px) {
+                .event-card img {
+                    height: 100px;
+                }
+
+                .event-card .card-title {
+                    font-size: 14px;
+                }
+
+                .event-card .card-text {
+                    font-size: 12px;
+                }
+            }
+        </style>
+
+        <!-- Bootstrap JS -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+        <!-- CSS for Styling Event Cards and  -->
+
+
+        <!-- Membership Section -->
+        <div id="membership" class="content-section">
+            <div class="container py-5">
+                <h2 class="text-center mb-5">Become a Member</h2>
+
+                <!-- Membership Benefits -->
+                <div class="row mb-5">
+                    <div class="col-md-6">
+                        <h4>Benefits of Being a Member</h4>
+                        <ul>
+                            <li>Access to exclusive events and workshops</li>
+                            <li>Networking opportunities with top industry professionals</li>
+                            <li>Free resources and educational materials</li>
+                            <li>Discounts on all club-sponsored programs</li>
+                            <li>Professional recognition and awards</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <h4>Bylaws, Purpose, and Terms & Conditions</h4>
+                        <p>As a member, you are expected to abide by our bylaws, which include:</p>
+                        <ul>
+                            <li>Upholding the values of the Uyo Creators Club</li>
+                            <li>Maintaining a positive and collaborative spirit</li>
+                            <li>Adhering to ethical practices within your industry</li>
+                            <li>Participation in at least one event annually</li>
+                            <li>Payment of yearly dues</li>
+                        </ul>
+                        <p>
+                            <a href="#">View Full Terms & Conditions</a>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Join Button -->
+                <div class="text-center">
+                    <button class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#membershipModal">Join
+                        Now</button>
+                </div>
+
+                <!-- Membership Form Modal -->
+                <div class="modal fade" id="membershipModal" tabindex="-1" aria-labelledby="membershipModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="membershipModalLabel">Membership Signup Form</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <form>
+                                    <div class="row">
+                                        <!-- Full Name -->
+                                        <div class="col-md-6 mb-3">
+                                            <label for="fullName" class="form-label">Full Name</label>
+                                            <input type="text" class="form-control" id="fullName"
+                                                placeholder="Enter your full name" required>
+                                        </div>
+                                        <!-- Phone Number -->
+                                        <div class="col-md-6 mb-3">
+                                            <label for="phoneNumber" class="form-label">Phone Number</label>
+                                            <input type="text" class="form-control" id="phoneNumber"
+                                                placeholder="Enter your phone number" required>
+                                        </div>
+                                        <!-- Email Address -->
+                                        <div class="col-md-6 mb-3">
+                                            <label for="emailAddress" class="form-label">Email Address</label>
+                                            <input type="email" class="form-control" id="emailAddress"
+                                                placeholder="Enter your email" required>
+                                        </div>
+                                        <!-- Area of Specialty -->
+                                        <div class="col-md-6 mb-3">
+                                            <label for="specialty" class="form-label">Area of Specialty</label>
+                                            <input type="text" class="form-control" id="specialty"
+                                                placeholder="Your area of expertise" required>
+                                        </div>
+                                        <!-- Brand Name -->
+                                        <div class="col-md-6 mb-3">
+                                            <label for="brandName" class="form-label">Brand Name</label>
+                                            <input type="text" class="form-control" id="brandName"
+                                                placeholder="Enter your brand name">
+                                        </div>
+                                        <!-- Gender Identification -->
+                                        <div class="col-md-6 mb-3">
+                                            <label for="gender" class="form-label">Gender Identification</label>
+                                            <select id="gender" class="form-select">
+                                                <option selected>Select...</option>
+                                                <option value="male">Male</option>
+                                                <option value="female">Female</option>
+                                                <option value="non-binary">Non-binary</option>
+                                                <option value="prefer-not-to-say">Prefer not to say</option>
+                                            </select>
+                                        </div>
+                                        <!-- Headshot Upload -->
+                                        <div class="col-md-6 mb-3">
+                                            <label for="headshot" class="form-label">Headshot (Upload)</label>
+                                            <input type="file" class="form-control" id="headshot">
+                                        </div>
+                                        <!-- City -->
+                                        <div class="col-md-6 mb-3">
+                                            <label for="city" class="form-label">City</label>
+                                            <input type="text" class="form-control" id="city"
+                                                placeholder="Enter your city">
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <!-- Social Media Handles -->
+                                        <div class="col-md-6 mb-3">
+                                            <label for="facebookHandle" class="form-label">Facebook Handle</label>
+                                            <input type="text" class="form-control" id="facebookHandle"
+                                                placeholder="Facebook profile link">
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <label for="tiktokHandle" class="form-label">TikTok Handle</label>
+                                            <input type="text" class="form-control" id="tiktokHandle"
+                                                placeholder="TikTok profile link">
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <label for="instagramHandle" class="form-label">Instagram Handle</label>
+                                            <input type="text" class="form-control" id="instagramHandle"
+                                                placeholder="Instagram profile link">
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <label for="twitterHandle" class="form-label">Twitter Handle</label>
+                                            <input type="text" class="form-control" id="twitterHandle"
+                                                placeholder="Twitter profile link">
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <label for="linkedInHandle" class="form-label">LinkedIn Handle</label>
+                                            <input type="text" class="form-control" id="linkedInHandle"
+                                                placeholder="LinkedIn profile link">
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <label for="website" class="form-label">Website</label>
+                                            <input type="url" class="form-control" id="website"
+                                                placeholder="Your website URL">
+                                        </div>
+                                        <!-- Additional Information -->
+                                        <div class="col-12 mb-3">
+                                            <label for="additionalInfo" class="form-label">Additional
+                                                Information</label>
+                                            <textarea class="form-control" id="additionalInfo" rows="3"
+                                                placeholder="Tell us anything else we should know"></textarea>
+                                        </div>
+                                    </div>
+
+                                    <!-- Submit Button -->
+                                    <div class="text-center">
+                                        <button type="submit" class="btn btn-primary">Submit Application</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- CSS Styling -->
+        <style>
+            #membership {
+                background-color: #1D1B34;
+                color: #ffffff;
+                padding: 40px 20px;
+            }
+
+            h4 {
+                color: #d1d1d8;
+            }
+
+            ul {
+                padding-left: 20px;
+            }
+
+            ul li {
+                margin-bottom: 10px;
+                color: #f0f0f0;
+            }
+
+            .btn-outline-light {
+                border-color: #ffffff;
+                color: #ffffff;
+                transition: background-color 0.3s ease, color 0.3s ease;
+            }
+
+            .btn-outline-light:hover {
+                background-color: #ffffff;
+                color: #1D1B34;
+            }
+
+            .modal-content {
+                background-color: #2D2B47;
+                color: #ffffff;
+                border-radius: 15px;
+            }
+
+            .form-label {
+                color: #ffffff;
+            }
+
+            .form-control,
+            .form-select {
+                background-color: #3C3B55;
+                color: #ffffff;
+                border: none;
+            }
+
+            .form-control::placeholder {
+                color: #d1d1d8;
+            }
+
+            .btn-primary {
+                background-color: #4E4C68;
+                border: none;
+            }
+
+            .btn-primary:hover {
+                background-color: #ff6961;
+            }
+
+            .btn-close {
+                filter: invert(100%);
+            }
+        </style>
+
+        <!-- Bootstrap JS -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 
 
 
@@ -894,10 +861,10 @@
                         <input type="text" class="form-control custom-search-input" placeholder="Search Shop...">
                     </div>
                 </div>
-               
+
 
                 <!-- Cart and Favorites -->
-                
+
                 <div class="d-flex justify-content-end mb-4">
                     <button class="btn btn-outline-light me-3"><i class="fas fa-heart"></i> Favorites</button>
                     <button class="btn btn-outline-light"><i class="fas fa-shopping-cart"></i> Cart</button>
@@ -910,7 +877,8 @@
                         <!-- Placeholder Product Card 1 -->
                         <div class="col-6 col-md-4 col-lg-3">
                             <div class="card h-100 product-card" data-bs-toggle="modal" data-bs-target="#productModal1">
-                                <img src="/assets/images/branding_Materials/selected/branded_item (1).jpg" class="card-img-top" alt="New Item 1">
+                                <img src="/assets/images/branding_Materials/selected/branded_item (1).jpg"
+                                    class="card-img-top" alt="New Item 1">
                                 <div class="card-body d-flex flex-column">
                                     <h5 class="card-title">Product Name 1</h5>
                                     <p class="card-text">Description of the new item.</p>
@@ -925,7 +893,8 @@
                         <!-- Placeholder Product Card 2 -->
                         <div class="col-6 col-md-4 col-lg-3">
                             <div class="card h-100 product-card" data-bs-toggle="modal" data-bs-target="#productModal1">
-                                <img src="/assets/images/branding_Materials/selected/branded_item (1).png" class="card-img-top" alt="New Item 1">
+                                <img src="/assets/images/branding_Materials/selected/branded_item (1).png"
+                                    class="card-img-top" alt="New Item 1">
                                 <div class="card-body d-flex flex-column">
                                     <h5 class="card-title">Product Name 1</h5>
                                     <p class="card-text">Description of the new item.</p>
@@ -937,10 +906,11 @@
                             </div>
                         </div>
 
-                         <!-- Placeholder Product Card 3 -->
-                         <div class="col-6 col-md-4 col-lg-3">
+                        <!-- Placeholder Product Card 3 -->
+                        <div class="col-6 col-md-4 col-lg-3">
                             <div class="card h-100 product-card" data-bs-toggle="modal" data-bs-target="#productModal1">
-                                <img src="/assets/images/branding_Materials/selected/branded_item (10).jpg" class="card-img-top" alt="New Item 1">
+                                <img src="/assets/images/branding_Materials/selected/branded_item (10).jpg"
+                                    class="card-img-top" alt="New Item 1">
                                 <div class="card-body d-flex flex-column">
                                     <h5 class="card-title">Product Name 1</h5>
                                     <p class="card-text">Description of the new item.</p>
@@ -952,10 +922,11 @@
                             </div>
                         </div>
 
-                         <!-- Placeholder Product Card 4 -->
-                         <div class="col-6 col-md-4 col-lg-3">
+                        <!-- Placeholder Product Card 4 -->
+                        <div class="col-6 col-md-4 col-lg-3">
                             <div class="card h-100 product-card" data-bs-toggle="modal" data-bs-target="#productModal1">
-                                <img src="/assets/images/branding_Materials/selected/branded_item (11).jpg" class="card-img-top" alt="New Item 1">
+                                <img src="/assets/images/branding_Materials/selected/branded_item (11).jpg"
+                                    class="card-img-top" alt="New Item 1">
                                 <div class="card-body d-flex flex-column">
                                     <h5 class="card-title">Product Name 1</h5>
                                     <p class="card-text">Description of the new item.</p>
@@ -978,7 +949,8 @@
                         <!-- Placeholder Product Card 1 -->
                         <div class="col-6 col-md-4 col-lg-3">
                             <div class="card h-100 product-card" data-bs-toggle="modal" data-bs-target="#productModal2">
-                                <img src="/assets/images/branding_Materials/selected/branded_item (9).jpg" class="card-img-top" alt="Featured Item 1">
+                                <img src="/assets/images/branding_Materials/selected/branded_item (9).jpg"
+                                    class="card-img-top" alt="Featured Item 1">
                                 <div class="card-body d-flex flex-column">
                                     <h5 class="card-title">Featured Product</h5>
                                     <p class="card-text">A brief description of the featured item.</p>
@@ -992,7 +964,8 @@
                         <!-- Placeholder Product Card 2 -->
                         <div class="col-6 col-md-4 col-lg-3">
                             <div class="card h-100 product-card" data-bs-toggle="modal" data-bs-target="#productModal2">
-                                <img src="/assets/images/branding_Materials/selected/branded_item (2).jpg" class="card-img-top" alt="Featured Item 1">
+                                <img src="/assets/images/branding_Materials/selected/branded_item (2).jpg"
+                                    class="card-img-top" alt="Featured Item 1">
                                 <div class="card-body d-flex flex-column">
                                     <h5 class="card-title">Featured Product</h5>
                                     <p class="card-text">A brief description of the featured item.</p>
@@ -1007,7 +980,8 @@
                         <!-- Placeholder Product Card 3 -->
                         <div class="col-6 col-md-4 col-lg-3">
                             <div class="card h-100 product-card" data-bs-toggle="modal" data-bs-target="#productModal2">
-                                <img src="/assets/images/branding_Materials/selected/branded_item (8).jpg" class="card-img-top" alt="Featured Item 1">
+                                <img src="/assets/images/branding_Materials/selected/branded_item (8).jpg"
+                                    class="card-img-top" alt="Featured Item 1">
                                 <div class="card-body d-flex flex-column">
                                     <h5 class="card-title">Featured Product</h5>
                                     <p class="card-text">A brief description of the featured item.</p>
@@ -1022,7 +996,8 @@
                         <!-- Placeholder Product Card 4 -->
                         <div class="col-6 col-md-4 col-lg-3">
                             <div class="card h-100 product-card" data-bs-toggle="modal" data-bs-target="#productModal2">
-                                <img src="/assets/images/branding_Materials/selected/branded_item (7).jpg" class="card-img-top" alt="Featured Item 1">
+                                <img src="/assets/images/branding_Materials/selected/branded_item (7).jpg"
+                                    class="card-img-top" alt="Featured Item 1">
                                 <div class="card-body d-flex flex-column">
                                     <h5 class="card-title">Featured Product</h5>
                                     <p class="card-text">A brief description of the featured item.</p>
@@ -1045,7 +1020,8 @@
                         <!-- Placeholder Product Card 1 -->
                         <div class="col-6 col-md-4 col-lg-3">
                             <div class="card h-100 product-card" data-bs-toggle="modal" data-bs-target="#productModal3">
-                                <img src="/assets/images/branding_Materials/selected/branded_item (1).jpg" class="card-img-top" alt="Most Viewed Item">
+                                <img src="/assets/images/branding_Materials/selected/branded_item (1).jpg"
+                                    class="card-img-top" alt="Most Viewed Item">
                                 <div class="card-body d-flex flex-column">
                                     <h5 class="card-title">Popular Product</h5>
                                     <p class="card-text">Most viewed product description.</p>
@@ -1060,7 +1036,8 @@
                         <!-- Placeholder Product Card 2 -->
                         <div class="col-6 col-md-4 col-lg-3">
                             <div class="card h-100 product-card" data-bs-toggle="modal" data-bs-target="#productModal3">
-                                <img src="/assets/images/branding_Materials/selected/branded_item (5).jpg" class="card-img-top" alt="Most Viewed Item">
+                                <img src="/assets/images/branding_Materials/selected/branded_item (5).jpg"
+                                    class="card-img-top" alt="Most Viewed Item">
                                 <div class="card-body d-flex flex-column">
                                     <h5 class="card-title">Popular Product</h5>
                                     <p class="card-text">Most viewed product description.</p>
@@ -1071,10 +1048,11 @@
                                 </div>
                             </div>
                         </div>
-                          <!-- Placeholder Product Card 3 -->
-                          <div class="col-6 col-md-4 col-lg-3">
+                        <!-- Placeholder Product Card 3 -->
+                        <div class="col-6 col-md-4 col-lg-3">
                             <div class="card h-100 product-card" data-bs-toggle="modal" data-bs-target="#productModal3">
-                                <img src="/assets/images/branding_Materials/selected/branded_item (4).jpg" class="card-img-top" alt="Most Viewed Item">
+                                <img src="/assets/images/branding_Materials/selected/branded_item (4).jpg"
+                                    class="card-img-top" alt="Most Viewed Item">
                                 <div class="card-body d-flex flex-column">
                                     <h5 class="card-title">Popular Product</h5>
                                     <p class="card-text">Most viewed product description.</p>
@@ -1086,10 +1064,11 @@
                             </div>
                         </div>
 
-                          <!-- Placeholder Product Card 4 -->
-                          <div class="col-6 col-md-4 col-lg-3">
+                        <!-- Placeholder Product Card 4 -->
+                        <div class="col-6 col-md-4 col-lg-3">
                             <div class="card h-100 product-card" data-bs-toggle="modal" data-bs-target="#productModal3">
-                                <img src="/assets/images/branding_Materials/selected/branded_item (3).jpg" class="card-img-top" alt="Most Viewed Item">
+                                <img src="/assets/images/branding_Materials/selected/branded_item (3).jpg"
+                                    class="card-img-top" alt="Most Viewed Item">
                                 <div class="card-body d-flex flex-column">
                                     <h5 class="card-title">Popular Product</h5>
                                     <p class="card-text">Most viewed product description.</p>
@@ -1112,7 +1091,8 @@
                         <!-- Placeholder Product Card 1 -->
                         <div class="col-6 col-md-4 col-lg-3">
                             <div class="card h-100 product-card" data-bs-toggle="modal" data-bs-target="#productModal4">
-                                <img src="/assets/images/branding_Materials/selected/branded_item (2).jpg" class="card-img-top" alt="Item 1">
+                                <img src="/assets/images/branding_Materials/selected/branded_item (2).jpg"
+                                    class="card-img-top" alt="Item 1">
                                 <div class="card-body d-flex flex-column">
                                     <h5 class="card-title">Product Name</h5>
                                     <p class="card-text">Product description.</p>
@@ -1127,7 +1107,8 @@
                         <!-- Placeholder Product Card 2 -->
                         <div class="col-6 col-md-4 col-lg-3">
                             <div class="card h-100 product-card" data-bs-toggle="modal" data-bs-target="#productModal4">
-                                <img src="/assets/images/branding_Materials/selected/branded_item (3).jpg" class="card-img-top" alt="Item 1">
+                                <img src="/assets/images/branding_Materials/selected/branded_item (3).jpg"
+                                    class="card-img-top" alt="Item 1">
                                 <div class="card-body d-flex flex-column">
                                     <h5 class="card-title">Product Name</h5>
                                     <p class="card-text">Product description.</p>
@@ -1142,7 +1123,8 @@
                         <!-- Placeholder Product Card 3 -->
                         <div class="col-6 col-md-4 col-lg-3">
                             <div class="card h-100 product-card" data-bs-toggle="modal" data-bs-target="#productModal4">
-                                <img src="/assets/images/branding_Materials/selected/branded_item (1).jpg" class="card-img-top" alt="Item 1">
+                                <img src="/assets/images/branding_Materials/selected/branded_item (1).jpg"
+                                    class="card-img-top" alt="Item 1">
                                 <div class="card-body d-flex flex-column">
                                     <h5 class="card-title">Product Name</h5>
                                     <p class="card-text">Product description.</p>
@@ -1157,7 +1139,8 @@
                         <!-- Placeholder Product Card 4 -->
                         <div class="col-6 col-md-4 col-lg-3">
                             <div class="card h-100 product-card" data-bs-toggle="modal" data-bs-target="#productModal4">
-                                <img src="/assets/images/branding_Materials/selected/branded_item (6).jpg" class="card-img-top" alt="Item 1">
+                                <img src="/assets/images/branding_Materials/selected/branded_item (6).jpg"
+                                    class="card-img-top" alt="Item 1">
                                 <div class="card-body d-flex flex-column">
                                     <h5 class="card-title">Product Name</h5>
                                     <p class="card-text">Product description.</p>
@@ -1186,8 +1169,8 @@
                             <div class="modal-body">
                                 <div class="row">
                                     <div class="col-md-6">
-                                        <img src="/assets/images/branding_Materials/selected/branded_item (10).jpg" class="img-fluid"
-                                            alt="Product Image">
+                                        <img src="/assets/images/branding_Materials/selected/branded_item (10).jpg"
+                                            class="img-fluid" alt="Product Image">
                                     </div>
                                     <div class="col-md-6">
                                         <p>This is an extended description of the product.</p>
@@ -1395,316 +1378,320 @@
 
 
         <!-- Video Content Section -->
-<div id="contents" class="content-section">
-    <div class="container py-5">
-        <h2 class="text-center mb-5">Video Content</h2>
+        <div id="contents" class="content-section">
+            <div class="container py-5">
+                <h2 class="text-center mb-5">Video Content</h2>
 
-        <!-- Search Bar, Playlist, and Favorites -->
-        <div class="d-flex flex-column flex-md-row justify-content-between align-items-center mb-4">
-            <div class="search-bar mb-3 mb-md-0">
-                <input type="text" class="form-control custom-search-input" placeholder="Search videos...">
-            </div>
-            <div class="playlist d-flex">
-                <button class="btn btn-outline-light me-2"><i class="fas fa-play"></i> Playlist</button>
-                <button class="btn btn-outline-light"><i class="fas fa-heart"></i> Favorites</button>
-            </div>
-        </div>
-
-        <!-- Video Cards Section -->
-        <div class="row g-4">
-            <!-- Video Card 1 -->
-            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                <div class="card video-card h-100" data-bs-toggle="modal" data-bs-target="#videoModal1">
-                    <!-- Video inside the card -->
-                    <div class="card-video-wrapper">
-                        <video class="video-card-player" controls>
-                            <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
+                <!-- Search Bar, Playlist, and Favorites -->
+                <div class="d-flex flex-column flex-md-row justify-content-between align-items-center mb-4">
+                    <div class="search-bar mb-3 mb-md-0">
+                        <input type="text" class="form-control custom-search-input" placeholder="Search videos...">
                     </div>
-                    <div class="card-body d-flex flex-column">
-                        <h5 class="card-title">Video Title 1</h5>
-                        <p class="card-text">Description for video 1.</p>
-                        <div class="d-flex justify-content-between mt-auto">
-                            <span class="views">1.2K views</span>
-                            <button class="btn btn-outline-light btn-sm"><i class="fas fa-heart"></i></button>
-                        </div>
+                    <div class="playlist d-flex">
+                        <button class="btn btn-outline-light me-2"><i class="fas fa-play"></i> Playlist</button>
+                        <button class="btn btn-outline-light"><i class="fas fa-heart"></i> Favorites</button>
                     </div>
                 </div>
-            </div>
 
-            <!-- Video Card 2 -->
-            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                <div class="card video-card h-100" data-bs-toggle="modal" data-bs-target="#videoModal2">
-                    <div class="card-video-wrapper">
-                        <video class="video-card-player" controls>
-                            <source src="https://www.w3schools.com/html/movie.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                    </div>
-                    <div class="card-body d-flex flex-column">
-                        <h5 class="card-title">Video Title 2</h5>
-                        <p class="card-text">Description for video 2.</p>
-                        <div class="d-flex justify-content-between mt-auto">
-                            <span class="views">2.1K views</span>
-                            <button class="btn btn-outline-light btn-sm"><i class="fas fa-heart"></i></button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Video Card 3 -->
-            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                <div class="card video-card h-100" data-bs-toggle="modal" data-bs-target="#videoModal3">
-                    <div class="card-video-wrapper">
-                        <video class="video-card-player" controls>
-                            <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                    </div>
-                    <div class="card-body d-flex flex-column">
-                        <h5 class="card-title">Video Title 3</h5>
-                        <p class="card-text">Description for video 3.</p>
-                        <div class="d-flex justify-content-between mt-auto">
-                            <span class="views">3.5K views</span>
-                            <button class="btn btn-outline-light btn-sm"><i class="fas fa-heart"></i></button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Video Card 4 -->
-            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                <div class="card video-card h-100" data-bs-toggle="modal" data-bs-target="#videoModal4">
-                    <div class="card-video-wrapper">
-                        <video class="video-card-player" controls>
-                            <source src="https://www.w3schools.com/html/movie.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                    </div>
-                    <div class="card-body d-flex flex-column">
-                        <h5 class="card-title">Video Title 4</h5>
-                        <p class="card-text">Description for video 4.</p>
-                        <div class="d-flex justify-content-between mt-auto">
-                            <span class="views">4.7K views</span>
-                            <button class="btn btn-outline-light btn-sm"><i class="fas fa-heart"></i></button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Video Card 5 -->
-            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                <div class="card video-card h-100" data-bs-toggle="modal" data-bs-target="#videoModal5">
-                    <div class="card-video-wrapper">
-                        <video class="video-card-player" controls>
-                            <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                    </div>
-                    <div class="card-body d-flex flex-column">
-                        <h5 class="card-title">Video Title 5</h5>
-                        <p class="card-text">Description for video 5.</p>
-                        <div class="d-flex justify-content-between mt-auto">
-                            <span class="views">5.1K views</span>
-                            <button class="btn btn-outline-light btn-sm"><i class="fas fa-heart"></i></button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- View All Button -->
-        <div class="d-flex justify-content-center mt-4">
-            <button class="btn btn-outline-light">View All Videos</button>
-        </div>
-
-        <!-- Video Modal 1 -->
-        <div class="modal fade" id="videoModal1" tabindex="-1" aria-labelledby="videoModalLabel1" aria-hidden="true">
-            <div class="modal-dialog modal-lg">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="videoModalLabel1">Video Title 1</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="row">
-                            <div class="col-md-12">
-                                <!-- Larger video player in modal -->
-                                <video width="100%" height="400" controls>
+                <!-- Video Cards Section -->
+                <div class="row g-4">
+                    <!-- Video Card 1 -->
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                        <div class="card video-card h-100" data-bs-toggle="modal" data-bs-target="#videoModal1">
+                            <!-- Video inside the card -->
+                            <div class="card-video-wrapper">
+                                <video class="video-card-player" controls>
                                     <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
                                     Your browser does not support the video tag.
                                 </video>
                             </div>
-                            <div class="col-md-12 mt-3">
-                                <p>This is the detailed description of the video.</p>
-                                <div class="mt-3">
-                                    <button class="btn btn-outline-light"><i class="fas fa-heart"></i> Add to Favorites</button>
-                                </div>
-                                <!-- Progress Bar -->
-                                <div class="progress mt-4">
-                                    <div class="progress-bar" role="progressbar" style="width: 30%" aria-valuenow="1" aria-valuemin="0" aria-valuemax="100">1/10</div>
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Video Title 1</h5>
+                                <p class="card-text">Description for video 1.</p>
+                                <div class="d-flex justify-content-between mt-auto">
+                                    <span class="views">1.2K views</span>
+                                    <button class="btn btn-outline-light btn-sm"><i class="fas fa-heart"></i></button>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Next Video</button>
+
+                    <!-- Video Card 2 -->
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                        <div class="card video-card h-100" data-bs-toggle="modal" data-bs-target="#videoModal2">
+                            <div class="card-video-wrapper">
+                                <video class="video-card-player" controls>
+                                    <source src="https://www.w3schools.com/html/movie.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Video Title 2</h5>
+                                <p class="card-text">Description for video 2.</p>
+                                <div class="d-flex justify-content-between mt-auto">
+                                    <span class="views">2.1K views</span>
+                                    <button class="btn btn-outline-light btn-sm"><i class="fas fa-heart"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Video Card 3 -->
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                        <div class="card video-card h-100" data-bs-toggle="modal" data-bs-target="#videoModal3">
+                            <div class="card-video-wrapper">
+                                <video class="video-card-player" controls>
+                                    <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Video Title 3</h5>
+                                <p class="card-text">Description for video 3.</p>
+                                <div class="d-flex justify-content-between mt-auto">
+                                    <span class="views">3.5K views</span>
+                                    <button class="btn btn-outline-light btn-sm"><i class="fas fa-heart"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Video Card 4 -->
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                        <div class="card video-card h-100" data-bs-toggle="modal" data-bs-target="#videoModal4">
+                            <div class="card-video-wrapper">
+                                <video class="video-card-player" controls>
+                                    <source src="https://www.w3schools.com/html/movie.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Video Title 4</h5>
+                                <p class="card-text">Description for video 4.</p>
+                                <div class="d-flex justify-content-between mt-auto">
+                                    <span class="views">4.7K views</span>
+                                    <button class="btn btn-outline-light btn-sm"><i class="fas fa-heart"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Video Card 5 -->
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                        <div class="card video-card h-100" data-bs-toggle="modal" data-bs-target="#videoModal5">
+                            <div class="card-video-wrapper">
+                                <video class="video-card-player" controls>
+                                    <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Video Title 5</h5>
+                                <p class="card-text">Description for video 5.</p>
+                                <div class="d-flex justify-content-between mt-auto">
+                                    <span class="views">5.1K views</span>
+                                    <button class="btn btn-outline-light btn-sm"><i class="fas fa-heart"></i></button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
+
+                <!-- View All Button -->
+                <div class="d-flex justify-content-center mt-4">
+                    <button class="btn btn-outline-light">View All Videos</button>
+                </div>
+
+                <!-- Video Modal 1 -->
+                <div class="modal fade" id="videoModal1" tabindex="-1" aria-labelledby="videoModalLabel1"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="videoModalLabel1">Video Title 1</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <!-- Larger video player in modal -->
+                                        <video width="100%" height="400" controls>
+                                            <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                                            Your browser does not support the video tag.
+                                        </video>
+                                    </div>
+                                    <div class="col-md-12 mt-3">
+                                        <p>This is the detailed description of the video.</p>
+                                        <div class="mt-3">
+                                            <button class="btn btn-outline-light"><i class="fas fa-heart"></i> Add to
+                                                Favorites</button>
+                                        </div>
+                                        <!-- Progress Bar -->
+                                        <div class="progress mt-4">
+                                            <div class="progress-bar" role="progressbar" style="width: 30%"
+                                                aria-valuenow="1" aria-valuemin="0" aria-valuemax="100">1/10</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary">Next Video</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Repeat modals for other video cards (Video Modal 2, 3, 4, 5) -->
             </div>
         </div>
 
-        <!-- Repeat modals for other video cards (Video Modal 2, 3, 4, 5) -->
-    </div>
-</div>
+        <!-- Enhanced CSS for styling the video content section -->
+        <style>
+            #contents {
+                background-color: #1D1B34;
+                color: #ffffff;
+                padding: 40px 20px;
+            }
 
-<!-- Enhanced CSS for styling the video content section -->
-<style>
-    #contents {
-        background-color: #1D1B34;
-        color: #ffffff;
-        padding: 40px 20px;
-    }
+            /* Search Bar Styling */
+            .custom-search-input {
+                background-color: #ffffff;
+                color: #000000;
+                padding: 10px;
+                border-radius: 10px;
+            }
 
-    /* Search Bar Styling */
-    .custom-search-input {
-        background-color: #ffffff;
-        color: #000000;
-        padding: 10px;
-        border-radius: 10px;
-    }
+            .playlist .btn {
+                margin-left: 10px;
+                color: #ffffff;
+                border-radius: 20px;
+                border: 1px solid #ffffff;
+                transition: background-color 0.3s ease, color 0.3s ease;
+            }
 
-    .playlist .btn {
-        margin-left: 10px;
-        color: #ffffff;
-        border-radius: 20px;
-        border: 1px solid #ffffff;
-        transition: background-color 0.3s ease, color 0.3s ease;
-    }
+            .playlist .btn:hover {
+                background-color: #ffffff;
+                color: #1D1B34;
+            }
 
-    .playlist .btn:hover {
-        background-color: #ffffff;
-        color: #1D1B34;
-    }
+            /* Video Card Styling */
+            .video-card {
+                background-color: #2D2B47;
+                border: none;
+                border-radius: 15px;
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+                transition: transform 0.3s ease-in-out;
+                height: 100%;
+            }
 
-    /* Video Card Styling */
-    .video-card {
-        background-color: #2D2B47;
-        border: none;
-        border-radius: 15px;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-        transition: transform 0.3s ease-in-out;
-        height: 100%;
-    }
+            .video-card:hover {
+                transform: translateY(-10px);
+            }
 
-    .video-card:hover {
-        transform: translateY(-10px);
-    }
+            .card-video-wrapper {
+                width: 100%;
+                height: 200px;
+                overflow: hidden;
+                border-radius: 15px 15px 0 0;
+            }
 
-    .card-video-wrapper {
-        width: 100%;
-        height: 200px;
-        overflow: hidden;
-        border-radius: 15px 15px 0 0;
-    }
+            .video-card-player {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 15px 15px 0 0;
+            }
 
-    .video-card-player {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        border-radius: 15px 15px 0 0;
-    }
+            .video-card .card-body {
+                padding: 15px;
+                display: flex;
+                flex-direction: column;
+            }
 
-    .video-card .card-body {
-        padding: 15px;
-        display: flex;
-        flex-direction: column;
-    }
+            .video-card .card-title {
+                font-size: 16px;
+                margin-bottom: 10px;
+                color: #ffffff;
+            }
 
-    .video-card .card-title {
-        font-size: 16px;
-        margin-bottom: 10px;
-        color: #ffffff;
-    }
+            .video-card .card-text {
+                color: #d1d1d8;
+                font-size: 13px;
+            }
 
-    .video-card .card-text {
-        color: #d1d1d8;
-        font-size: 13px;
-    }
+            .video-card .views {
+                font-size: 12px;
+                color: #cccccc;
+            }
 
-    .video-card .views {
-        font-size: 12px;
-        color: #cccccc;
-    }
+            .video-card .btn-sm {
+                border: 1px solid #ffffff;
+                color: #ffffff;
+                padding: 5px 8px;
+                border-radius: 50%;
+                transition: background-color 0.3s ease;
+            }
 
-    .video-card .btn-sm {
-        border: 1px solid #ffffff;
-        color: #ffffff;
-        padding: 5px 8px;
-        border-radius: 50%;
-        transition: background-color 0.3s ease;
-    }
+            .video-card .btn-sm:hover {
+                background-color: #ff6961;
+                color: #ffffff;
+            }
 
-    .video-card .btn-sm:hover {
-        background-color: #ff6961;
-        color: #ffffff;
-    }
+            /* Modal Styling */
+            .modal-content {
+                background-color: #2D2B47;
+                color: #ffffff;
+                border-radius: 15px;
+                border: none;
+            }
 
-    /* Modal Styling */
-    .modal-content {
-        background-color: #2D2B47;
-        color: #ffffff;
-        border-radius: 15px;
-        border: none;
-    }
+            .modal-header .btn-close {
+                filter: invert(100%);
+            }
 
-    .modal-header .btn-close {
-        filter: invert(100%);
-    }
+            .modal-title {
+                font-size: 24px;
+                color: #ffffff;
+            }
 
-    .modal-title {
-        font-size: 24px;
-        color: #ffffff;
-    }
+            .modal-body video {
+                border-radius: 15px;
+            }
 
-    .modal-body video {
-        border-radius: 15px;
-    }
+            /* Progress bar in modal */
+            .progress-bar {
+                background-color: #ff6961;
+                color: #ffffff;
+            }
 
-    /* Progress bar in modal */
-    .progress-bar {
-        background-color: #ff6961;
-        color: #ffffff;
-    }
+            .modal-footer .btn {
+                background-color: #4E4C68;
+                color: #ffffff;
+                border-radius: 10px;
+                border: none;
+            }
 
-    .modal-footer .btn {
-        background-color: #4E4C68;
-        color: #ffffff;
-        border-radius: 10px;
-        border: none;
-    }
+            .modal-footer .btn-primary {
+                background-color: #ff6961;
+            }
 
-    .modal-footer .btn-primary {
-        background-color: #ff6961;
-    }
+            .modal-footer .btn-secondary:hover {
+                background-color: #666;
+            }
 
-    .modal-footer .btn-secondary:hover {
-        background-color: #666;
-    }
+            /* Responsive adjustments */
+            @media (max-width: 576px) {
+                .playlist {
+                    flex-direction: column;
+                    gap: 10px;
+                }
+            }
+        </style>
 
-    /* Responsive adjustments */
-    @media (max-width: 576px) {
-        .playlist {
-            flex-direction: column;
-            gap: 10px;
-        }
-    }
-</style>
-
-<!-- Bootstrap JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Bootstrap JS -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 
 
         <div id="about" class="content-section" style="display: none;">

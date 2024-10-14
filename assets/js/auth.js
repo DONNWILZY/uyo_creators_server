@@ -137,8 +137,14 @@ document.getElementById('signinForm').addEventListener('submit', async (e) => {
 
         // Wait a moment (2 seconds) before redirecting
         setTimeout(() => {
-            // Redirect to dashboard or admin based on user role
-            window.location.href = role === 'Admin' ? '../admin.html' : '../dashboard.html';
+            // Get redirect URL from session storage
+            const redirectUrl = sessionStorage.getItem('redirectUrl');
+
+            // Remove redirect URL from session storage
+            sessionStorage.removeItem('redirectUrl');
+
+            // Redirect to original URL or dashboard/admin based on user role
+            window.location.href = redirectUrl ? decodeURIComponent(redirectUrl) : (role === 'Admin' ? '../admin.html' : '../dashboard.html');
         }, 2000);
 
     } catch (error) {
