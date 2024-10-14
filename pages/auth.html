@@ -5,15 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>UYO Creators Club | Authentication</title>
-       <!-- High-resolution favicon -->
-<link rel="icon" type="image/png" sizes="48x48" href="/assets/images/favicon.ico">
+    <!-- High-resolution favicon -->
+    <link rel="icon" type="image/png" sizes="48x48" href="/assets/images/favicon.ico">
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <!-- Custom CSS -->
-     <link rel="stylesheet" href="/assets/css/auth.css">
-   
+    <link rel="stylesheet" href="/assets/css/auth.css">
+
 </head>
 
 <body>
@@ -32,7 +32,8 @@
                     <input type="text" class="form-control" id="signinEmail" placeholder="Email or Username">
                 </div>
                 <div class="mb-3 position-relative">
-                    <input type="password" class="form-control password-input" id="signinPassword" placeholder="Password">
+                    <input type="password" class="form-control password-input" id="signinPassword"
+                        placeholder="Password">
                     <i class="fas fa-eye eye-icon" onclick="togglePasswordVisibility('signinPassword')"></i>
                 </div>
                 <button type="submit" class="btn btn-custom">Sign In</button>
@@ -44,6 +45,7 @@
             </form>
         </div>
 
+
         <!-- Sign Up Page -->
         <div id="signup" class="auth-card auth-page">
             <div class="logo">
@@ -53,25 +55,66 @@
             <h2>Sign Up</h2>
             <form id="signupForm">
                 <div class="mb-3 position-relative">
-                    <input type="text" class="form-control" id="signupName" placeholder="Full Name">
+                    <input type="text" class="form-control" id="signupName" placeholder="Full Name" required>
+                </div>
+                <!-- Gender Selection -->
+                <div class="mb-3 form-control">
+                    <label class="form-label">Gender:</label><br>
+                    <input type="radio" name="gender" id="male" value="male" required>
+                    <label for="male">Male</label>
+                    <input type="radio" name="gender" id="female" value="female" required>
+                    <label for="female">Female</label>
                 </div>
                 <div class="mb-3 position-relative">
-                    <input type="email" class="form-control" id="signupEmail" placeholder="Email address">
+                    <input type="email" class="form-control" id="signupEmail" placeholder="Email address" required>
                 </div>
                 <div class="mb-3 position-relative">
-                    <input type="password" class="form-control password-input" id="signupPassword" placeholder="Password">
+                    <input type="password" class="form-control password-input" id="signupPassword"
+                        placeholder="Password" required>
                     <i class="fas fa-eye eye-icon" onclick="togglePasswordVisibility('signupPassword')"></i>
                 </div>
                 <div class="mb-3 position-relative">
-                    <input type="password" class="form-control password-input" id="signupConfirmPassword" placeholder="Confirm Password">
+                    <input type="password" class="form-control password-input" id="signupConfirmPassword"
+                        placeholder="Confirm Password" required>
                     <i class="fas fa-eye eye-icon" onclick="togglePasswordVisibility('signupConfirmPassword')"></i>
                 </div>
+
+
+
                 <button type="submit" class="btn btn-custom">Sign Up</button>
                 <div class="auth-footer">
                     <a href="#" onclick="showPage('signin')">Already have an account? Sign In</a>
                 </div>
+                <div class="flash-message" id="signupMessage"></div>
             </form>
         </div>
+
+
+        <!-- SignUp OTP Verification Page -->
+        <div id="signupOtp" class="auth-card auth-page">
+            <div class="logo">
+                <img src="/assets/images/logoWhite.png" alt="UYO Creators Club Logo">
+                <h6>Uyo Creators Club </h6>
+            </div>
+            <h2>Enter OTP for your Sign Up</h2>
+            <form id="signupOtpForm">
+                <div class="signup-otp-inputs">
+                    <input type="text" maxlength="1" class="otp-input" id="otp1" autofocus>
+                    <input type="text" maxlength="1" class="otp-input" id="otp2">
+                    <input type="text" maxlength="1" class="otp-input" id="otp3">
+                    <input type="text" maxlength="1" class="otp-input" id="otp4">
+                    <input type="text" maxlength="1" class="otp-input" id="otp5">
+                    <input type="text" maxlength="1" class="otp-input" id="otp6">
+                </div>
+                <button type="submit" class="btn btn-custom">Verify OTP</button>
+                <div class="auth-footer">
+                    <a href="#" onclick="showPage('signin')">Back to Sign In</a>
+                </div>
+                <div class="flash-message" id="otpMessage"></div>
+            </form>
+        </div>
+
+
 
         <!-- Forgot Password Page -->
         <div id="forgot" class="auth-card auth-page">
@@ -80,7 +123,7 @@
                 <h6>Uyo Creators Club </h6>
             </div>
             <h2>Forgot Password</h2>
-            <form id="forgotForm">
+            <form id="forgotForm"> <!-- Added id attribute -->
                 <div class="mb-3 position-relative">
                     <input type="email" class="form-control" id="forgotEmail" placeholder="Email address">
                 </div>
@@ -91,14 +134,14 @@
             </form>
         </div>
 
-        <!-- OTP Verification Page -->
-        <div id="otp" class="auth-card auth-page">
+        <!-- forgot password Otp verifcation -->
+        <div id="ResetPasswordotp" class="auth-card auth-page">
             <div class="logo">
                 <img src="/assets/images/logoWhite.png" alt="UYO Creators Club Logo">
                 <h6>Uyo Creators Club </h6>
             </div>
             <h2>Enter OTP</h2>
-            <form id="otpForm">
+            <form id="ResetPasswordOtpForm">
                 <div class="otp-inputs">
                     <input type="text" maxlength="1">
                     <input type="text" maxlength="1">
@@ -107,6 +150,7 @@
                     <input type="text" maxlength="1">
                     <input type="text" maxlength="1">
                 </div>
+
                 <button type="submit" class="btn btn-custom">Verify OTP</button>
                 <div class="auth-footer">
                     <a href="#" onclick="showPage('signin')">Back to Sign In</a>
@@ -114,20 +158,27 @@
             </form>
         </div>
 
+
+
+
+
         <!-- New Password Page -->
+
         <div id="newPassword" class="auth-card auth-page">
             <div class="logo">
                 <img src="/assets/images/logoWhite.png" alt="UYO Creators Club Logo">
                 <h6>Uyo Creators Club </h6>
             </div>
             <h2>Set New Password</h2>
-            <form id="newPasswordForm">
+            <form id="newPasswordForm"> <!-- Added id attribute -->
                 <div class="mb-3 position-relative">
-                    <input type="password" class="form-control password-input" id="newPasswordInput" placeholder="New Password">
+                    <input type="password" class="form-control password-input" id="newPasswordInput"
+                        placeholder="New Password">
                     <i class="fas fa-eye eye-icon" onclick="togglePasswordVisibility('newPasswordInput')"></i>
                 </div>
                 <div class="mb-3 position-relative">
-                    <input type="password" class="form-control password-input" id="confirmNewPasswordInput" placeholder="Confirm New Password">
+                    <input type="password" class="form-control password-input" id="confirmNewPasswordInput"
+                        placeholder="Confirm New Password">
                     <i class="fas fa-eye eye-icon" onclick="togglePasswordVisibility('confirmNewPasswordInput')"></i>
                 </div>
                 <button type="submit" class="btn btn-custom">Set Password</button>
@@ -139,6 +190,7 @@
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 
+
     <script>
         // Function to toggle between authentication pages
         function showPage(pageId) {
@@ -148,7 +200,7 @@
             });
             document.getElementById(pageId).classList.add('active');
         }
-
+    
         // Function to toggle password visibility
         function togglePasswordVisibility(inputId) {
             const inputField = document.getElementById(inputId);
@@ -158,15 +210,67 @@
                 inputField.type = 'password';
             }
         }
-
-        // Sample logic for handling OTP input
-        const otpForm = document.getElementById('otpForm');
-        otpForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            // Proceed to new password page after OTP validation
-            showPage('newPassword');
-        });
+    
+        // Function to handle auto-move and backspace for OTP inputs
+        function handleOtpInput(inputClass) {
+            const otpInputs = document.querySelectorAll(`.${inputClass} input`);
+            
+            otpInputs.forEach((input, index) => {
+                input.addEventListener('input', (e) => {
+                    const currentInput = e.target;
+                    if (currentInput.value.length === 1 && index < otpInputs.length - 1) {
+                        // Move to next input if input is filled and it's not the last input
+                        otpInputs[index + 1].focus();
+                    }
+                });
+    
+                input.addEventListener('keydown', (e) => {
+                    const currentInput = e.target;
+    
+                    // If Backspace and current input is empty, move to the previous input
+                    if (e.key === 'Backspace' && currentInput.value === '' && index > 0) {
+                        otpInputs[index - 1].focus();
+                    }
+                });
+            });
+        }
+    
+        // Initialize the OTP input behavior for both forms
+        handleOtpInput('otp-inputs');        // For Reset Password OTP
+        handleOtpInput('signup-otp-inputs'); // For Signup OTP
+    
+        // // Example form submission handling for Signup OTP
+        // const signupOtpForm = document.getElementById('signupOtpForm');
+        // signupOtpForm.addEventListener('submit', (e) => {
+        //     e.preventDefault();
+        //     // OTP validation logic for signup can go here
+        //     console.log("Signup OTP Verified!");
+        //     showPage('newPassword'); // Redirect to new password setup after validation
+        // });
+    
+        // // Example form submission handling for Reset Password OTP
+        // const resetPasswordOtpForm = document.getElementById('ResetPasswordOtpForm');
+        // resetPasswordOtpForm.addEventListener('submit', (e) => {
+        //     e.preventDefault();
+        //     // OTP validation logic for reset password can go here
+        //     console.log("Reset Password OTP Verified!");
+        //     showPage('newPassword'); // Redirect to new password setup after validation
+        // });
+    
+        // // Sample logic for handling OTP input (legacy handling)
+        // const otpForm = document.getElementById('otpForm');
+        // otpForm.addEventListener('submit', (e) => {
+        //     e.preventDefault();
+        //     // Proceed to new password page after OTP validation
+        //     showPage('newPassword');
+        // });
     </script>
+
+
+   
+
+
+    <script src="/assets/js/auth.js"></script>
 </body>
 
 </html>

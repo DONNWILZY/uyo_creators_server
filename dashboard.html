@@ -9,6 +9,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
     <link rel="stylesheet" href="assets/css/dashboard.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.min.js" ></script>
 
   
 </head>
@@ -26,7 +27,7 @@
         <span class="notification-count">5</span>
       </div>
       <i class="fas fa-sign-out-alt"></i>
-      <img src="/assets/images/logo.png" alt="User Avatar">
+      <img src="/assets/images/user-avatar.png" alt="User Avatar">
     </div>
   </div>
 
@@ -79,7 +80,7 @@
                         </div>
 
                         <div class="post-card">
-                          <img src="/assets/images/creatorsweekone.jpg" alt="Post Image" class="post-image">
+                          <img src="/assets/images/Uyo_creators_club/uyo_creators_05.jpg" alt="Post Image" class="post-image">
                           <div class="post-info-card">
                             <div class="user-info">
                               <img src="/assets/images/logo.png" alt="User Avatar">
@@ -115,26 +116,29 @@
             </div>
             <div class="container">
                 <div class="row">
+                  <!-- user profile detail-->
                   <div class="col-lg-4">
                     <div class="card">
-                      <div class="image-container">
-                        <img src="/assets/images/award/wilz.jpg" alt="Profile Image">
-                        <div class="camera-btn">
-                          <i class="fas fa-camera"></i>
+                        <div class="image-container">
+                            <img src="/assets/images/avatar/male.jpg" alt="Profile Image"> <!-- Avatar image -->
+                            <div class="camera-btn">
+                                <i class="fas fa-camera"></i>
+                            </div>
                         </div>
-                      </div>
-                      <div class="card-body">
-                        <div class="badges">
-                          <span class="badge-verification"><i class="fas fa-check"></i> Verified</span>
-                          <span class="badge-membership"><i class="fas fa-id-card"></i> Member</span>
+                        <div class="card-body">
+                            <div class="badges">
+                                <span class="badge-verification"><i class="fas fa-check"></i> Verified</span> <!-- User verification badge -->
+                                <span class="badge-membership"><i class="fas fa-id-card"></i> Member</span> <!-- Membership badge -->
+                            </div>
+                            <h5 class="card-title">John Doe</h5> <!-- User's name -->
+                            <h6 class="card-title"><i>Digital Creator</i></h6> <!-- User's description -->
+                            <p>Brand Name: N/A</p> <!-- Brand name -->
+                            <p>An Entrepreneur</p> <!-- Role or profession -->
+                            <p>N/A</p> <!-- Social media handle -->
                         </div>
-                        <h5 class="card-title">John Doe</h5>
-                        <p>Brand Name: Doe Creations</p>
-                        <p>Specialty: Digital Art</p>
-                        <p>Social Media: @doecreator</p>
-                      </div>
                     </div>
-                  </div>
+                </div>
+                
                     <div class="col-lg-8">
                       <div class="widget-box thought-widget">
                         <h4>Share Your Thoughts</h4>
@@ -155,25 +159,129 @@
             </div>
         </div>
 
-          <!-- Event section-->
-        <div id="events" class="content-section" style="display: none;">
-          <div class="dashboard-header">
-              <h2>Upcoming Events</h2>
-          </div>
-          <div class="container">
-              <!-- Event Cards as shown in previous implementation -->
-          </div>
+<!-- Event section -->
+<div id="events" class="content-section" style="display: none;">
+  <div class="dashboard-header">
+    <h2>Upcoming Events</h2>
+  </div>
+  <div class="container">
+    <div class="event-list">
+      <!-- Event List Items -->
+      <div class="event-item">
+        <h3>Tech Conference</h3>
+        <p>October 07 | 9:00 AM</p>
+        <span class="event-details">
+          <span class="event-price">₦61,100</span>
+          <span class="event-status"> | Upcoming</span>
+        </span>
+        <button class="btn view-details" style="background-color: #2D2B47; color: #fff; float: right;" data-toggle="modal" data-target="#eventModal">View Details</button>
+      </div>
+      <div class="event-item">
+        <h3>JavaScript Summit</h3>
+        <p>October 02 | 3:00 PM</p>
+        <span class="event-details">
+          <span class="event-price">Free</span>
+          <span class="event-status"> | Upcoming</span>
+        </span>
+        <button class="btn view-details" style="background-color: #2D2B47; color: #fff; float: right;" data-toggle="modal" data-target="#eventModal">View Details</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal for Event Tickets/Passes -->
+
+<div class="modal fade" id="eventModal" tabindex="-1" role="dialog" aria-labelledby="eventModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="eventModalLabel">Event Ticket/Pass Details</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <h6>Ticket/Pass Information:</h6>
+        <p>Ticket Name: <span id="ticket-name"></span></p>
+        <p>Ticket Type: <span id="ticket-type"></span></p>
+        <p>Event Date: <span id="event-date"></span></p>
+        <p>Event Time: <span id="event-time"></span></p>
+        <p>Ticket Status: <span id="ticket-status"></span></p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+  <!-- Shop Order Section -->
+<div id="shop" class="content-section" style="display: none;">
+  <div class="dashboard-header">
+    <h2>Order for Shop</h2>
+  </div>
+  <div class="container">
+    <div class="order-list">
+      <!-- Shop Order Items -->
+      <div class="order-item">
+        <img src="/assets/images/branding_Materials/selected/branded_item (9).jpg" alt="Wireless Headphones" class="product-image">
+        <div class="order-details-container">
+          <h3>Wireless Headphones</h3>
+          <p>Purchased on: October 05, 2024</p>
+          <span class="order-details">
+            <span class="order-price">₦20,000</span>
+            <span class="order-status"> | Delivered</span>
+          </span>
+        </div>
       </div>
 
-      <!-- Shop order-->
-      <div id="shop" class="content-section" style="display: none;">
-        <div class="dashboard-header">
-            <h2>Order for Shop</h2>
+      <div class="order-item">
+        <img src="/assets/images/branding_Materials/selected/branded_item (3).jpg" alt="Smartphone" class="product-image">
+        <div class="order-details-container">
+          <h3>Smartphone</h3>
+          <p>Purchased on: September 28, 2024</p>
+          <span class="order-details">
+            <span class="order-price">₦150,000</span>
+            <span class="order-status"> | In Transit</span>
+          </span>
         </div>
-        <div class="container">
-            <!-- Shop Cards as per previous implementation -->
+      </div>
+
+      <div class="order-item">
+        <img src="/assets/images/branding_Materials/selected/branded_item (6).jpg" alt="Laptop Stand" class="product-image">
+        <div class="order-details-container">
+          <h3>Laptop Stand</h3>
+          <p>Purchased on: September 25, 2024</p>
+          <span class="order-details">
+            <span class="order-price">₦8,500</span>
+            <span class="order-status"> | Delivered</span>
+          </span>
         </div>
+      </div>
+
+      <div class="order-item">
+        <img src="/assets/images/branding_Materials/selected/branded_item (4).jpg" alt="Laptop Stand" class="product-image">
+        <div class="order-details-container">
+          <h3>Laptop Stand</h3>
+          <p>Purchased on: September 25, 2024</p>
+          <span class="order-details">
+            <span class="order-price">₦8,500</span>
+            <span class="order-status"> | Delivered</span>
+          </span>
+        </div>
+      </div>
+
     </div>
+  </div>
+</div>
+
+
+
 
       <!-- My content-->
       <div id="content" class="content-section" style="display: none;">
@@ -344,6 +452,8 @@ function deleteAllNotifications() {
 // Initialize notifications
 renderNotifications();
     </SCript>
+
+    <script src="/assets/js/profile.js"></script>
 </body>
 
 </html>

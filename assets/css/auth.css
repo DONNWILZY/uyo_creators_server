@@ -127,6 +127,34 @@ body {
     outline: none;
 }
 
+.flash-message {
+    transition: opacity 0.3s ease;
+}
+
+
+/* Signup OTP Styling */
+.signup-otp-inputs {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.signup-otp-inputs input {
+    width: 45px;
+    height: 45px;
+    background-color: #1D1B34;
+    color: white;
+    text-align: center;
+    font-size: 24px;
+    border-radius: 5px;
+    border: none;
+}
+
+.signup-otp-inputs input:focus {
+    border: 2px solid #1D1B34;
+    outline: none;
+}
+
 /* Password Eye Icon Styling */
 .eye-icon {
     position: absolute;

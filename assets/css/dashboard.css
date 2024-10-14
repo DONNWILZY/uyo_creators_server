@@ -476,7 +476,152 @@
         margin-top: 10px;
       }
       
-      /* POST PPREVIEW*/
+      /* EVENNT LIST*/
+  /* Event List */
+  .event-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .event-item {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 45%;
+    cursor: pointer;
+    color: #2D2B47;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  /* Add hover effect and smooth transitions */
+  .event-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  }
+
+  .event-item h3 {
+    color: #ed0707;
+  }
+  
+  .event-item p {
+    color: #666;
+  }
+
+  /* Price and Status Styling */
+  .event-details {
+    display: inline-block;
+    margin-top: 10px;
+  }
+
+  .event-price {
+    font-weight: bold;
+    color: #2D2B47;
+  }
+
+  .event-status {
+    color: #4CAF50; /* Green for upcoming */
+    font-weight: 500;
+  }
+
+  /* Add smooth transitions for the modal appearance */
+  .modal.fade .modal-dialog {
+    transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+    transform: translate(0, -20px);
+    opacity: 0;
+  }
+
+  .modal.fade.show .modal-dialog {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+
+  @media only screen and (max-width: 768px) {
+    .event-item {
+      width: 90%;
+    }
+  }
+
+      
+  /* Shop Order Section */
+  .order-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .order-item {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: flex; /* Flex for image and details side by side */
+    align-items: center;
+    width: 45%;
+    cursor: pointer;
+    color: #2D2B47;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  /* Add hover effect for shop items */
+  .order-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  }
+
+  /* Product Image */
+  .product-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 8px;
+    margin-right: 20px;
+  }
+
+  .order-details-container {
+    flex-grow: 1;
+  }
+
+  .order-item h3 {
+    color: #ed0707; /* Product title color */
+    margin: 0 0 10px;
+  }
+
+  .order-item p {
+    color: #666;
+    margin: 0 0 5px;
+  }
+
+  /* Price and Status Styling */
+  .order-details {
+    display: inline-block;
+    margin-top: 10px;
+  }
+
+  .order-price {
+    font-weight: bold;
+    color: #2D2B47;
+  }
+
+  .order-status {
+    color: #4CAF50; /* Green for delivered, you can change for other statuses */
+    font-weight: 500;
+  }
+
+  @media only screen and (max-width: 768px) {
+    .order-item {
+      width: 90%;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .product-image {
+      margin-bottom: 10px;
+    }
+  }
+
       
 
     /* Responsive Design */

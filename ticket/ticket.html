@@ -85,34 +85,16 @@
     }
 
     /* Watermark (transparent) */
-    .watermark-left {
+    .watermark {
       position: absolute;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      background-image: url("https://res.cloudinary.com/dwbthqy0f/image/upload/v1728561126/image-removebg-preview_4_rqkhhb.png");
-      background-size: contain;
-      background-repeat: no-repeat;
-      opacity: 0.1; /* Adjust transparency */
-      height: 200px; /* Adjust size */
-      width: 200px; /* Adjust size */
+      font-size: 40px;
+      color: rgba(255, 255, 255, 0.2);
+      font-weight: 700;
       z-index: 0;
     }
-
-    .watermark {
-  position: absolute;
-  top: 50%;
-  left: 265%; /* Shifted it towards the right */
-  transform: translate(-50%, -50%);
-  background-image: url("https://res.cloudinary.com/dwbthqy0f/image/upload/v1728561126/image-removebg-preview_4_rqkhhb.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-  opacity: 0.1; /* Adjust transparency */
-  height: 220px; /* Adjust size */
-  width: 220px; /* Adjust size */
-  z-index: 0;
-}
-
 
     .ticket-info {
       padding: 10px 30px;
@@ -230,20 +212,22 @@
 <div class="ticket">
   <div class="left">
     <div class="image">
-      <!-- Watermark -->
-      <div class="watermark"></div>
-
       <!-- Admit One (left) -->
       <p class="admit-one">
         <span>ADMIT ONE</span>
         <span>ADMIT ONE</span>
         <span>ADMIT ONE</span>
       </p>
-      
       <!-- Ticket number on image -->
       <div class="ticket-number">
         <p>#20030220</p>
       </div>
+
+      <!-- Watermark -->
+      <div class="watermark">
+        <p>TICKET</p>
+      </div>
+
     </div>
     <div class="ticket-info">
       <p class="date">
