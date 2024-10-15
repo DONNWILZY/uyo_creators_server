@@ -38,7 +38,7 @@ function logoutIcon() {
 
 document.addEventListener('DOMContentLoaded', async () => {
     const userId = sessionStorage.getItem('userId');  // Get the stored userId from sessionStorage
-    const baseUrl = 'http://127.0.0.1:5000/api';  // Replace this with the actual base URL of your API
+    const baseUrl = 'https://uyocreator-backend.vercel.app/api';  // Replace this with the actual base URL of your API
 
     try {
         // Fetch user data from the API
@@ -91,9 +91,11 @@ document.addEventListener('DOMContentLoaded', async () => {
 });
 
 
+
+// view booked event for a User
 document.addEventListener('DOMContentLoaded', async () => {
     const userId = sessionStorage.getItem('userId');
-    const baseUrl = 'http://127.0.0.1:5000/api';  // Replace with your actual API base URL
+    const baseUrl = 'https://uyocreator-backend.vercel.app/api';  // Replace with your actual API base URL
 
     try {
         const response = await fetch(`${baseUrl}/events/user/${userId}`);
@@ -103,7 +105,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         eventListContainer.innerHTML = '';  // Clear previous events if any
 
         data.data.forEach(event => {
-            const { title, startDate, isFree, status } = event;
+            const { eventNumber, title, startDate, isFree, status } = event;
 
             // Format date and time
             const eventDate = new Date(startDate);

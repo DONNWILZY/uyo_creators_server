@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-    const baseUrl = 'http://127.0.0.1:5000'; // Base URL for API
+    const baseUrl = 'https://uyocreator-backend.vercel.app'; // Base URL for API
 
     // Function to handle API errors
     async function handleApiError(response) {

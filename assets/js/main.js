@@ -69,7 +69,7 @@ window.onload = function () {
 
 // event display
 document.addEventListener('DOMContentLoaded', async () => {
-    const baseUrl = 'http://127.0.0.1:5000/api';  // Replace with actual API URL
+    const baseUrl = 'https://uyocreator-backend.vercel.app/api';  // Replace with actual API URL
     const userId = sessionStorage.getItem('userId');
     const token = sessionStorage.getItem('token');
 
@@ -135,7 +135,7 @@ async function handleApiError(response) {
 
 // Function to open event modal and populate it with event data
 async function openEventModal(eventId) {
-    const baseUrl = 'http://127.0.0.1:5000/api';  // Update to actual base URL
+    const baseUrl = 'https://uyocreator-backend.vercel.app/api';  // Update to actual base URL
 
     try {
         const response = await fetch(`${baseUrl}/events/${eventId}`);
@@ -183,7 +183,7 @@ async function openEventModal(eventId) {
 
 // Function to handle event booking
 async function bookEvent(eventId) {
-    const baseUrl = 'http://127.0.0.1:5000/api';  // Update to your base URL
+    const baseUrl = 'https://uyocreator-backend.vercel.app/api';  // Update to your base URL
     const userId = sessionStorage.getItem('userId');
     const token = sessionStorage.getItem('token');
     const bookButton = document.getElementById('book-event-btn');
@@ -266,10 +266,10 @@ document.querySelectorAll('.event-card').forEach(card => {
 //// event for home page
 document.addEventListener('DOMContentLoaded', () => {
     // Base URL for API
-    const baseUrl = 'http://127.0.0.1:5000/api';
+    const baseUrl = 'https://uyocreator-backend.vercel.app/api';
   
     // Event ID
-    const eventId = '670ea6e4d629d5e38c1775fc';
+    const eventId = '670ec0ea860d3068799afe52';
   
     // Function to fetch event data
     async function fetchEventData(eventId) {

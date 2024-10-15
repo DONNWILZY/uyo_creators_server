@@ -80,6 +80,15 @@ body {
     font-size: 18px;
 }
 
+/* show or hide event */
+.show {
+    display: block;
+  }
+  
+  .hide {
+    display: none;
+  }
+
 /* Organizers & Speakers Section */
 .people-grid {
     display: grid;
