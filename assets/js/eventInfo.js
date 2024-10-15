@@ -1,7 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     // Get URL parameters
     const urlParams = new URLSearchParams(window.location.search);
-    const eventId = urlParams.get('eventId');
     const eventNumber = urlParams.get('eventNumber');
     const baseUrl = 'https://uyocreator-backend.vercel.app';
   
