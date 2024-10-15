@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="event-title"></title>
+    <!-- High-resolution favicon -->
+    <link rel="icon" type="image/png" sizes="48x48" href="assets/images/favicon.ico">
+    <!-- Bootstrap CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+
+    <!-- custom css-->
+    <link rel="stylesheet" href="assets/css/event_info.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <a href="index.html"><i class="fas fa-home"></i> Home</a>
+        <a href="#" onclick="history.back()"><i class="fas fa-arrow-left"></i> Back</a>
+        <a href="dashboard.html"><i class="fas fa-user"></i> Dashboard</a>
+    </div>
+
+    <!-- Event Section -->
+    <div class="container event-section">
+        <h2 id="title"></h2>
+
+        <!-- Event Image -->
+        <img id="event-image" src="" alt="Event Image" class="event-image">
+
+        <!-- Event Details -->
+        <div class="event-details">
+            <h1 id="event-theme"></h1>
+            <p><strong></strong> <span id="event-description"></span></p>
+            <div class="event-info">
+                <span><strong>Date:</strong> <span id="event-date"></span></span>
+                <span><strong>Time:</strong> <span id="event-time"></span></span>
+            </div>
+            <div class="event-info">
+                <span>Entry: <span id="event-entry"></span></span>
+                <span>Status: <span id="event-status"></span></span>
+            </div>
+
+            <!-- Speakers Section -->
+            <div id="speakers-section" class="${event.displaySpeakers ? 'show' : 'hide'}">
+                <h4>Speakers</h4>
+                <div class="people-grid" id="speakers-grid">
+                </div>
+            </div>
+
+            <!-- Agenda Section -->
+            <div id="agenda-section" class="${event.displayAgenda ? 'show' : 'hide'}">
+                <h4>Agenda</h4>
+                <div class="agenda-day" id="agenda-day">
+                </div>
+            </div>
+
+            <!-- Organizers Section -->
+            <div id="organizers-section" class="${event.displayOrganizers ? 'show' : 'hide'}">
+                <h4>Organizers</h4>
+                <div class="people-grid" id="organizers-grid">
+                </div>
+            </div>
+
+            <!-- Volunteers Section -->
+            <div id="volunteers-section" class="${event.displayVolunteers ? 'show' : 'hide'}">
+                <h4>Volunteers</h4>
+                <div class="people-grid" id="volunteers-grid">
+                </div>
+            </div>
+
+            <!-- Attendees Section -->
+            <h4>Attendees</h4>
+            <div class="attendees" id="attendees">
+            </div>
+            <p> <span id="total-attendees"></span></p>
+
+            <!-- Official Partners and Sponsors Section -->
+            <div id="partners-sponsors" class="container py-5 text-center">
+                <h3 class="mb-4">Our Official Partners & Sponsors</h3>
+                <div class="sponsors-container">
+                    <div class="sponsors-slider" id="sponsors-slider">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Get Ticket Button -->
+            <button class="get-ticket-btn" id="get-ticket-btn">Get Ticket</button>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="/assets/js/eventInfo.js"></script>
+</body>
+
+</html>

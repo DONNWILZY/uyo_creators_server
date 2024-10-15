@@ -42,6 +42,15 @@ body {
     padding: 5px 10px;
 }
 
+.attendee-count {
+  font-size: 16px !important;
+  font-weight: bold !important;
+  margin-top: 10px !important;
+  background-color: #DC143C;
+   text-align: center;
+   margin-right: 20px;
+}
+
 /* Sidebar Styling */
 .sidebar {
     position: fixed;
@@ -912,6 +921,8 @@ footer {
       transform: translateX(-100%);
     }
   }
+
+
 
 
   

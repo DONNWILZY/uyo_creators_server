@@ -1,0 +1,291 @@
+
+/* General Styling */
+body {
+    background-color: #1D1B34;
+    color: #ffffff;
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+}
+
+/* Center the content on mobile */
+.container {
+    max-width: 960px;
+    margin: auto; /* Center the content horizontally */
+    padding: 20px;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #2D2B47;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.navbar a:hover {
+    color: #FFA500;
+}
+
+/* Event Section */
+.event-section {
+    margin-top: 80px;
+    padding: 20px;
+    text-align: center; /* Center content text */
+}
+
+.event-image {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.event-details {
+    background-color: #2D2B47;
+    border-radius: 15px;
+    padding: 20px;
+    margin-top: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.event-details h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.event-details p {
+    font-size: 16px;
+    color: #d1d1d8;
+}
+
+.event-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.event-info span {
+    font-size: 18px;
+}
+
+/* Organizers & Speakers Section */
+.people-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.people-card {
+    background-color: #22223A;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.people-card:hover {
+    transform: translateY(-10px);
+}
+
+.people-card img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.people-card h5 {
+    font-size: 14px;
+    margin: 0;
+    color: white;
+}
+
+.people-card p {
+    font-size: 12px;
+    color: #d1d1d8;
+    margin: 0;
+}
+
+/* Attendees Section */
+.attendees {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.attendees .circle-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: -10px;
+    background-size: cover;
+    background-position: center;
+    border: 2px solid #2D2B47;
+}
+
+/* Agenda Section */
+.agenda-section {
+    margin-top: 30px;
+    background-color: #2D2B47;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.agenda-section h4 {
+    margin-bottom: 15px;
+}
+
+.agenda-day {
+    margin-bottom: 20px;
+}
+
+.agenda-day h5 {
+    color: #FFA500;
+}
+
+.agenda-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 10px;
+}
+
+.agenda-item .time {
+    width: 80px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.agenda-item .activity {
+    flex: 1;
+    margin-left: 20px;
+    text-align: left;
+}
+
+.agenda-item .duration {
+    width: 70px;
+    text-align: center;
+}
+
+/* Get Ticket Button */
+.get-ticket-btn {
+    background-color: #FFA500;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+    display: block;
+    width: 100%;
+}
+
+.get-ticket-btn:hover {
+    background-color: #ff8800;
+}
+
+/* Sponsors Section */
+.sponsors-container {
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+}
+
+.sponsors-slider {
+    display: flex;
+    gap: 20px;
+}
+
+.sponsor {
+    scroll-snap-align: center;
+    flex-shrink: 0;
+    width: 80px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sponsor .sponsor-logo {
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+    width: 60px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.sponsor .sponsor-logo:hover {
+    opacity: 1;
+}
+
+.sponsor .sponsor-name {
+    font-size: 14px;
+    color: #b3b9d4;
+    margin: 0;
+}
+
+/* Responsive Behavior */
+@media (max-width: 768px) {
+    .event-info {
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left; /* Align text left on mobile */
+    }
+
+    .event-details h2 {
+        font-size: 22px;
+    }
+
+    .event-info span {
+        font-size: 16px;
+    }
+
+    .people-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .attendees {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .attendees .circle-avatar {
+        margin-right: -10px;
+    }
+
+    .container {
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+}
+
+/* Auto-scrolling sponsors */
+.sponsors-slider {
+    animation: scroll 10s linear infinite;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
