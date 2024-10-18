@@ -165,11 +165,14 @@ async function openEventModal(eventId) {
             });
 
             // Display total attendee count
-            const totalAttendees = `<div class="attendee-count">${attendees.length} attendees</div>`;
-            attendeeList.insertAdjacentHTML('beforeend', totalAttendees);
+            // const totalAttendees = `<div class="attendee-count"> </br> ${attendees.length} attendees</div>`;
+            // attendeeList.insertAdjacentHTML('beforeend', totalAttendees);
+
+            document.getElementById('total-attendees').innerText = `Total Registered Attendees: ${attendees.length}`;
+
         } else {
             attendeeList.innerHTML = '<p>No attendees yet.</p>';
-        }
+        } 
 
         // Handle booking button functionality
         document.getElementById('book-event-btn').onclick = () => bookEvent(eventId);

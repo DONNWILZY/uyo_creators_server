@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Post</title>
+    <!-- Bootstrap CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <style>
+        /* General Styling */
+        body {
+            background-color: #1D1B34;
+            color: #fff;
+            font-family: 'Trebuchet MS', Arial, sans-serif;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        /* Navbar Styling */
+        .navbar {
+            background-color: #2D2B47;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+            top: 0;
+            left: 0;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        .navbar a:hover {
+            color: #FFA500;
+        }
+
+        /* Blog Post Styling */
+        .blog-post img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .blog-title {
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            color: #fff;
+        }
+
+        .blog-info {
+            font-size: 14px;
+            color: #BBBBBB;
+            margin-bottom: 25px;
+        }
+
+        .blog-content {
+            line-height: 1.6;
+            color: #d1d1d8;
+        }
+
+        .highlight {
+            background-color: #33303e;
+            border-left: 4px solid #FFA500;
+            padding: 10px;
+            margin-bottom: 20px;
+            color: #FFF;
+        }
+
+        /* Sidebar Styling */
+        .sidebar {
+            padding: 20px;
+            background-color: #22223A;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .sidebar h4 {
+            margin-bottom: 20px;
+            color: #FFA500;
+        }
+
+        .related-posts .card {
+            margin-bottom: 20px;
+            background-color: #2D2B47;
+            border: none;
+        }
+
+        .related-posts img {
+            height: 150px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+
+        .related-posts .card-body {
+            color: #fff;
+        }
+
+        .related-posts .btn-primary {
+            background-color: #FFA500;
+            border: none;
+        }
+
+        .list-group-item {
+            background-color: #2D2B47;
+            color: #d1d1d8;
+        }
+
+        .list-group-item:hover {
+            background-color: #3e3c59;
+        }
+
+        /* Footer Styling */
+        footer {
+            background-color: #2D2B47;
+            padding: 20px;
+            text-align: center;
+            color: #d1d1d8;
+            margin-top: 50px;
+        }
+
+        footer a {
+            color: #FFA500;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            color: #ff8800;
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            .blog-title {
+                font-size: 28px;
+            }
+
+            .sidebar {
+                margin-top: 30px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <div class="navbar">
+        <a href="index.html"><i class="fas fa-home"></i> Home</a>
+        <a href="dashboard.html"><i class="fas fa-user"></i> Dashboard</a>
+    </div>
+
+    <!-- Blog Post Content -->
+    <div class="container" style="margin-top: 70px;">
+        <div class="row">
+            <!-- Main Blog Post Content -->
+            <div class="col-lg-8">
+                <div class="blog-post">
+                    <img src="https://via.placeholder.com/1000x400" alt="Blog Image">
+                    <h1 class="blog-title">The Art of Digital Creation</h1>
+                    <div class="blog-info">
+                        <span>By <strong>John Doe</strong></span> |
+                        <span>Published on October 20, 2024</span>
+                    </div>
+
+                    <div class="blog-content">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ac feugiat odio. Curabitur tincidunt eros ut nibh tincidunt, in gravida eros tristique. Integer pretium, metus nec congue interdum, nulla turpis viverra ex, eget iaculis ligula ipsum a ante. Aenean convallis scelerisque tortor, non feugiat leo luctus sit amet.</p>
+
+                        <p class="highlight">"Digital creation has reshaped the way we perceive art in the 21st century. It's no longer just about creativity; it's about innovation and technology."</p>
+
+                        <p>Praesent vehicula ligula sed quam cursus, at lobortis sem volutpat. Integer vel suscipit sem. Proin eu nisi felis. Aliquam erat volutpat. Fusce sit amet efficitur eros. Curabitur consectetur, metus ut faucibus suscipit, libero purus lacinia mi, nec ultricies sem odio nec orci.</p>
+
+                        <h3>Why Digital Creation is Important</h3>
+                        <p>In the modern world, digital creation allows artists to break traditional barriers and expand their creativity without limits. It enables designers to craft visuals that are only bound by their imagination.</p>
+
+                        <h3>Tools and Techniques</h3>
+                        <p>From Adobe Photoshop to Procreate, artists have access to a plethora of tools that help bring their visions to life. These tools also allow collaboration, where multiple creators can work together on a single piece of art seamlessly.</p>
+
+                        <p>In conclusion, digital creation is here to stay, and it continues to revolutionize the creative industries around the world.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sidebar for Related Posts & Highlights -->
+            <div class="col-lg-4">
+                <div class="sidebar">
+                    <!-- Related Posts -->
+                    <h4>Related Posts</h4>
+                    <div class="related-posts">
+                        <div class="card">
+                            <img src="https://via.placeholder.com/400x200" class="card-img-top" alt="Related Post 1">
+                            <div class="card-body">
+                                <h5 class="card-title">Exploring the Future of Digital Art</h5>
+                                <p class="card-text">Learn about where digital art is heading and how you can be part of this movement.</p>
+                                <a href="#" class="btn btn-primary btn-sm">Read More</a>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <img src="https://via.placeholder.com/400x200" class="card-img-top" alt="Related Post 2">
+                            <div class="card-body">
+                                <h5 class="card-title">Top Tools for Digital Artists</h5>
+                                <p class="card-text">Discover the best tools that every digital artist should be using today.</p>
+                                <a href="#" class="btn btn-primary btn-sm">Read More</a>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <img src="https://via.placeholder.com/400x200" class="card-img-top" alt="Related Post 3">
+                            <div class="card-body">
+                                <h5 class="card-title">How to Build a Career as a Digital Creator</h5>
+                                <p class="card-text">A step-by-step guide to establishing yourself as a professional digital creator.</p>
+                                <a href="#" class="btn btn-primary btn-sm">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Post Highlights -->
+                    <h4 class="mt-5">Post Highlights</h4>
+                    <ul class="list-group">
+                        <li class="list-group-item">Digital Art Tips</li>
+                        <li class="list-group-item">Procreate vs Photoshop</li>
+                        <li class="list-group-item">How to Use Adobe Creative Cloud</li>
+                        <li class="list-group-item">Best Graphic Design Courses in 2024</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Suggested Reading Section -->
+        <div class="container mt-5">
+            <h3>Suggested Reading</h3>
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="card" style="background-color: #2D2B47;">
+                        <img src="https://via.placeholder.com/400x200" class="card-img-top" alt="Suggested Post 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Breaking Barriers with Digital Innovation</h5>
+                            <a href="#" class="btn btn-primary btn-sm">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card" style="background-color: #2D2B47;">
+                        <img src="https://via.placeholder.com/400x200" class="card-img-top" alt="Suggested Post 2">
+                        <div class="card-body">
+                            <h5 class="card-title">The Creative Evolution: Then & Now</h5>
+                            <a href="#" class="btn btn-primary btn-sm">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card" style="background-color: #2D2B47;">
+                        <img src="https://via.placeholder.com/400x200" class="card-img-top" alt="Suggested Post 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Mastering the Art of Digital Storytelling</h5>
+                            <a href="#" class="btn btn-primary btn-sm">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Your Blog Name. All rights reserved.</p>
+        <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Event Ticket</title>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css'>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
+
+    body, p, h1 {
+      margin: 0;
+      padding: 0;
+      font-family: "Open Sans", sans-serif;
+    }
+
+    .container {
+      background: #e0e2e8;
+      position: relative;
+      width: 100%;
+      height: 100vh;
+    }
+
+    .ticket {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.3);
+      border-radius: 25px;
+      overflow: hidden;
+      width: 300px;
+    }
+
+    .event-image {
+      height: 220px;
+       background-image: url('https://res.cloudinary.com/dwbthqy0f/image/upload/v1729153387/Asset_41_10x_1_eqryy2.png'); 
+      background-color: #3a0958;
+      background-size: cover;
+      background-position: center;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .bottom {
+      background: #fff;
+      padding: 1.5rem;
+      color: #3a0958;
+      position: relative;
+      height: 300px;
+    }
+
+    .bottom h1 {
+      text-align: center;
+      font-size: 18px;
+      margin-bottom: 1rem;
+    }
+
+    .row {
+      display: flex;
+      justify-content: space-between;
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+
+    .row p {
+      font-weight: 700;
+      margin: 0;
+    }
+
+    .row span {
+      display: block;
+      font-weight: 400;
+      font-size: 12px;
+      color: #6c6c6c;
+    }
+
+    .watermark {
+      position: absolute;
+      
+      top: 90%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-image: url('https://res.cloudinary.com/dwbthqy0f/image/upload/v1728561126/image-removebg-preview_4_rqkhhb.png'); /* Watermark image */
+      background-size: 150px 150px;
+      background-repeat: no-repeat;
+      opacity: 0.1;
+      height: 150px;
+      width: 150px;
+      z-index: 0;
+    }
+
+    .barcode {
+      height: 80px;
+      background-color: #3a0958;
+      /* background-image: url('https://via.placeholder.com/150x60');  */
+      background-size: cover;
+      margin-top: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="ticket">
+      <div class="event-image">
+        <!-- Event image on the top, covering the purple section -->
+      </div>
+      <div class="bottom">
+        <h1>Event Title</h1> <!-- Event title moved to the top of the white section -->
+        <div class="row">
+          <p><span>Attendee</span>John Doe</p>
+          <p><span>Seat</span>15B</p>
+        </div>
+        <div class="row">
+          <p><span>Venue</span>Grand Arena</p>
+          <p><span>Date</span>12th Dec 2024</p>
+        </div>
+        <div class="row">
+          <p><span>Time</span>7:00 PM</p>
+          <!-- <p><span>Organisers</span>Uyo Creators Club</p> -->
+        </div>
+        <div class="barcode"></div> <!-- Placeholder QR code -->
+      </div>
+      <div class="watermark"></div> <!-- Centralized watermark -->
+    </div>
+  </div>
+</body>
+</html>
